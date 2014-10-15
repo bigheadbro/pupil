@@ -1,0 +1,167 @@
+<div id="pagemask-industry"></div>
+<div class="industry-win">
+    <div class="industry-win-content">
+        <h2>
+            <a class="close-industry">[确认]</a>
+				请选择行业类别（您最多能选择5项）
+		</h2>
+		<div class="selected clearfix">
+			<h5>已选行业：</h5><span></span>
+		</div>
+		<div class="grey">
+			<ul class="industry-wrap clearfix">
+				<li class="category">
+					计算机/互联网/通信/电子：
+				</li>
+				<li class="detail">
+					<a>计算机软件</a><a>计算机硬件</a><a>互联网/电子商务/网游</a>
+					<a>通信/电信/网络</a><a>通信/电信/网络设备设备</a><a>IT-品管、技术支持及其它</a>
+					<a>通信技术开发及应用</a><a>电子/电器/半导体/仪器仪表</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="industry-wrap clearfix">
+				<li class="category">会计/金融/银行/保险：</li>
+				<li class="detail">
+					<a>会计/审计</a><a>金融/投资/证券</a><a>银行</a><a>保险</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="industry-wrap clearfix">
+				<li class="category">管理学：</li>
+				<li class="detail">
+					<a>管理科学与工程类</a><a>工商管理类</a><a>行政管理、公共管理类</a><a>图书档案学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="industry-wrap clearfix">
+				<li class="category">贸易/消费/制造/营运：</li>
+				<li class="detail">
+					<a>贸易/进出口</a><a>批发/零售</a><a>快速消费品(食品、饮料、化妆品)</a>
+					<a>服装/纺织/皮革</a><a>家具/家电/工艺品/玩具/珠宝</a>	<a>奢侈品/收藏品</a>
+					<a>办公用品及设备</a><a>机械/设备/重工</a><a>汽车及零配件</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="industry-wrap clearfix">
+				<li class="category">制药/医疗：</li>
+				<li class="detail">
+					<a>制药/生物工程</a><a>医疗/护理/卫生</a><a>医疗设备/器械</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="industry-wrap clearfix">
+				<li class="category">广告/媒体：</li>
+				<li class="detail">
+					<a>广告</a><a>公关/市场推广/会展</a><a>影视/媒体/艺术/文化传播</a>
+					<a>文字媒体/出版	印刷/包装/造纸</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="industry-wrap clearfix">
+				<li class="category">房地产/建筑：</li>
+				<li class="detail">
+						<a>房地产开发</a><a>建筑/建材/工程</a><a>家居/室内设计/装潢</a>
+						<a>物业管理/商业中心</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="industry-wrap clearfix">
+				<li class="category">专业服务/教育/培训：</li>
+				<li class="detail">
+						<a>中介服务</a><a>专业服务(咨询、人力资源、财会)</a><a>外包服务</a>
+						<a>检测，认证</a><a>法律</a><a>教育/培训/院校</a>
+						<a>学术/科研</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="industry-wrap clearfix">
+				<li class="category">服务业：</li>
+				<li class="detail">
+						<a>餐饮业</a><a>酒店/旅游</a><a>娱乐/休闲/体育</a>
+						<a>美容/保健</a><a>生活服务</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="industry-wrap clearfix">
+				<li class="category">物流/运输：</li>
+				<li class="detail">
+					<a>交通/运输/物流</a><a>航天/航空</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="industry-wrap clearfix">
+				<li class="category">能源/原材料：</li>
+				<li class="detail">
+						<a>石油/化工/矿产/地质</a><a>采掘业/冶炼</a><a>电力/水利</a>
+						<a>新能源	原材料和加工</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="industry-wrap clearfix">
+				<li class="category">政府/非赢利机构/其他：</li>
+				<li class="detail">
+						<a>政府/公共事业</a><a>非盈利机构</a><a>环保</a>
+						<a>农/林/牧/渔</a><a>多元化业务集团公司</a><a>其他行业</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>
+<script>
+    var cntInd = 0;
+	$(function(){
+		$(".industry-win .detail a").click(function(){
+			var ind = $(this).text();
+			if($(this).attr("check") == undefined){
+				$(this).attr("check", 1);
+        		if(cntInd == 5)
+        		{
+        			alert("最多选择5个行业");
+        			last;
+        		}
+            	$(".industry-win .selected span").append("<a>" + $(this).text() + "<em>x</em></a>");
+        		cntInd++;
+			}else{
+				$(this).removeAttr("check");
+				$(".selected span a").each(function(){
+					if($(this).text() == ind + "x"){
+						$(this).remove();
+					}
+				});
+				cntInd--;
+			}
+        });
+    	$(".industry-win .selected span").on("click", "a", function(){
+			var tmp = $(this).text();
+    		$(this).remove();
+			$(".detail a").each(function(){
+				if($(this).text() + "x" == tmp){
+					$(this).removeAttr("check");
+					return false; 
+				}
+			});
+			
+			cntInd--;
+    	});
+    			
+    	$(".close-industry").click(function(){
+			re = new RegExp("x", "g");
+			var txt = $(".industry-win .selected span").text().replace(re, " ");
+    		$("#industry").val(txt);
+			$("#industry").attr("title",txt);
+        	hideindustry();
+        });
+	});
+</script>

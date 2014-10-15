@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<resultMap type="UserEntity" id="UserResultMap">
+	  <!---->
+		<id property="id" column="id" />
+   	  <!---->
+   	<id property="name" column="name" />
+		<id property="cardno" column="cardno" />
+   	  <!---->
+		<id property="birth" column="birth" />
+   	  <!---->
+		<id property="gender" column="gender" />
+   	  <!---->
+		<id property="domicile" column="domicile" />
+   	  <!---->
+		<id property="school" column="school" />
+   	  <!---->
+		<id property="major" column="major" />
+   	  <!---->
+		<id property="industry" column="industry" />
+   	  <!---->
+		<id property="position" column="position" />
+   	  <!---->
+		<id property="salary" column="salary" />
+   	  <!---->
+		<id property="welfare" column="welfare" />
+   	  <!---->
+		<id property="vacation" column="vacation" />
+   	  <!---->
+		<id property="freedom" column="freedom" />
+   	  <!---->
+		<id property="burden" column="burden" />
+   	  <!---->
+		<id property="development" column="development" />
+   	  <!---->
+		<id property="training" column="training" />
+   	  <!---->
+		<id property="wtrip" column="wtrip" />
+   	  <!---->
+		<id property="atmosphere" column="atmosphere" />
+   	  <!---->
+		<id property="brand" column="brand" />
+   	  <!---->
+		<id property="distance" column="distance" />
+   	  <!---->
+		<id property="lowSalary" column="lowSalary" />
+   	  <!---->
+		<id property="expectedSalary" column="expectedSalary" />
+   	  <!---->
+		<id property="stateown" column="stateown" />
+   	  <!---->
+		<id property="institution" column="institution" />
+   	  <!---->
+		<id property="administration" column="administration" />
+   	  <!---->
+		<id property="foreig" column="foreig" />
+   	  <!---->
+		<id property="privat" column="privat" />
+   	  <!---->
+		<id property="startup" column="startup" />
+   	  <!---->
+		<id property="ngo" column="ngo" />
+   	  <!---->
+		<id property="commonweal" column="commonweal" />
+		<id property="state" column="state" />
+	</resultMap>
+
+	<select id="queryUserEntityById" parameterType="int" resultMap="UserResultMap">
+	<![CDATA[
+		SELECT * from t_user t WHERE t.id = #{id}
+	]]>
+	</select>
+
+	<select id="queryUserEntityByCN" parameterType="String" resultMap="UserResultMap">
+	<![CDATA[
+		SELECT * from t_user t WHERE t.cardno = #{cn}
+	]]>
+	</select>
+
+	<insert id="insertUserEntity" parameterType="UserEntity">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+		insert into t_user
+		(
+		id
+		,name
+		,cardno
+		,birth
+		,gender
+		,domicile
+		,school
+		,major
+		,industry
+		,position
+		,salary
+		,welfare
+		,vacation
+		,freedom
+		,burden
+		,development
+		,training
+		,wtrip
+		,atmosphere
+		,brand
+		,distance
+		,lowSalary
+		,expectedSalary
+		,stateown
+		,institution
+		,administration
+		,foreig
+		,privat
+		,startup
+		,ngo
+		,commonweal
+		,state)
+		values
+		(
+		#{id}
+		,#{name}
+		,#{cardno}
+		,#{birth}
+		,#{gender}
+		,#{domicile}
+		,#{school}
+		,#{major}
+		,#{industry}
+		,#{position}
+		,#{salary}
+		,#{welfare}
+		,#{vacation}
+		,#{freedom}
+		,#{burden}
+		,#{development}
+		,#{training}
+		,#{wtrip}
+		,#{atmosphere}
+		,#{brand}
+		,#{distance}
+		,#{lowSalary}
+		,#{expectedSalary}
+		,#{stateown}
+		,#{institution}
+		,#{administration}
+		,#{foreig}
+		,#{privat}
+		,#{startup}
+		,#{ngo}
+		,#{commonweal}
+		,#{state}
+		)
+	</insert>
+	
+	<update id="updateStateById" parameterType="UserEntity">
+		update t_user set state = #{state} where id=#{id}
+	</update>
+</mapper>
+	

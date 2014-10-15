@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dimension">
+	<resultMap type="DimensionEntity" id="DimensionResultMap">
+	  <!---->
+		<id property="id" column="id" />
+   	  <!---->
+		<id property="qid" column="qid" />
+		<id property="title" column="title" />
+   	  <!---->
+		<id property="number" column="number" />
+		<id property="subtitle" column="subtitle" />
+   	  <!---->
+		<id property="choice" column="choice" />
+		<id property="answer" column="answer" />
+   	  <!---->
+		<id property="loyalty" column="loyalty" />
+   	  <!---->
+		<id property="positive" column="positive" />
+   	  <!---->
+		<id property="responsibility" column="responsibility" />
+   	  <!---->
+		<id property="morality" column="morality" />
+   	  <!---->
+		<id property="thinking" column="thinking" />
+   	  <!---->
+		<id property="plan" column="plan" />
+   	  <!---->
+		<id property="innovation" column="innovation" />
+   	  <!---->
+		<id property="teamwork" column="teamwork" />
+   	  <!---->
+		<id property="communication" column="communication" />
+   	  <!---->
+		<id property="strain" column="strain" />
+   	  <!---->
+		<id property="details" column="details" />
+   	  <!---->
+		<id property="potential" column="potential" />
+	</resultMap>
+
+	<select id="queryDimensionByQid" parameterType="DimensionEntity"
+		resultMap="DimensionResultMap">
+		SELECT * from t_dimension
+		<where>
+			<if test="qid != 0">AND qid=#{qid}</if>
+		    <if test="choice != 0">AND choice=#{choice}</if>
+		    <if test="number != 0">AND number=#{number}</if>
+	    </where> 
+	</select>
+</mapper>
+	

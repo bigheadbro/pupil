@@ -1,0 +1,159 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<div class="index-content-container">
+	<div class="main-body">
+		<div class="end-cont clearfix">
+			<img src="img/end.png"/>
+			<div class="right">
+				<h1>评测已完成</h1>
+				<h3>感谢您的参与</h3>
+			</div>
+		</div>
+		<div class="result">
+			<table border="1">
+				<tbody>
+					<tr>
+						<td width="150">
+							领域
+						</td>
+						<td width="150">
+							维度
+						</td>
+						<td colspan="2" width="300">
+							测试结果
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="4">
+							职业素养
+						</td>
+						<td>
+							忠诚敬业
+						</td>
+						<td>
+							${score.loyalty}
+						</td>
+						<td rowspan="4">
+							${score.profession}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							积极主动
+						</td>
+						<td>
+							${score.positive}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							责任心
+						</td>
+						<td>
+							${score.responsibility}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							道德感
+						</td>
+						<td>
+							${score.morality}
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="4">
+							思维能力
+						</td>
+						<td>
+							智力
+						</td>
+						<td>
+							${score.intelligence}
+						</td>
+						<td rowspan="4">
+							${score.logic}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							信息学习能力
+						</td>
+						<td>
+							${score.thinking}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							计划能力
+						</td>
+						<td>
+							${score.plan}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							创新意识
+						</td>
+						<td>
+							${score.innovation}
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="4">
+							执行能力
+						</td>
+						<td>
+							团队观念
+						</td>
+						<td>
+							${score.teamwork}
+						</td>
+						<td rowspan="4">
+							${score.executive}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							人际沟通
+						</td>
+						<td>
+							${score.loyalty}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							应变能力
+						</td>
+						<td>
+							${score.strain}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							细节执行
+						</td>
+						<td>
+							${score.details}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							可持续发展
+						</td>
+						<td>
+							成就潜力
+						</td>
+						<td>
+							${score.potential}
+						</td>
+						<td>
+							${score.potential}
+						</td>
+					</tr>
+                </tbody>
+			</table>
+		</div>
+		<div class="bottom"></div>
+	</div>
+	
+</div>

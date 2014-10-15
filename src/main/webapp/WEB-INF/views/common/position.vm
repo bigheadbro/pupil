@@ -1,0 +1,1098 @@
+<div id="pagemask-position"></div>
+<div class="position-win">
+    <div class="position-win-content">
+        <h2>
+            <a class="close-position">[确认]</a>
+				请选择职位（您最多能选择3项）
+		</h2>
+		<div class="selected clearfix">
+			<h5>已选行业：</h5><span></span>
+		</div>
+		<div class="grey">
+			<ul class="position-wrap clearfix">
+				<li class="category">
+					计算机/互联网/通信/电子：
+				</li>
+				<li class="detail">
+					<a>计算机软件</a>
+					<ul class="sub">
+						<li>高级软件工程师</li>
+						<li>软件工程师</li>
+						<li>软件UI设计师/工程师</li>
+						<li>仿真应用工程师</li>
+						<li>ERP实施顾问</li>
+						<li>ERP技术开发</li>
+						<li>需求工程师</li>
+						<li>系统集成工程师</li>
+						<li>系统分析员</li>
+						<li>系统工程师</li>
+						<li>系统架构设计师</li>
+						<li>数据库工程师/管理员</li>
+						<li>计算机辅助设计工程师</li>
+						<li>其他</li>
+					</ul>
+					<a>计算机硬件</a>
+					<ul class="sub">
+						<li>高级硬件工程师</li>
+						<li>硬件工程师</li>
+						<li>其他</li>
+					</ul>
+					<a>互联网/电子商务/网游</a>
+					<ul class="sub">
+						<li>互联网软件开发工程师</li>
+						<li>语音/视频开发工程师</li>
+						<li>多媒体/游戏开发工程师</li>
+						<li>网站营运经理/主管</li>
+						<li>网站营运专员</li>
+						<li>产品经理/主管</li>
+						<li>产品专员</li>
+						<li>电子商务经理/主管</li>
+						<li>电子商务专员</li>
+						<li>网店店长/客服</li>
+						<li>网络工程师</li>
+						<li>UI设计师/顾问</li>
+						<li>网站架构设计师</li>
+						<li>网站维护工程师</li>
+						<li>系统管理员/网络管理员</li>
+						<li>网站策划</li>
+						<li>网站编辑</li>
+						<li>网页设计/制作/美工</li>
+						<li>脚本开发工程师</li>
+						<li>游戏策划师</li>
+						<li>游戏界面设计师</li>
+						<li>Flash设计/开发</li>
+						<li>特效设计师</li>
+						<li>视觉设计师</li>
+						<li>音效设计师</li>
+						<li>SEO搜索引擎优化</li>
+						<li>网络信息安全工程师</li>
+						<li>智能大厦/综合布线</li>
+						<li>其他</li>
+					</ul>
+					<a>IT-管理</a>
+					<ul class="sub">
+						<li>首席技术执行官CTO/首席信息官</li>
+						<li>技术总监/经理</li>
+						<li>信息技术经理/主管</li>
+						<li>信息技术专员</li>
+						<li>项目总监</li>
+						<li>项目经理</li>
+						<li>项目主管</li>
+						<li>项目执行/协调人员</li>
+						<li>其他</li>
+					</ul>
+					<a>IT-品管、技术支持及其它</a>
+					<ul class="sub">
+						<li>技术支持/维护经理</li>
+						<li>技术支持/维护工程师</li>
+						<li>计量工程师</li>
+						<li>标准化工程师</li>
+						<li>品质经理</li>
+						<li>系统测试</li>
+						<li>软件测试</li>
+						<li>硬件测试</li>
+						<li>测试员</li>
+						<li>文档工程师</li>
+						<li>技术文员/助理</li>
+						<li>其他</li>
+					</ul>
+					<a>通信技术开发及应用</a>
+					<ul class="sub">
+						<li>通信技术工程师</li>
+						<li>有线传输工程师</li>
+						<li>无线通信工程师</li>
+						<li>电信交换工程师</li>
+						<li>数据通信工程师</li>
+						<li>移动通信工程师</li>
+						<li>电信网络工程师</li>
+						<li>通信电源工程师</li>
+						<li>增值产品开发工程师</li>
+						<li>手机软件开发工程师</li>
+						<li>手机应用开发工程师</li>
+						<li>其他</li>
+					</ul>
+					<a>电子/电器/半导体/仪器仪表</a>
+					<ul class="sub">
+						<li>集成电路IC设计/应用工程师</li>
+						<li>IC验证工程师</li>
+						<li>电子工程师/技术员</li>
+						<li>电子技术研发工程师</li>
+						<li>射频工程师</li>
+						<li>电子/电器维修工程师/技师</li>
+						<li>变压器与磁电工程师</li>
+						<li>版图设计工程师</li>
+						<li>电气工程师/技术员</li>
+						<li>电路工程师/技术员(模拟/数字)</li>
+						<li>电声/音响工程师/技术员</li>
+						<li>激光/光电子技术</li>
+						<li>半导体技术</li>
+						<li>自动控制工程师/技术员</li>
+						<li>电子软件开发</li>
+						<li>嵌入式软件开发</li>
+						<li>嵌入式硬件开发</li>
+						<li>电池/电源开发</li>
+						<li>现场应用工程师</li>
+						<li>工艺工程师</li>
+						<li>家用电器/数码产品研发</li>
+						<li>仪器/仪表/计量分析师</li>
+						<li>测试工程师</li>
+						<li>其他</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="position-wrap clearfix">
+				<li class="category">销售/客服/技术支持：</li>
+				<li class="detail">		
+					<a>销售管理</a>
+					<ul class="sub">
+                        <li>销售管理</li>
+                        <li>销售总监</li>
+                        <li>销售经理</li>
+                        <li>销售主管</li>
+                        <li>业务拓展主管/经理</li>
+                        <li>渠道/分销总监</li>
+                        <li>渠道/分销经理</li>
+                        <li>渠道/分销主管</li>
+                        <li>大客户经理</li>
+                        <li>客户经理/主管</li>
+                        <li>区域销售总监</li>
+                        <li>区域销售经理</li>
+                        <li>团购经理/主管</li>
+                        <li>其他</li>
+                    </ul>
+					<a>销售人员</a>
+					<ul class="sub">
+                        <li>销售人员</li>
+                        <li>销售代表</li>
+                        <li>渠道/分销专员</li>
+                        <li>客户代表</li>
+                        <li>销售工程师</li>
+                        <li>电话销售</li>
+                        <li>团购业务员</li>
+                        <li>经销商</li>
+                        <li>其他</li>
+                    </ul>
+					<a>银行</a>
+					<ul class="sub">
+                        <li>银行</li>
+                        <li>行长/副行长</li>
+                        <li>个人业务部门经理/主管</li>
+                        <li>个人业务客户经理</li>
+                        <li>公司业务部门经理/主管</li>
+                        <li>公司业务客户经理</li>
+                        <li>综合业务经理/主管</li>
+                        <li>综合业务专员</li>
+                        <li>资产评估/分析</li>
+                        <li>风险控制</li>
+                        <li>信贷管理</li>
+                        <li>信审核查</li>
+                        <li>进出口/信用证结算</li>
+                        <li>外汇交易</li>
+                        <li>清算人员</li>
+                        <li>高级客户经理/客户经理</li>
+                        <li>客户主管/专员</li>
+                        <li>营业部大堂经理</li>
+                        <li>银行柜员</li>
+                        <li>银行卡、电子银行业务推广</li>
+                        <li>其他</li>
+                    </ul>
+					<a>销售行政及商务</a>
+					<ul class="sub">
+                        <li>销售行政及商务</li>
+                        <li>销售行政经理/主管</li>
+                        <li>销售行政专员/助理</li>
+                        <li>业务分析经理/主管</li>
+                        <li>业务分析专员/助理</li>
+                        <li>商务经理</li>
+                        <li>商务主管/专员</li>
+                        <li>商务助理</li>
+                        <li>销售助理</li>
+                        <li>其他</li>
+                    </ul>
+					<a>客服及技术支持</a>
+					<ul class="sub">
+                        <li>客服及技术支持</li>
+                        <li>客服总监(非技术)</li>
+                        <li>客服经理(非技术)</li>
+                        <li>客服主管(非技术)</li>
+                        <li>客服专员/助理(非技术)</li>
+                        <li>客户关系经理/主管</li>
+                        <li>投诉专员</li>
+                        <li>售前/售后技术支持经理</li>
+                        <li>售前/售后技术支持主管</li>
+                        <li>售前/售后技术支持工程师</li>
+                        <li>咨询热线/呼叫中心服务人员</li>
+                        <li>VIP专员</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="position-wrap clearfix">
+				<li class="category">会计/金融/银行/保险：</li>
+				<li class="detail">
+					<a>财务/审计/税务</a>
+					<ul class="sub">
+                        <li>财务/审计/税务</li>
+                        <li>首席财务官 CFO</li>
+                        <li>财务总监</li>
+                        <li>财务经理</li>
+                        <li>财务顾问</li>
+                        <li>财务主管/总帐主管</li>
+                        <li>会计经理/会计主管</li>
+                        <li>会计</li>
+                        <li>出纳员</li>
+                        <li>财务/会计助理</li>
+                        <li>会计文员</li>
+                        <li>固定资产会计</li>
+                        <li>财务分析经理/主管</li>
+                        <li>财务分析员</li>
+                        <li>成本经理/成本主管</li>
+                        <li>成本管理员</li>
+                        <li>资金经理/主管</li>
+                        <li>资金专员</li>
+                        <li>审计经理/主管</li>
+                        <li>审计专员/助理</li>
+                        <li>税务经理/税务主管</li>
+                        <li>税务专员/助理</li>
+                        <li>统计员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>金融/证券/期货/投资</a>
+					<ul class="sub">
+                        <li>金融/证券/期货/投资</li>
+                        <li>证券/期货/外汇经纪人</li>
+                        <li>证券分析师</li>
+                        <li>股票/期货操盘手</li>
+                        <li>金融/经济研究员</li>
+                        <li>投资/基金项目经理</li>
+                        <li>投资/理财顾问</li>
+                        <li>投资银行业务</li>
+                        <li>融资经理/融资主管</li>
+                        <li>融资专员</li>
+                        <li>拍卖师</li>
+                        <li>其他</li>
+                    </ul>
+					<a>保险</a>
+					<ul class="sub">
+                        <li>保险</li>
+                        <li>保险精算师</li>
+                        <li>保险产品开发/项目策划</li>
+                        <li>保险业务经理/主管</li>
+                        <li>保险代理/经纪人/客户经理</li>
+                        <li>理财顾问/财务规划师</li>
+                        <li>储备经理人</li>
+                        <li>保险核保</li>
+                        <li>保险理赔</li>
+                        <li>保险客户服务/续期管理</li>
+                        <li>保险培训师</li>
+                        <li>保险内勤</li>
+                        <li>契约管理</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="position-wrap clearfix">
+				<li class="category">生产/营运/采购/物流：</li>
+				<li class="detail">
+					<a>生产/营运</a>
+					<ul class="sub">
+                        <li>生产/营运</li>
+                        <li>工厂经理/厂长</li>
+                        <li>总工程师/副总工程师</li>
+                        <li>项目总监</li>
+                        <li>项目经理/主管</li>
+                        <li>项目工程师</li>
+                        <li>营运经理</li>
+                        <li>营运主管</li>
+                        <li>生产总监</li>
+                        <li>生产经理/车间主任</li>
+                        <li>生产计划/物料管理(PMC)</li>
+                        <li>生产主管/督导/领班/组长</li>
+                        <li>生产文员</li>
+                        <li>化验员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>质量管理/安全防护</a>
+					<ul class="sub">
+                        <li>质量管理/安全防护</li>
+                        <li>质量管理/测试经理(QA/QC经理)</li>
+                        <li>质量管理/测试主管(QA/QC主管)</li>
+                        <li>质量管理/测试工程师(QA/QC工程师)</li>
+                        <li>质量检验员/测试员</li>
+                        <li>可靠度工程师</li>
+                        <li>故障分析工程师</li>
+                        <li>认证工程师/审核员</li>
+                        <li>体系工程师/审核员</li>
+                        <li>环境/健康/安全经理/主管（EHS）</li>
+                        <li>环境/健康/安全工程师（EHS）</li>
+                        <li>安全防护</li>
+                        <li>供应商管理</li>
+                        <li>采购材料、设备质量管理</li>
+                        <li>其他</li>
+                    </ul>
+					<a>工程/机械/能源</a>
+					<ul class="sub">
+						<li>工程/机械/能源</li>
+						<li>技术研发经理/主管</li>
+						<li>技术研发工程师</li>
+						<li>产品工艺/制程工程师</li>
+						<li>产品规划工程师</li>
+						<li>实验室负责人/工程师</li>
+						<li>工程/设备经理</li>
+						<li>工程/设备主管</li>
+						<li>工程/设备工程师</li>
+						<li>工程/机械绘图员</li>
+						<li>工业工程师</li>
+						<li>材料工程师</li>
+						<li>机械工程师</li>
+						<li>结构工程师</li>
+						<li>模具工程师</li>
+						<li>机电工程师</li>
+						<li>维修经理/主管</li>
+						<li>维修工程师</li>
+						<li>装配工程师/技师</li>
+						<li>铸造/锻造工程师/技师</li>
+						<li>注塑工程师/技师</li>
+						<li>焊接工程师/技师</li>
+						<li>夹具工程师/技师</li>
+						<li>CNC工程师</li>
+						<li>冲压工程师/技师</li>
+						<li>锅炉工程师/技师</li>
+						<li>电力工程师/技术员</li>
+						<li>光源与照明工程</li>
+						<li>光伏系统工程师</li>
+						<li>汽车/摩托车工程师</li>
+						<li>船舶工程师</li>
+						<li>轨道交通工程师/技术员</li>
+						<li>飞机维修机械师</li>
+						<li>飞行器设计与制造</li>
+						<li>水利/水电工程师</li>
+						<li>石油天然气技术人员</li>
+						<li>矿产勘探/地质勘测工程师</li>
+						<li>其他</li>
+    				</ul>
+					<a>汽车</a>
+					<ul class="sub">
+                        <li>汽车</li>
+                        <li>汽车机构工程师</li>
+                        <li>汽车设计工程师</li>
+                        <li>汽车电子工程师</li>
+                        <li>汽车质量管理</li>
+                        <li>汽车安全性能工程师</li>
+                        <li>汽车装配工艺工程师</li>
+                        <li>汽车修理人员</li>
+                        <li>4S店经理/维修站经理</li>
+                        <li>汽车销售/经纪人</li>
+                        <li>二手车评估师</li>
+                        <li>其他</li>
+                    </ul>
+					<a>技工</a>
+					<ul class="sub">
+                        <li>技工</li>
+                        <li>技工</li>
+                        <li>钳工/机修工/钣金工</li>
+                        <li>电焊工/铆焊工</li>
+                        <li>车工/磨工/铣工/冲压工/锣工</li>
+                        <li>切割技工</li>
+                        <li>模具工</li>
+                        <li>电工</li>
+                        <li>叉车工</li>
+                        <li>空调工/电梯工/锅炉工</li>
+                        <li>水工/木工/漆工</li>
+                        <li>普工/操作工</li>
+                        <li>裁缝印纺熨烫</li>
+                        <li>汽车修理工</li>
+                        <li>其他</li>
+                    </ul>
+					<a>服装/纺织/皮革</a>
+					<ul class="sub">
+                        <li>服装/纺织/皮革</li>
+                        <li>服装/纺织设计总监</li>
+                        <li>服装/纺织设计</li>
+                        <li>服装/纺织/皮革工艺师</li>
+                        <li>面料辅料开发</li>
+                        <li>面料辅料采购</li>
+                        <li>服装/纺织/皮革跟单</li>
+                        <li>质量管理/验货员(QA/QC)</li>
+                        <li>板房/楦头/底格出格师</li>
+                        <li>打样/制版</li>
+                        <li>电脑放码员</li>
+                        <li>纸样师/车板工</li>
+                        <li>裁床</li>
+                        <li>其他</li>
+                    </ul>
+					<a>采购</a>
+					<ul class="sub">
+                        <li>采购</li>
+                        <li>采购总监</li>
+                        <li>采购经理</li>
+                        <li>采购主管</li>
+                        <li>采购员</li>
+                        <li>采购助理</li>
+                        <li>买手</li>
+                        <li>供应商开发</li>
+                        <li>其他</li>
+                    </ul>
+					<a>贸易</a>
+					<ul class="sub">
+                        <li>贸易</li>
+                        <li>贸易/外贸经理/主管</li>
+                        <li>贸易/外贸专员/助理</li>
+                        <li>国内贸易人员</li>
+                        <li>业务跟单经理</li>
+                        <li>高级业务跟单</li>
+                        <li>业务跟单</li>
+                        <li>助理业务跟单</li>
+                        <li>其他</li>
+                    </ul>
+					<a>物流/仓储</a>
+					<ul class="sub">
+                        <li>物流/仓储</li>
+                        <li>物流总监</li>
+                        <li>物流经理</li>
+                        <li>物流主管</li>
+                        <li>物流专员/助理</li>
+                        <li>供应链总监</li>
+                        <li>供应链经理</li>
+                        <li>供应链主管/专员</li>
+                        <li>物料经理</li>
+                        <li>物料主管/专员</li>
+                        <li>仓库经理/主管</li>
+                        <li>仓库管理员</li>
+                        <li>运输经理/主管</li>
+                        <li>项目经理/主管</li>
+                        <li>货运代理</li>
+                        <li>集装箱业务</li>
+                        <li>海关事务管理</li>
+                        <li>报关员</li>
+                        <li>单证员</li>
+                        <li>船务/空运陆运操作</li>
+                        <li>快递员</li>
+                        <li>调度员</li>
+                        <li>理货员</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="position-wrap clearfix">
+				<li class="category">生物/制药/医疗/护理：</li>
+				<li class="detail">		
+					<a>生物/制药/医疗器械</a>
+					<ul class="sub">
+                        <li>生物/制药/医疗器械</li>
+                        <li>生物工程/生物制药</li>
+                        <li>化学分析测试员</li>
+                        <li>医药技术研发管理人员</li>
+                        <li>医药技术研发人员</li>
+                        <li>临床研究员</li>
+                        <li>临床协调员</li>
+                        <li>临床数据分析员</li>
+                        <li>药品注册</li>
+                        <li>药品生产/质量管理</li>
+                        <li>药品市场推广经理</li>
+                        <li>药品市场推广主管/专员</li>
+                        <li>医药招商</li>
+                        <li>政府事务管理</li>
+                        <li>招投标管理</li>
+                        <li>医药销售经理/主管</li>
+                        <li>医药销售代表</li>
+                        <li>医疗器械注册</li>
+                        <li>医疗器械研发</li>
+                        <li>医疗器械生产/质量管理</li>
+                        <li>医疗器械市场推广</li>
+                        <li>医疗器械销售</li>
+                        <li>医疗器械维修人员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>化工</a>
+					<ul class="sub">
+                        <li>化工</li>
+                        <li>化工技术应用/化工工程师</li>
+                        <li>化工实验室研究员/技术员</li>
+                        <li>涂料研发工程师</li>
+                        <li>配色技术员</li>
+                        <li>塑料工程师</li>
+                        <li>化妆品研发</li>
+                        <li>食品/饮料研发</li>
+                        <li>造纸研发</li>
+                        <li>其他</li>
+                    </ul>
+					<a>医院/医疗/护理</a>
+					<ul class="sub">
+                        <li>医院/医疗/护理</li>
+                        <li>医院管理人员</li>
+                        <li>内科医生</li>
+                        <li>外科医生</li>
+                        <li>专科医生</li>
+                        <li>牙科医生</li>
+                        <li>麻醉医生</li>
+                        <li>美容整形师</li>
+                        <li>理疗师</li>
+                        <li>中医科医生</li>
+                        <li>针灸、推拿</li>
+                        <li>儿科医生</li>
+                        <li>心理医生</li>
+                        <li>营养师</li>
+                        <li>药库主任/药剂师</li>
+                        <li>医药学检验</li>
+                        <li>公共卫生/疾病控制</li>
+                        <li>护理主任/护士长</li>
+                        <li>护士/护理人员</li>
+                        <li>兽医</li>
+                        <li>验光师</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="position-wrap clearfix">
+				<li class="category">广告/市场/媒体/艺术：</li>
+				<li class="detail">
+					<a>广告</a>
+					<ul class="sub">
+                        <li>广告</li>
+                        <li>广告客户总监/副总监</li>
+                        <li>广告客户经理</li>
+                        <li>广告客户主管/专员</li>
+                        <li>广告创意/设计经理</li>
+                        <li>广告创意总监</li>
+                        <li>广告创意/设计主管/专员</li>
+                        <li>美术指导</li>
+                        <li>文案/策划</li>
+                        <li>企业/业务发展经理</li>
+                        <li>企业策划人员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>公关/媒介</a>
+					<ul class="sub">
+                        <li>公关/媒介</li>
+                        <li>公关经理</li>
+                        <li>公关主管</li>
+                        <li>公关专员</li>
+                        <li>会务/会展经理</li>
+                        <li>会务/会展主管</li>
+                        <li>会务/会展专员</li>
+                        <li>媒介经理</li>
+                        <li>媒介主管</li>
+                        <li>媒介专员</li>
+                        <li>公关/媒介助理</li>
+                        <li>媒介销售</li>
+                        <li>活动策划</li>
+                        <li>其他</li>
+                    </ul>
+					<a>市场/营销</a>
+					<ul class="sub">
+                        <li>市场/营销</li>
+                        <li>市场/营销/拓展总监</li>
+                        <li>市场/营销/拓展经理</li>
+                        <li>市场/营销/拓展主管</li>
+                        <li>市场/营销/拓展专员</li>
+                        <li>市场助理</li>
+                        <li>市场分析/调研人员</li>
+                        <li>产品/品牌经理</li>
+                        <li>产品/品牌主管</li>
+                        <li>产品/品牌专员</li>
+                        <li>市场通路经理/主管</li>
+                        <li>市场通路专员</li>
+                        <li>市场企划经理/主管</li>
+                        <li>市场企划专员</li>
+                        <li>促销经理</li>
+                        <li>促销主管/督导</li>
+                        <li>促销员/导购</li>
+                        <li>选址拓展/新店开发</li>
+                        <li>其他</li>
+                    </ul>
+					<a>影视/媒体</a>
+					<ul class="sub">
+                        <li>影视/媒体</li>
+                        <li>影视策划/制作人员</li>
+                        <li>导演/编导</li>
+                        <li>艺术/设计总监</li>
+                        <li>经纪人/星探</li>
+                        <li>演员/模特/主持人</li>
+                        <li>摄影师/摄像师</li>
+                        <li>后期制作</li>
+                        <li>音效师</li>
+                        <li>配音员</li>
+                        <li>放映经理/主管</li>
+                        <li>放映员</li>
+                        <li>化妆师/造型师</li>
+                        <li>其他</li>
+                    </ul>
+					<a>写作/出版/印刷</a>
+					<ul class="sub">
+                        <li>写作/出版/印刷</li>
+                        <li>总编/副总编</li>
+                        <li>编辑</li>
+                        <li>作家/撰稿人</li>
+                        <li>记者</li>
+                        <li>电话采编</li>
+                        <li>美术编辑</li>
+                        <li>排版设计</li>
+                        <li>校对/录入</li>
+                        <li>出版/发行</li>
+                        <li>电分操作员</li>
+                        <li>印刷排版/制版</li>
+                        <li>数码直印/菲林输出</li>
+                        <li>打稿机操作员</li>
+                        <li>调墨技师</li>
+                        <li>印刷机械机长</li>
+                        <li>晒版/拼版/装订/烫金技工</li>
+                        <li>其他</li>
+                    </ul>
+					<a>艺术/设计</a>
+					<ul class="sub">
+                        <li>艺术/设计</li>
+                        <li>平面设计总监</li>
+                        <li>平面设计经理/主管</li>
+                        <li>平面设计师</li>
+                        <li>绘画</li>
+                        <li>动画/3D设计</li>
+                        <li>原画师</li>
+                        <li>展览/展示/店面设计</li>
+                        <li>多媒体设计</li>
+                        <li>包装设计</li>
+                        <li>工业/产品设计</li>
+                        <li>工艺品/珠宝设计鉴定</li>
+                        <li>家具/家居用品设计</li>
+                        <li>玩具设计</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="position-wrap clearfix">
+				<li class="category">建筑/房地产：</li>
+				<li class="detail">		
+						<a>建筑装潢/市政建设</a>
+						<ul class="sub">
+                            <li>建筑装潢/市政建设</li>
+                            <li>高级建筑工程师/总工</li>
+                            <li>建筑工程师</li>
+                            <li>建筑设计师</li>
+                            <li>市政工程师</li>
+                            <li>结构/土木/土建工程师</li>
+                            <li>公路/桥梁/港口/隧道工程</li>
+                            <li>岩土工程</li>
+                            <li>楼宇自动化</li>
+                            <li>建筑机电工程师</li>
+                            <li>安防工程师</li>
+                            <li>给排水/暖通工程</li>
+                            <li>幕墙工程师</li>
+                            <li>规划与设计</li>
+                            <li>室内外装潢设计</li>
+                            <li>园艺/园林/景观设计</li>
+                            <li>测绘/测量</li>
+                            <li>建筑制图</li>
+                            <li>开发报建</li>
+                            <li>工程造价师/预结算经理</li>
+                            <li>预结算员</li>
+                            <li>建筑工程管理/项目经理</li>
+                            <li>建筑工程验收</li>
+                            <li>工程监理</li>
+                            <li>合同管理</li>
+                            <li>安全员</li>
+                            <li>资料员</li>
+                            <li>施工员</li>
+                            <li>其他</li>
+                        </ul>
+					<a>房地产</a>
+					<ul class="sub">
+                        <li>房地产</li>
+                        <li>房地产项目/开发/策划经理</li>
+                        <li>房地产项目/开发/策划主管/专员</li>
+                        <li>房产项目配套工程师</li>
+                        <li>房地产项目招投标</li>
+                        <li>房地产评估</li>
+                        <li>房地产中介/交易</li>
+                        <li>房地产销售经理/主管</li>
+                        <li>房地产销售人员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>物业管理</a>
+					<ul class="sub">
+                        <li>物业管理</li>
+                        <li>高级物业顾问/物业顾问</li>
+                        <li>物业管理经理/主管</li>
+                        <li>物业管理专员/助理</li>
+                        <li>物业招商/租赁/租售</li>
+                        <li>物业设施管理人员</li>
+                        <li>物业机电工程师</li>
+                        <li>物业维修人员</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="position-wrap clearfix">
+				<li class="category">人事/行政/高级管理：</li>
+				<li class="detail">
+					<a>人力资源</a>
+    				<ul class="sub">
+                        <li>人力资源</li>
+                        <li>人事总监</li>
+                        <li>人事经理</li>
+                        <li>人事主管</li>
+                        <li>人事专员</li>
+                        <li>人事助理</li>
+                        <li>招聘经理/主管</li>
+                        <li>招聘专员/助理</li>
+                        <li>薪资福利经理/主管</li>
+                        <li>薪资福利专员/助理</li>
+                        <li>绩效考核经理/主管</li>
+                        <li>绩效考核专员/助理</li>
+                        <li>培训经理/主管</li>
+                        <li>培训专员/助理/培训师</li>
+                        <li>企业文化/员工关系/工会管理</li>
+                        <li>人力资源信息系统专员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>高级管理</a>
+					<ul class="sub">
+                        <li>高级管理</li>
+                        <li>首席执行官CEO/总裁/总经理</li>
+                        <li>首席运营官COO</li>
+                        <li>副总经理/副总裁</li>
+                        <li>合伙人</li>
+                        <li>总监/部门经理</li>
+                        <li>策略发展总监</li>
+                        <li>办事处首席代表</li>
+                        <li>办事处/分公司/分支机构经理</li>
+                        <li>总裁助理/总经理助理</li>
+                        <li>其他</li>
+                    </ul>
+					<a>行政/后勤</a>
+					<ul class="sub">
+                        <li>行政/后勤</li>
+                        <li>行政总监</li>
+                        <li>行政经理/主管/办公室主任</li>
+                        <li>行政专员/助理</li>
+                        <li>经理助理/秘书</li>
+                        <li>前台接待/总机/接待生</li>
+                        <li>后勤</li>
+                        <li>图书管理员/资料管理员</li>
+                        <li>电脑操作员/打字员</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="position-wrap clearfix">
+				<li class="category">咨询/法律/教育/科研：</li>
+				<li class="detail">
+					<a>咨询/顾问</a>
+					<ul class="sub">
+                        <li>咨询/顾问</li>
+                        <li>专业顾问</li>
+                        <li>咨询总监</li>
+                        <li>咨询经理</li>
+                        <li>专业培训师</li>
+                        <li>咨询员</li>
+                        <li>调研员</li>
+                        <li>猎头/人才中介</li>
+                        <li>情报信息分析人员</li>
+                        <li>其他</li>
+					</ul>
+					<a>律师/法务/合规</a>
+					<ul class="sub">
+                        <li>律师/法务/合规</li>
+                        <li>律师/法律顾问</li>
+                        <li>律师助理</li>
+                        <li>法务经理</li>
+                        <li>法务主管/专员</li>
+                        <li>法务助理</li>
+                        <li>合规经理</li>
+                        <li>合规主管/专员</li>
+                        <li>知识产权/专利顾问/专员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>教师</a>
+					<ul class="sub">
+                        <li>教师</li>
+                        <li>校长</li>
+                        <li>大学教授</li>
+                        <li>讲师/助教</li>
+                        <li>中学教师</li>
+                        <li>小学教师</li>
+                        <li>幼教</li>
+                        <li>院校教务管理人员</li>
+                        <li>兼职教师</li>
+                        <li>家教</li>
+                        <li>音乐/美术教师</li>
+                        <li>职业技术教师</li>
+                        <li>其他</li>
+                    </ul>
+					<a>培训</a>
+					<ul class="sub">
+                        <li>培训</li>
+                        <li>培训督导</li>
+                        <li>培训讲师</li>
+                        <li>培训策划</li>
+                        <li>培训产品开发</li>
+                        <li>培训/课程顾问</li>
+                        <li>培训助理</li>
+                        <li>其他</li>
+                    </ul>
+					<a>科研人员</a>
+					<ul class="sub">
+                        <li>科研人员</li>
+                        <li>科研管理人员</li>
+                        <li>科研人员</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="position-wrap clearfix">
+				<li class="category">服务业：</li>
+				<li class="detail">		
+					<a>餐饮/娱乐</a>
+					<ul class="sub">
+                        <li>餐饮/娱乐</li>
+                        <li>餐饮/娱乐管理</li>
+                        <li>餐饮/娱乐领班/部长</li>
+                        <li>餐饮/娱乐服务员</li>
+                        <li>传菜主管/传菜员</li>
+                        <li>礼仪/迎宾</li>
+                        <li>司仪</li>
+                        <li>行政主厨/厨师长</li>
+                        <li>厨师/面点师</li>
+                        <li>厨师助理/学徒</li>
+                        <li>调酒师/侍酒师/吧台员</li>
+                        <li>茶艺师</li>
+                        <li>其他</li>
+                    </ul>
+					<a>酒店/旅游</a>
+					<ul class="sub">
+                        <li>酒店/旅游</li>
+                        <li>酒店/宾馆经理</li>
+                        <li>酒店/宾馆营销</li>
+                        <li>宴会管理</li>
+                        <li>大堂经理</li>
+                        <li>宾客服务经理</li>
+                        <li>楼面经理</li>
+                        <li>前厅接待</li>
+                        <li>预定部主管</li>
+                        <li>预定员</li>
+                        <li>客房服务员/楼面服务员</li>
+                        <li>机场代表</li>
+                        <li>行李员</li>
+                        <li>管家部经理/主管</li>
+                        <li>清洁服务人员</li>
+                        <li>健身房服务</li>
+                        <li>旅游产品销售</li>
+                        <li>导游/旅行顾问</li>
+                        <li>行程管理/操作</li>
+                        <li>票务/订房服务</li>
+                        <li>签证专员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>美容/健身/体育</a>
+					<ul class="sub">
+                        <li>美容/健身/体育</li>
+                        <li>美容顾问/化妆</li>
+                        <li>彩妆培训师</li>
+                        <li>专柜彩妆顾问(BA)</li>
+                        <li>美容助理/见席美容师</li>
+                        <li>瘦身顾问</li>
+                        <li>发型师</li>
+                        <li>发型助理/学徒</li>
+                        <li>美甲师</li>
+                        <li>按摩/足疗</li>
+                        <li>健身顾问/教练</li>
+                        <li>体育运动教练</li>
+                        <li>救生员</li>
+                        <li>瑜伽/舞蹈老师</li>
+                        <li>宠物护理/美容</li>
+                        <li>其他</li>
+                    </ul>
+					<a>百货/连锁/零售服务</a>
+					<ul class="sub">
+                        <li>百货/连锁/零售服务</li>
+                        <li>店长/卖场经理/楼面管理</li>
+                        <li>品类经理</li>
+                        <li>店员/营业员</li>
+                        <li>安防主管</li>
+                        <li>防损员/内保</li>
+                        <li>收银主管/收银员</li>
+                        <li>理货员/陈列员/收货员</li>
+                        <li>导购员</li>
+                        <li>西点师/面包糕点加工</li>
+                        <li>生鲜食品加工/处理</li>
+                        <li>熟食加工</li>
+                        <li>兼职店员</li>
+                        <li>其他</li>
+                    </ul>
+					<a>交通运输服务</a>
+					<ul class="sub">
+                        <li>交通运输服务</li>
+                        <li>飞机机长/副机长</li>
+                        <li>空乘人员</li>
+                        <li>地勤人员</li>
+                        <li>列车/地铁车长</li>
+                        <li>列车/地铁司机</li>
+                        <li>船长/副船长</li>
+                        <li>船员</li>
+                        <li>乘务员</li>
+                        <li>司机</li>
+                        <li>其他</li>
+                    </ul>
+					<a>保安/家政/其他服务</a>
+					<ul class="sub">
+                        <li>保安/家政/其他服务</li>
+                        <li>保安经理</li>
+                        <li>保安人员</li>
+                        <li>保镖</li>
+                        <li>寻呼员/话务员</li>
+                        <li>搬运工</li>
+                        <li>清洁工</li>
+                        <li>家政服务/保姆</li>
+                        <li>其他</li>
+                    </ul>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="position-wrap clearfix">
+				<li class="category">公务员/翻译/其他：</li>
+				<li class="detail">		
+					<a>公务员</a>
+					<ul class="sub">
+                        <li>公务员</li>
+                    </ul>
+					<a>翻译</a>
+					<ul class="sub">
+                        <li>翻译</li>
+                        <li>英语翻译</li>
+                        <li>日语翻译</li>
+                        <li>德语翻译</li>
+                        <li>法语翻译</li>
+                        <li>俄语翻译</li>
+                        <li>意大利语翻译</li>
+                        <li>西班牙语翻译</li>
+                        <li>葡萄牙语翻译</li>
+                        <li>阿拉伯语翻译</li>
+                        <li>韩语/朝鲜语翻译</li>
+                        <li>泰语翻译</li>
+                        <li>中国方言翻译</li>
+                        <li>其他语种翻译</li>
+                    </ul>
+					<a>在校学生</a>
+					<ul class="sub">
+                        <li>在校学生</li>
+                        <li>研究生</li>
+                        <li>大学/大专应届毕业生</li>
+                        <li>中专/职校生</li>
+                        <li>其他</li>
+                    </ul>
+					<a>储备干部/培训生/实习生</a>
+					<ul class="sub">
+                        <li>储备干部/培训生/实习生</li>
+                        <li>储备干部</li>
+                        <li>培训生</li>
+                        <li>实习生</li>
+                    </ul>
+					<a>兼职</a>
+					<ul class="sub">
+						<li>兼职</li>
+					</ul>
+					<a>其他</a>
+					<ul class="sub">
+						<li>驯兽师/助理驯兽师</li>
+                        <li>志愿者</li>
+                        <li>其他</li>
+					</ul>
+					<a>环保</a>
+					<ul class="sub">
+                        <li>环保</li>
+                        <li>环保工程师</li>
+                        <li>环境影响评价工程师</li>
+                        <li>环保检测</li>
+                        <li>水质检测员</li>
+                        <li>水处理工程师</li>
+                        <li>固废工程师</li>
+                        <li>其它</li>
+                    </ul>
+					<a>农/林/牧/渔</a>
+					<ul class="sub">
+                        <li>农/林/牧/渔</li>
+                        <li>养殖部主管</li>
+                        <li>场长(农/林/牧/渔业)</li>
+                        <li>农艺师</li>
+                        <li>畜牧师</li>
+                        <li>饲养员</li>
+                        <li>动物营养/饲料研发</li>
+                        <li>其他</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>
+<script>
+	var cntPos = 0;
+	$(function(){
+		$(".position-win .detail a").click(function(event){
+			$(this).next(".sub").css("left",event.pageX -$(".position-win").offset().left);
+			$(this).next(".sub").show();
+    	});
+		$(".position-win .detail ul.sub li").click(function(){
+			var position = $(this).text();
+			if($(this).attr("check") == undefined){
+				$(this).attr("check", 1);
+				if(cntPos == 3)
+        		{
+        			alert("最多选择3个职位");
+        			last;
+        		}
+    			$(".position-win .selected span").append("<a>" + $(this).text() + "<em>x</em></a>");
+        		cntPos++;
+			}else{
+				$(this).removeAttr("check");
+				$(".selected span a").each(function(){
+					if($(this).text() == position + "x"){
+						$(this).remove();
+					}
+				});
+				cntPos--;
+			}
+			
+		});
+		$(".position-win .detail ul.sub").mouseenter(function(){
+			$(this).show();
+		}).mouseleave(function(){
+			$(this).hide();
+		});
+		$(".position-win .selected span").on("click", "a", function(){
+			var tmp = $(this).text();
+  			$(this).remove();
+			$(".sub li").each(function(){
+				if($(this).text() + "x" == tmp){
+					$(this).removeAttr("check");
+					return false; 
+				}
+			});
+  			cntPos--;
+  		});
+			
+  		$(".close-position").click(function(){
+			re = new RegExp("x", "g");
+			var txt = $(".position-win .selected span").text().replace(re, " ");
+  			$("#position").val(txt);
+			$("#position").attr("title",txt);
+      		hideposition();
+      	});
+	});
+</script>

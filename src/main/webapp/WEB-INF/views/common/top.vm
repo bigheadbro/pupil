@@ -1,0 +1,8 @@
+<div class="main-top-container">
+    <div class="main-top clearfix">
+		<h4>思来氏职业素养测评</h4>
+		#if($account)
+			<h5>${account.userName}，${account.school}</h5>
+		#end
+    </div>
+</div>

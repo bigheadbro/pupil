@@ -1,0 +1,138 @@
+<div id="pagemask-q15b"></div>
+<div class="q15-win" id="q15b">
+    <div class="q15-win-content">
+		<h2>
+            <a class="close-q15 close-15b">x</a>
+				选项B的信息
+		</h2>
+		<div class="q15-win-body">
+			<h1>D、E、F景点信息如下：</h1>
+			<p>D景点，蓝底为已经有安排的日期</p>
+			<div class="scene">
+				<ul class="head clearfix">
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+					<li>周日</li>
+				</ul>
+				<ul class="content clearfix">
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li><em>1</em><em>租金：20万</em></li>
+					<li><em>2</em><em>租金：20万</em></li>
+					<li class="unavail">3</li>
+					<li class="unavail">4</li>
+					<li class="unavail">5</li>
+				</ul>
+				<ul class="content clearfix">
+					<li class="unavail">6</li>
+					<li><em>7</em><em>租金：25万</em></li>
+					<li><em>8</em><em>租金：25万</em></li>
+					<li><em>9</em><em>租金：25万</em></li>
+					<li class="unavail">10</li>
+					<li class="unavail">11</li>
+					<li class="unavail">12</li>
+				</ul>
+				<ul class="content clearfix">
+					<li><em>13</em><em>租金：40万</em></li>
+					<li class="unavail">14</li>
+					<li class="unavail">15</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<p>E景点，蓝底为已经有安排的日期</p>
+			<div class="scene">
+				<ul class="head clearfix">
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+					<li>周日</li>
+				</ul>
+				<ul class="content clearfix">
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li class="unavail">1</li>
+					<li class="unavail">2</li>
+					<li class="unavail">3</li>
+					<li class="unavail">4</li>
+					<li class="unavail">5</li>
+				</ul>
+				<ul class="content clearfix">
+					<li><em>6</em><em>租金：15万</em></li>
+					<li><em>7</em><em>租金：20万</em></li>
+					<li class="unavail">8</li>
+					<li class="unavail">9</li>
+					<li><em>10</em><em>租金：12万</em></li>
+					<li><em>11</em><em>租金：25万</em></li>
+					<li><em>12</em><em>租金：25万</em></li>
+				</ul>
+				<ul class="content clearfix">
+					<li class="unavail">13</li>
+					<li class="unavail">14</li>
+					<li class="unavail">15</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<p>F景点，蓝底为已经有安排的日期<br/>此场地属于C小姐所在的演艺公司，所以C小姐来此地拍摄的话，场地价格将7折优惠</p>
+			<div class="scene">
+				<ul class="head clearfix">
+					<li>周一</li>
+					<li>周二</li>
+					<li>周三</li>
+					<li>周四</li>
+					<li>周五</li>
+					<li>周六</li>
+					<li>周日</li>
+				</ul>
+				<ul class="content clearfix">
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li><em>1</em></li>
+					<li><em>2</em></li>
+					<li class="unavail">3</li>
+					<li class="unavail">4</li>
+					<li class="unavail">5</li>
+				</ul>
+				<ul class="content clearfix">
+					<li class="unavail">6</li>
+					<li class="unavail">7</li>
+					<li><em>8</em><em>租金：16万</em></li>
+					<li><em>9</em><em>租金：16万</em></li>
+					<li class="unavail">10</li>
+					<li class="unavail">11</li>
+					<li class="unavail">12</li>
+				</ul>
+				<ul class="content clearfix">
+					<li><em>13</em><em>租金：12万</em></li>
+					<li><em>14</em><em>租金：12万</em></li>
+					<li><em>15</em><em>租金：12万</em></li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+					<li>&nbsp;</li>
+				</ul>
+			</div>
+			<div class="op"><a class="close-15b">返回继续答题</a></div>
+		</div>
+    </div>
+</div>
+<script>
+$(function(){
+	$(".close-15b").click(function(){
+		$("#q15b").hide();
+		$("#pagemask-q15b").hide();
+	});
+});
+</script>

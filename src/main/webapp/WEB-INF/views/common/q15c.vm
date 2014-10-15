@@ -1,0 +1,21 @@
+<div id="pagemask-q15c"></div>
+<div class="q15-win" id="q15c">
+    <div class="q15-win-content">
+		<h2>
+            <a class="close-q15 close-15c">x</a>
+				选项C的信息
+		</h2>
+		<div class="q15-win-body">
+			<h1>副总裁有空的时间为8，9两天</h1>
+			<div class="op"><a class="close-15c">返回继续答题</a></div>
+		</div>
+    </div>
+</div>
+<script>
+$(function(){
+	$(".close-15c").click(function(){
+		$("#q15c").hide();
+		$("#pagemask-q15c").hide();
+	});
+});
+</script>

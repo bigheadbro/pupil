@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+	  <typeAlias alias="UserEntity" type="com.pupil.entity.UserEntity" />
+		<typeAlias alias="QuestionEntity" type="com.pupil.entity.QuestionEntity" />
+		<typeAlias alias="DimensionEntity" type="com.pupil.entity.DimensionEntity" />
+		<typeAlias alias="ScoreEntity" type="com.pupil.entity.ScoreEntity" />
+	</typeAliases>
+
+	<mappers>
+	</mappers>
+</configuration>    

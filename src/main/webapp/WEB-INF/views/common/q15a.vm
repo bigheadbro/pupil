@@ -1,0 +1,51 @@
+<link rel="stylesheet" type="text/css" href="css/mp3-player-button.css" />
+<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="js/mp3-player-button.js"></script>
+<div id="pagemask-q15a"></div>
+<div class="q15-win" id="q15a">
+    <div class="q15-win-content">
+		<h2>
+            <a class="close-q15 close-15a">x</a>
+				选项A的信息
+		</h2>
+		<div class="q15-win-body">
+			<h1>你分别打给了A，B，C三个明星的经纪人，得到的回复是：</h1>
+			#if($!util.isMale($account.getGender()))
+				<div class="audio">
+					和A明星经纪人的电话，点击播放录音<a href="resource/a_male.mp3" class="sm2_button">A明星经纪人</a>
+				</div>
+				<div class="audio">
+					和B明星经纪人的电话，点击播放录音<a href="resource/b_male.mp3" class="sm2_button">B明星经纪人</a>
+				</div>
+				<div class="audio">
+					和C明星经纪人的电话，点击播放录音<a href="resource/c_male.mp3" class="sm2_button">C明星经纪人</a>
+				</div>
+			#else
+				<div class="audio">
+					和A明星经纪人的电话，点击播放录音<a href="resource/a_female.mp3" class="sm2_button">A明星经纪人</a>
+				</div>
+				<div class="audio">
+					和B明星经纪人的电话，点击播放录音<a href="resource/b_female.mp3" class="sm2_button">B明星经纪人</a>
+				</div>
+				<div class="audio">
+					和C明星经纪人的电话，点击播放录音<a href="resource/c_female.mp3" class="sm2_button">C明星经纪人</a>
+				</div>
+			#end
+			<div class="op"><a class="close-15a">返回继续答题</a></div>
+		</div>
+    </div>
+</div>
+<script>
+$(function(){
+	$(".close-15a").click(function(){
+		$("#q15a").hide();
+		$("#pagemask-q15a").hide();
+	});
+	$(".op").click(function(){
+		soundManager.pauseAll();
+	});
+	$(".close-q15").click(function(){
+		soundManager.pauseAll();
+	});
+});
+</script>

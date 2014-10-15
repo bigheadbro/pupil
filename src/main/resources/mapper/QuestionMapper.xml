@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="question">
+	<resultMap type="QuestionEntity" id="QuestionResultMap">
+	  <!---->
+		<id property="id" column="id" />
+   	  <!---->
+		<id property="userId" column="user_id" />
+   	  <!---->
+		<id property="qid" column="qid" />
+   	  <!---->
+		<id property="number" column="number" />
+   	  <!---->
+		<id property="choice" column="choice" />
+   	  <!---->
+		<id property="time" column="time" />
+   	  <!---->
+		<id property="loyalty" column="loyalty" />
+   	  <!---->
+		<id property="positive" column="positive" />
+   	  <!---->
+		<id property="responsibility" column="responsibility" />
+   	  <!---->
+		<id property="morality" column="morality" />
+   	  <!---->
+   	  	<id property="intelligence" column="intelligence" />
+		<id property="thinking" column="thinking" />
+   	  <!---->
+		<id property="plan" column="plan" />
+   	  <!---->
+		<id property="innovation" column="innovation" />
+   	  <!---->
+		<id property="teamwork" column="teamwork" />
+   	  <!---->
+		<id property="communication" column="communication" />
+   	  <!---->
+		<id property="strain" column="strain" />
+   	  <!---->
+		<id property="details" column="details" />
+   	  <!---->
+		<id property="potential" column="potential" />
+	</resultMap>
+
+	<insert id="insertQuestionEntity" parameterType="QuestionEntity">
+		
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey> 
+		insert into t_question
+		(
+		id
+		,user_id
+		,qid
+		,number
+		,choice
+		,time
+		,loyalty
+		,positive
+		,responsibility
+		,morality
+		,intelligence
+		,thinking
+		,plan
+		,innovation
+		,teamwork
+		,communication
+		,strain
+		,details
+		,potential)
+		values
+		(
+		#{id}
+		,#{userId}
+		,#{qid}
+		,#{number}
+		,#{choice}
+		,#{time}
+		,#{loyalty}
+		,#{positive}
+		,#{responsibility}
+		,#{morality}
+		,#{intelligence}
+		,#{thinking}
+		,#{plan}
+		,#{innovation}
+		,#{teamwork}
+		,#{communication}
+		,#{strain}
+		,#{details}
+		,#{potential}
+		)
+	</insert>
+	
+	<insert id="insertQuestionList" parameterType="java.util.List">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+		insert into t_question
+		(
+		user_id
+		,qid
+		,number
+		,choice
+		,time
+		,loyalty
+		,positive
+		,responsibility
+		,morality
+		,intelligence
+		,thinking
+		,plan
+		,innovation
+		,teamwork
+		,communication
+		,strain
+		,details
+		,potential)
+		values
+		<foreach collection="list" item="item" index="index" separator="," >  
+		(
+		#{item.userId}
+		,#{item.qid}
+		,#{item.number}
+		,#{item.choice}
+		,#{item.time}
+		,#{item.loyalty}
+		,#{item.positive}
+		,#{item.responsibility}
+		,#{item.morality}
+		,#{item.intelligence}
+		,#{item.thinking}
+		,#{item.plan}
+		,#{item.innovation}
+		,#{item.teamwork}
+		,#{item.communication}
+		,#{item.strain}
+		,#{item.details}
+		,#{item.potential}
+		)
+		</foreach>  
+	</insert>
+</mapper>
+	

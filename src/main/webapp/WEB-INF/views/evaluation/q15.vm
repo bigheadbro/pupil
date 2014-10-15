@@ -1,0 +1,288 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+	$("#form_q").validate({
+			rules:{
+    			"choice2":{
+    					required:true
+    				},
+    			"choice3":{
+    				required:true
+    			},
+    			"choice4":{
+    				required:true
+    			}
+			},
+			messages:{
+				"choice2":{
+					required:"请选择答案"
+				},
+				"choice3":{
+					required:"请选择答案"
+				},
+				"choice4":{
+					required:"请选择答案"
+				}
+			},
+			errorElement:"em"
+	});
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="test-wrap">
+			<div class="test clearfix">
+    			<ul>
+    				<li class="done"><em><span>●</span>1</em></li>
+    				<li class="done"><em><span>●</span>2</em></li>
+    				<li class="done"><em><span>●</span>3</em></li>
+    				<li class="done"><em><span>●</span>4</em></li>
+    				<li class="done"><em><span>●</span>5</em></li>
+    				<li class="done"><em><span>●</span>6</em></li>
+    				<li class="done"><em><span>●</span>7</em></li>
+    				<li class="done"><em><span>●</span>8</em></li>
+    				<li class="done"><em><span>●</span>9</em></li>
+    				<li class="done"><em><span>●</span>10</em></li>
+    				<li class="done"><em><span>●</span>11</em></li>
+    				<li class="done"><em><span>●</span>12</em></li>
+    				<li class="done"><em><span>●</span>13</em></li>
+    				<li class="done"><em><span>●</span>14</em></li>
+    				<li class="done"><em><span>●</span>15</em></li>
+						<li class="done"><em><span>●</span>16</em></li>
+    				<li class="done"><em><span>●</span>17</em></li>
+    				<li class="done"><em><span>●</span>18</em></li>
+    				<li class="done"><em><span>●</span>19</em></li>
+    				<li class="done"><em><span>●</span>20</em></li>
+    				<li class="done"><em><span>●</span>21</em></li>
+    				<li><em><span>●</span>22</em></li>
+    				<li><em><span>●</span>23</em></li>
+    			</ul>
+    			<div class="time-cost clearfix">
+    				<ul>
+    					<li class="pic"><img src="img/time.png" /></li>
+    					<li><h4 id="showtime">00:00</h4></li>
+    				</ul>
+    			</div>
+			</div>
+		</div>
+		<form id="form_q" method="post" >
+		<input type="hidden" name="do_submit" value="true"/>
+		#springBind("form.questionid")
+		<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+		#springBind("form.choice")
+		<input type="hidden" name="${status.expression}" value="0" id="choice"/>
+		#springBind("form.time")
+		<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
+		<div class="question">
+			<div class="q-head clearfix">
+				<h1 class="number">22.</h1>
+				<h1 class="title"><img src="img/15.png" /><br/>
+					<br/>
+					这时，你首先会：【A、B、C分别只能点一次】</h1>
+			</div>
+			<ul>
+				<li>
+					<input type="radio" name="choicea" id="answer1">
+					<label for="answer1">A、联系明星</label>
+				</li>
+				<li>
+					<input type="radio" name="choiceb" id="answer2">
+					<label for="answer2">B、联系景点</label>
+				</li>
+				<li>
+					<input type="radio" name="choicec" id="answer3">
+					<label for="answer3">C、联系副总裁</label>
+				</li>
+				<li>
+					<input type="radio" name="choiced" id="answer4">
+					<label for="answer4">D、已决定</label>
+				</li>
+			</ul>
+		</div>
+		<div class="question subquestion">
+			<div class="q-head clearfix">
+				<h1 class="number">&nbsp;</h1>
+				<h1 class="title">
+					决定某代言人
+					#springBind("form.choice2")
+					<input type="hidden" value=0  name="${status.expression}" id="q2" />
+				</h1>
+			</div>
+			
+			<ul class="mt10">
+				<li>
+					<input type="radio" name="q2" id="a1" order="1">
+					<label for="a1">A代言人</label>
+				</li>
+				<li>
+					<input type="radio" name="q2" id="a2" order="2">
+					<label for="a2">B代言人</label>
+				</li>
+				<li>
+					<input type="radio" name="q2" id="a3" order="3">
+					<label for="a3">C代言人</label>
+				</li>
+			</ul>
+		</div>
+		<div class="question subquestion">
+			<div class="q-head clearfix">
+				<h1 class="number">&nbsp;</h1>
+				<h1 class="title">
+					决定日期
+					#springBind("form.choice3")
+					<input type="hidden" value=0 name="${status.expression}" id="q3" />
+				</h1>
+			</div>
+			
+			<ul class="mt10">
+				<li>
+					<input type="radio" name="q3" id="b1" order="1">
+					<label for="b1">5号</label>
+				</li>
+				<li>
+					<input type="radio" name="q3" id="b2" order="2">
+					<label for="b2">6号</label>
+				</li>
+				<li>
+					<input type="radio" name="q3" id="b3" order="3">
+					<label for="b3">7号</label>
+				</li>
+				<li>
+					<input type="radio" name="q3" id="b4" order="4">
+					<label for="b4">8号</label>
+				</li>
+				<li>
+					<input type="radio" name="q3" id="b5" order="5">
+					<label for="b5">9号</label>
+				</li>
+				<li>
+					<input type="radio" name="q3" id="b6" order="6">
+					<label for="b6">10号</label>
+				</li>
+				<li>
+					<input type="radio" name="q3" id="b7" order="7">
+					<label for="b7">11号</label>
+				</li>
+			</ul>
+		</div>
+		<div class="question subquestion">
+			<div class="q-head clearfix">
+				<h1 class="number">&nbsp;</h1>
+				<h1 class="title">
+					决定景点
+					#springBind("form.choice4")
+					<input type="hidden" value=0  name="${status.expression}" id="q4" />
+				</h1>
+			</div>
+			<ul class="mt10">
+				<li>
+					<input type="radio" name="q4" id="c1" order="1">
+					<label for="c1">D景点</label>
+				</li>
+				<li>
+					<input type="radio" name="q4" id="c2" order="2">
+					<label for="c2">E景点</label>
+				</li>
+				<li>
+					<input type="radio" name="q4" id="c3" order="3">
+					<label for="c3">F景点</label>
+				</li>
+			</ul>
+		</div>
+		</form>
+		<div class="operation clearfix">
+			<a class="next">下一题</a>
+		</div>
+	</div>
+</div>
+#parse("/common/q15a.vm")
+#parse("/common/q15b.vm")
+#parse("/common/q15c.vm")
+<script>
+function hidea() {
+	$("#q15a").hide();
+	$("#pagemask-q15a").hide();
+}
+function showa() {
+	$("#pagemask-q15a").css("width", $(document).width());
+	$("#pagemask-q15a").css("height", $(document).height());
+	$("#pagemask-q15a").show();
+	$("#q15a").css("top",
+			$(window).height() / 2 + $(document).scrollTop() - 220);
+	$("#q15a").css("left", $(document).width() / 2 - 300);
+	$("#q15a").show();
+}
+function hideb() {
+	$("#q15b").hide();
+	$("#pagemask-q15b").hide();
+}
+function showb() {
+	$("#pagemask-q15b").css("width", $(document).width());
+	$("#pagemask-q15b").css("height", $(document).height());
+	$("#pagemask-q15b").show();
+	$("#q15b").css("top",
+			$(window).height() / 2 + $(document).scrollTop() - 220);
+	$("#q15b").css("left", $(document).width() / 2 - 300);
+	$("#q15b").show();
+}
+function hidec() {
+	$("#q15c").hide();
+	$("#pagemask-q15c").hide();
+}
+function showc() {
+	$("#pagemask-q15c").css("width", $(document).width());
+	$("#pagemask-q15c").css("height", $(document).height());
+	$("#pagemask-q15c").show();
+	$("#q15c").css("top",
+			$(window).height() / 2 + $(document).scrollTop() - 220);
+	$("#q15c").css("left", $(document).width() / 2 - 300);
+	$("#q15c").show();
+}
+$(document).ready(function(){
+	$('input').on('ifChecked', function(event){
+		$("#"+$(this).attr("name")).val($(this).attr("order"));
+    });
+    $('#answer1').on('ifChecked', function(event){
+     	$('#answer1').iCheck('disable');
+		$('#answer4').iCheck('disable');
+		if($("#choice").val() == 0)
+			$("#choice").val(1);
+		showa();
+		if($('#answer3').is(':checked') && $('#answer2').is(':checked'))
+			$(".subquestion").show();
+    });
+	$('#answer2').on('ifChecked', function(event){
+     	$('#answer2').iCheck('disable');
+		$('#answer4').iCheck('disable');
+		if($("#choice").val() == 0)
+			$("#choice").val(2);
+		showb();
+		if($('#answer1').is(':checked') && $('#answer3').is(':checked'))
+			$(".subquestion").show();
+    });
+	$('#answer3').on('ifChecked', function(event){
+     	$('#answer3').iCheck('disable');
+		$('#answer4').iCheck('disable'); 
+		if($("#choice").val() == 0)
+			$("#choice").val(3);
+		showc();
+		if($('#answer1').is(':checked') && $('#answer2').is(':checked'))
+			$(".subquestion").show();
+    });
+	$('#answer4').on('ifChecked', function(event){
+		$('#answer4').iCheck('disable');
+		$("#time").val(s);
+		$("#choice").val(4);
+		$("#form_q").submit();
+    });
+	$(".next").click(function(){
+		$("#time").val(s);
+		$("#form_q").submit();
+	});
+});
+</script>

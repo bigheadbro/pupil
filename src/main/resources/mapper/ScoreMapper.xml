@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="score">
+	<resultMap type="ScoreEntity" id="ScoreResultMap">
+		<id property="userid" column="userid" />
+		<id property="name" column="学生姓名" />
+		<id property="school" column="学校" />
+		<id property="loyalty" column="忠诚敬业" />
+		<id property="positive" column="积极主动" />
+   	  <!---->
+		<id property="responsibility" column="责任心" />
+   	  <!---->
+		<id property="morality" column="道德感" />
+		<id property="profession" column="职业素养" />
+   	  <!---->
+		<id property="thinking" column="信息学习能力" />
+   	  <!---->
+		<id property="plan" column="计划能力" />
+   	  <!---->
+		<id property="innovation" column="创新意识" />
+		<id property="logic" column="思维能力" />
+   	  <!---->
+		<id property="teamwork" column="团队观念" />
+   	  <!---->
+		<id property="communication" column="人际沟通" />
+   	  <!---->
+		<id property="strain" column="应变能力" />
+   	  <!---->
+		<id property="details" column="细节执行" />
+		
+		<id property="executive" column="执行能力" />
+   	  <!---->
+		<id property="potential" column="成就潜力" />
+		<id property="intelligence" column="智力" />
+	</resultMap>
+
+	<select id="queryScoreByUserid" parameterType="int"
+		resultMap="ScoreResultMap">
+		SELECT * from score where userid = #{userid}
+	</select>
+</mapper>
+	

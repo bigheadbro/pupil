@@ -1,0 +1,88 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+	$('input').on('ifChecked', function(event){
+		$("#choice").val($(this).attr("id"));
+     	$('input').iCheck('disable');
+		$("#time").val(s);
+		$("#form_q").submit();
+    });
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="test-wrap">
+			<div class="test clearfix">
+    			<ul>
+    				<li class="done"><em><span>●</span>1</em></li>
+    				<li class="done"><em><span>●</span>2</em></li>
+    				<li class="done"><em><span>●</span>3</em></li>
+    				<li class="done"><em><span>●</span>4</em></li>
+    				<li class="done"><em><span>●</span>5</em></li>
+    				<li class="done"><em><span>●</span>6</em></li>
+    				<li class="done"><em><span>●</span>7</em></li>
+    				<li class="done"><em><span>●</span>8</em></li>
+    				<li class="done"><em><span>●</span>9</em></li>
+    				<li class="done"><em><span>●</span>10</em></li>
+    				<li class="done"><em><span>●</span>11</em></li>
+    				<li class="done"><em><span>●</span>12</em></li>
+    				<li class="done"><em><span>●</span>13</em></li>
+					<li class="done"><em><span>●</span>14</em></li>
+    				<li class="done"><em><span>●</span>15</em></li>
+					<li class="done"><em><span>●</span>16</em></li>
+    				<li class="done"><em><span>●</span>17</em></li>
+    				<li class="done"><em><span>●</span>18</em></li>
+    				<li class="done"><em><span>●</span>19</em></li>
+    				<li class="done"><em><span>●</span>20</em></li>
+    				<li><em><span>●</span>21</em></li>
+    				<li><em><span>●</span>22</em></li>
+    				<li><em><span>●</span>23</em></li>
+    			</ul>
+    			<div class="time-cost clearfix">
+    				<ul>
+    					<li class="pic"><img src="img/time.png" /></li>
+    					<li><h4 id="showtime">00:00</h4></li>
+    				</ul>
+    			</div>
+			</div>
+		</div>
+		<form id="form_q" method="post" >
+		<input type="hidden" name="do_submit" value="true"/>
+		#springBind("form.questionid")
+		<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+		#springBind("form.choice")
+		<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+		#springBind("form.time")
+		<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
+		<div class="question">
+			<div class="q-head clearfix">
+				<h1 class="number">21.1</h1>
+				<h1 class="title">你看到了实际的场地，位置非常理想，人流比你现在的展位要大得多。你判断这确实是一个更好的布展位置。而且你发现来考察场地的其他公司代表非常多。这时，你会</h1>
+			</div>
+			<ul>
+				<li show="subqa1">
+					<input type="radio" name="q2" id="0">
+					<label for="0">A-1：向在国内的领导请示</label>
+				</li>
+				<li show="subqa2">
+					<input type="radio" name="q2" id="1">
+					<label for="1">A-2：询问工作人员具体费用情况</label>
+				</li>
+				<li choice="2">
+					<input type="radio" name="q2" id="2">
+					<label for="2">A-3：与同行同事商量表决是否同意</label>
+				</li>
+				<li choice="3">
+					<input type="radio" name="q2" id="3">
+					<label for="3">A-4：直接预定该场地</label>
+				</li>
+			</ul>
+		</div>
+		</form>
+	</div>
+</div>

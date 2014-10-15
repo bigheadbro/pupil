@@ -1,0 +1,770 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+	$( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+	  monthNamesShort: ['一月','二月','三月','四月','五月','六月',
+		'七月','八月','九月','十月','十一月','十二月'],
+	dayNamesMin: ['周日','周一','周二','周三','周四','周五','周六'],
+	  dateFormat: "yy-mm-dd",
+	  defaultDate: "-22y"
+    });
+	$('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+		$("#form_profile").validate({
+				ignore: [],
+				rules:{
+					"user.gender":{
+						required:true
+					},
+					"user.domicile":{
+						required:true
+					},
+					"user.birth":{
+						required:true
+					},
+					"user.major":{
+						required:true
+					},
+					"user.industry":{
+						required:true
+					},
+					"user.position":{
+						required:true
+					},
+					"user.salary":{
+						required:true
+					},
+					"user.welfare":{
+						required:true
+					},
+					"user.vacation":{
+						required:true
+					},
+					"user.freedom":{
+						required:true
+					},
+					"user.burden":{
+						required:true
+					},
+					"user.development":{
+						required:true
+					},
+					"user.training":{
+						required:true
+					},
+					"user.wtrip":{
+						required:true
+					},
+					"user.atmosphere":{
+						required:true
+					},
+					"user.brand":{
+						required:true
+					},
+					"user.distance":{
+						required:true
+					},
+					"user.lowSalary":{
+						required:true
+					},
+					"user.expectedSalary":{
+						required:true
+					},
+					"user.stateown":{
+						required:true
+					},
+					"user.institution":{
+						required:true
+					},
+					"user.administration":{
+						required:true
+					},
+					"user.foreig":{
+						required:true
+					},
+					"user.privat":{
+						required:true
+					},
+					"user.startup":{
+						required:true
+					},
+					"user.ngo":{
+						required:true
+					},
+					"user.commonweal":{
+						required:true
+					}
+				},
+				messages:{
+					"user.domicile":{
+						required:"请填写户籍"
+					},
+					"user.gender":{
+						required:"请选择性别"
+					},
+					"user.birth":{
+						required:"请填写生日"
+					},
+					"user.major":{
+						required:"请选择专业"
+					},
+					"user.industry":{
+						required:"请选择感兴趣的行业"
+					},
+					"user.position":{
+						required:"请选择感兴趣的职位"
+					},
+					"user.salary":{
+						required:"请选择薪水要求"
+					},
+					"user.welfare":{
+						required:"请选择福利要求"
+					},
+					"user.vacation":{
+						required:"请选择假期要求"
+					},
+					"user.freedom":{
+						required:"请选择自由程度要求"
+					},
+					"user.burden":{
+						required:"请选择工作负荷要求"
+					},
+					"user.development":{
+						required:"请选择职业发展要求"
+					},
+					"user.training":{
+						required:"请选择培训要求"
+					},
+					"user.wtrip":{
+						required:"请选择出差频率要求"
+					},
+					"user.atmosphere":{
+						required:"请选择工作氛围要求"
+					},
+					"user.brand":{
+						required:"请选择公司品牌度要求"
+					},
+					"user.distance":{
+						required:"请选择离家距离要求"
+					},
+					"user.lowSalary":{
+						required:"请填写最低薪水"
+					},
+					"user.expectedSalary":{
+						required:"请填写期望薪水"
+					},
+					"user.stateown":{
+						required:"请选择对国企的兴趣"
+					},
+					"user.institution":{
+						required:"请选择对机构的兴趣"
+					},
+					"user.administration":{
+						required:"请选择对行政机关的兴趣"
+					},
+					"user.foreig":{
+						required:"请选择对外企的兴趣"
+					},
+					"user.privat":{
+						required:"请选择对民营企业的兴趣"
+					},
+					"user.startup":{
+						required:"请选择对创业公司的兴趣"
+					},
+					"user.ngo":{
+						required:"请选择对非政府组织的兴趣"
+					},
+					"user.commonweal":{
+						required:"请选择对公益组织的兴趣"
+					}
+				},
+				errorElement:"em"
+		});
+});
+</script>
+<div class="index-content-container">
+	<div class="main-body">
+		<div class="profile-wrap">
+			<div class="head">
+				<h1>Step1. 完善资料<span>(均为必填)</span></h1>
+			</div>
+			<form id="form_profile">
+			<input type="hidden" name="do_submit" value="true"/>
+			<div class="part">
+				<ul class="part-content clearfix">
+					<li class="title">
+						个人信息
+					</li>
+					<li class="content">
+						<ul class="item clearfix">
+							<li class="left">
+								姓名
+							</li>
+							<li class="right">
+								$!{account.userName}
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								性别
+							</li>
+							#if(${account.gender} == 2)
+							<li class="right">
+								<input type="radio" name="sex" id="gender1" order="1">
+								<label for="gender1">男</label>
+								<input type="radio" name="sex" id="gender2" order="0">
+								<label for="gender2">女</label>								
+							</li>
+							#springBind("form.user.gender")
+							<input type="hidden" name="${status.expression}"   id="sex" />
+							#elseif(${account.gender} == 1)
+								<li class="right">
+								#springBind("form.user.gender")
+							<input type="hidden" name="${status.expression}" value=1  id="sex" />
+								女
+								</li>
+							#else
+								<li class="right">
+									#springBind("form.user.gender")
+							<input type="hidden" name="${status.expression}" value=0 id="sex" />
+								男
+								</li>
+							#end	
+						</ul>
+						#springBind("form.user.birth")
+						<ul class="item clearfix">
+							<li class="left">
+								生日
+							</li>
+							<li class="right">
+								<input type="text" name="${status.expression}"  readonly="readonly" id="datepicker" />
+							</li>
+						</ul>
+						#springBind("form.user.domicile")
+						<ul class="item clearfix">
+							<li class="left">
+								户籍
+							</li>
+							<li class="right">
+								<input type="text" name="${status.expression}"   />
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								学校
+							</li>
+							<li class="right">
+								$!{account.school}
+							</li>
+						</ul>
+						#springBind("form.user.major")
+						<ul class="item clearfix">
+							<li class="left">
+								专业
+							</li>
+							<li class="right">
+								<input type="text" name="${status.expression}" id="major"  />
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="part">
+				<ul class="part-content clearfix">
+					<li class="title">
+						求职偏好
+					</li>
+					<li class="content">
+						#springBind("form.user.industry")
+						<ul class="item clearfix">
+							<li class="left">
+								感兴趣的行业
+							</li>
+							<li class="middle">
+								<input title="" type="text" name="${status.expression}" id="industry" />
+							</li>
+							<li class="right">
+								(最多选择五项)
+							</li>
+						</ul>
+						#springBind("form.user.position")
+						<ul class="item clearfix">
+							<li class="left">
+								想从事的岗位
+							</li>
+							<li class="middle">
+								<input title="" type="text" name="${status.expression}" id="position" />
+							</li>
+							<li class="right">
+								(最多选择三项)
+							</li>
+						</ul>
+						<div class="sep"></div>
+						<p class="dim">在你求职过程中，以下因素的重要程度：<span>(1 = 最不重要，7 = 最重要)</span></p>
+						<ul class="item clearfix">
+							<li class="left">
+								薪水
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.salary")
+								<input type="hidden" name="${status.expression}"   id="salary" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								福利
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.welfare")
+								<input type="hidden"  name="${status.expression}"   id="welfare" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								休假
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.vacation")
+								<input type="hidden" name="${status.expression}"    id="vacation" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								工作自由度
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.freedom")
+								<input type="hidden"  name="${status.expression}"   id="freedom" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								工作负荷大小
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.burden")
+								<input type="hidden"  name="${status.expression}"   id="burden" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								职业发展性
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.development")
+								<input type="hidden" name="${status.expression}"    id="development" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								培训机会
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.training")
+								<input type="hidden" name="${status.expression}"    id="training" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								出差平率
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.wtrip")
+								<input type="hidden" name="${status.expression}"    id="wtrip"/>
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								人际氛围
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.atmosphere")
+								<input type="hidden" name="${status.expression}"    id="atmosphere" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								品牌影响力
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.brand")
+								<input type="hidden" name="${status.expression}"    id="brand" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								离家距离
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.distance")
+								<input type="hidden"   name="${status.expression}"   id="distance" />
+								</div>
+							</li>
+						</ul>
+						<div class="sep"></div>
+						<ul class="item clearfix">
+							<li class="left">
+								最低可接受薪水
+							</li>
+							<li>
+								#springBind("form.user.lowSalary")
+								<input type="text" name="${status.expression}" />
+							</li>
+							<li class="right">
+								(税后，人民币元)
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								期望薪水
+							</li>
+							<li>
+								#springBind("form.user.expectedSalary")
+								<input type="text" name="${status.expression}"  />
+							</li>
+							<li class="right">
+								(税后，人民币元)
+							</li>
+						</ul>
+						<div class="sep"></div>
+						<p class="dim">你对以下工作单位的向往程度：<span>(1 = 最不向往，7 = 最向往)</span></p>
+						<ul class="item clearfix">
+							<li class="left">
+								国有企业
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.stateown")
+								<input type="hidden"  name="${status.expression}"    id="stateown" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								事业单位
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.institution")
+								<input type="hidden"  name="${status.expression}"    id="institution" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								行政机关
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.administration")
+								<input type="hidden"  name="${status.expression}"    id="administration" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								外资企业
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.foreig")
+								<input type="hidden" name="${status.expression}"     id="foreig" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								民营企业
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.privat")
+								<input type="hidden"  name="${status.expression}"    id="privat" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								创业团队
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.startup")
+								<input type="hidden"  name="${status.expression}"    id="startup" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								非政府组织
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.ngo")
+								<input type="hidden"  name="${status.expression}"    id="ngo" />
+								</div>
+							</li>
+						</ul>
+						<ul class="item clearfix">
+							<li class="left">
+								公益组织
+							</li>
+							<li>
+								<div class="dim7">
+								<a>1</a>
+								<a>2</a>
+								<a>3</a>
+								<a>4</a>
+								<a>5</a>
+								<a>6</a>
+								<a>7</a>
+								#springBind("form.user.commonweal")
+								<input type="hidden"  name="${status.expression}"    id="commonweal" />
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="profile-op clearfix">
+    			<a class="next">完成进入测评</a>
+    	</div>
+			</form>
+		</div>
+	</div>
+</div>
+#parse("/common/major.vm")
+#parse("/common/industry.vm")
+#parse("/common/position.vm")
+<script>
+function hidemajor() {
+	$(".major-win").hide();
+	$("#pagemask-major").hide();
+}
+function showmajor() {
+	$("#pagemask-major").css("width", $(document).width());
+	$("#pagemask-major").css("height", $(document).height());
+	$("#pagemask-major").show();
+	$(".major-win").css("top",
+			$(window).height() / 2 + $(document).scrollTop() - 220);
+	$(".major-win").css("left", $(document).width() / 2 - 300);
+	$(".major-win").show();
+}
+function hideindustry() {
+	$(".industry-win").hide();
+	$("#pagemask-industry").hide();
+}
+function showindustry() {
+	$("#pagemask-industry").css("width", $(document).width());
+	$("#pagemask-industry").css("height", $(document).height());
+	$("#pagemask-industry").show();
+	$(".industry-win").css("top",
+			$(window).height() / 2 + $(document).scrollTop() - 220);
+	$(".industry-win").css("left", $(document).width() / 2 - 300);
+	$(".industry-win").show();
+}
+function hideposition() {
+	$(".position-win").hide();
+	$("#pagemask-position").hide();
+}
+function showposition() {
+	$("#pagemask-position").css("width", $(document).width());
+	$("#pagemask-position").css("height", $(document).height());
+	$("#pagemask-position").show();
+	$(".position-win").css("top",
+			$(window).height() / 2 + $(document).scrollTop() - 220);
+	$(".position-win").css("left", $(document).width() / 2 - 300);
+	$(".position-win").show();
+}
+$(document).ready(function(){
+	$('input').on('ifChecked', function(event){
+		$("#"+$(this).attr("name")).val(parseInt($(this).attr("order")));
+    });
+	$(".dim7 a").click(function(){
+		$(this).parent().children("a").each(function(){
+			$(this).removeAttr("style")
+		});
+		$(this).css("color","#d71a21").css("border", "1px solid #d71a21");
+		$(this).parent().children("input").val(parseInt($(this).text()));
+	});
+	$(".next").click(function(){
+		$("#form_profile").submit();
+	});
+	
+	$("#major").click(function(){
+		showmajor();
+	});
+	$(".major-win .detail a").click(function(){
+		$("#major").val($(this).text());
+		hidemajor();
+	});
+	$(".close-major").click(function(){
+		hidemajor();
+	});
+	
+	$("#industry").click(function(){
+		showindustry();
+	});
+	
+	$("#position").click(function(){
+		showposition();
+	});
+
+	$(".close-position").click(function(){
+		hideposition();
+	});
+});
+</script>
+	

@@ -1,0 +1,105 @@
+<div id="pagemask-major"></div>
+<div class="major-win">
+    <div class="major-win-content">
+        <h2>
+            <a class="close-major">x</a>
+				请选择专业
+		</h2>
+		<div class="grey">
+			<ul class="major-wrap clearfix">
+				<li class="category">
+					哲学：
+				</li>
+				<li class="detail">
+					<a>哲学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="major-wrap clearfix">
+				<li class="category">经济学：</li>
+				<li class="detail">
+					<a>经济学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="major-wrap clearfix">
+				<li class="category">管理学：</li>
+				<li class="detail">
+					<a>管理科学与工程类</a><a>工商管理类</a><a>行政管理、公共管理类</a><a>图书档案学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="major-wrap clearfix">
+				<li class="category">文学：</li>
+				<li class="detail">
+					<a>语言文学类</a><a>新闻传播学类</a><a>艺术类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="major-wrap clearfix">
+				<li class="category">工学：</li>
+				<li class="detail">
+					<a>电气信息类</a><a>计算机科学与技术类</a><a>机械类</a><a>土建类</a>
+					<a>材料类</a><a>仪器仪表类</a><a>能源动力类</a><a>水利类</a>
+					<a>测绘类</a><a>制药工程类</a><a>交通运输类</a><a>船舶与海洋工程类</a>
+					<a>航空航天类</a><a>轻工纺织食品类</a><a>武器类</a><a>公安技术类</a>
+					<a>生物医学工程类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="major-wrap clearfix">
+				<li class="category">法学：</li>
+				<li class="detail">
+					<a>法学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="major-wrap clearfix">
+				<li class="category">历史学：</li>
+				<li class="detail">
+					<a>历史学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="major-wrap clearfix">
+				<li class="category">理学：</li>
+				<li class="detail">
+					<a>数学类</a><a>物理学类</a><a>化学类及化学工程类</a><a>生物科学及生物技术类</a>
+					<a>天文地质地理类</a><a>力学类</a><a>电子信息科学类</a><a>系统科学类</a>
+					<a>环境科学与安全类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="major-wrap clearfix">
+				<li class="category">教育学：</li>
+				<li class="detail">
+					<a>教育学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="white">
+			<ul class="major-wrap clearfix">
+				<li class="category">医学：</li>
+				<li class="detail">
+					<a>医学类</a><a>心理学类</a>
+				</li>
+			</ul>
+		</div>
+		<div class="grey">
+			<ul class="major-wrap clearfix">
+				<li class="category">农学</li>
+				<li class="detail">
+					<a>农业类</a>
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>
