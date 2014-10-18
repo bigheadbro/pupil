@@ -1,0 +1,11 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<div class="intro-content-container">
+	<div class="main-body">
+		<p class="head">接下来你会看到很多画，请猜猜看下面一排画中哪一幅跟上面那幅画是同一个人画的，请把它选出来</p>
+		<div class="bot">
+			<h1>准备好了吗？</h1>
+			<a href="q10">开始测试</a>
+		</div>
+	</div>
+</div>
+

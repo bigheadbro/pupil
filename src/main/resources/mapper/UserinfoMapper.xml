@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userinfo">
+	<resultMap type="UserinfoEntity" id="UserinfoResultMap">
+	  <!---->
+	  <id property="id" column="id"/>
+   	  <!---->
+	  <id property="userId" column="user_id"/>
+   	  <!---->
+	  <id property="state" column="state"/>
+	</resultMap>
+
+	<select id="queryUserinfoEntityByUserid" parameterType="int" resultMap="UserinfoResultMap">
+	<![CDATA[
+		SELECT * from t_userinfo t WHERE t.user_id = #{userid}
+	]]>
+	</select>
+
+	<insert id="insertUserinfoEntity" parameterType="UserinfoEntity">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+		insert into t_userinfo
+		(
+		id
+		,user_id
+		,state
+		)
+		values
+		(
+		#{id}
+		,#{userId}
+		,#{state}
+		)
+	</insert>
+	
+	<update id="updateStateById" parameterType="UserinfoEntity">
+		update t_userinfo set state = #{state} where id=#{id}
+	</update>
+</mapper>
+	

@@ -1,0 +1,11 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<div class="intro-content-container">
+	<div class="main-body">
+		<p class="head">接下来你会先看到一张图片，请你尽量记住它的颜色，然后从后面看到的三张图片中，选出跟前面一张一模一样的图片</p>
+		<div class="bot">
+			<h1>接下来，我们就开始吧！</h1>
+			<a href="q1t">开始测试</a>
+		</div>
+	</div>
+</div>
+

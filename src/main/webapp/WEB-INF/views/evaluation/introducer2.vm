@@ -1,0 +1,11 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<div class="intro-content-container">
+	<div class="main-body">
+		<p class="head">接下来请仔细听两段节奏，判断它们是否相同？</p>
+		<div class="bot">
+			<h1>准备好了吗？</h1>
+			<a href="q4">开始测试</a>
+		</div>
+	</div>
+</div>
+

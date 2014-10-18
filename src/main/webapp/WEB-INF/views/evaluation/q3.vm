@@ -1,90 +1,60 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-    $('input').iCheck({
-		checkboxClass: 'icheckbox_square-green',
-    	radioClass: 'iradio_square-green',
-    	increaseArea: '20%' // optional
-    });
-	$('input').on('ifChecked', function(event){
-		$("#choice").val($(this).attr("id"));
-     	$('input').iCheck('disable');
-    });
-    $('input').on('ifChecked', function(event){
-     	$('input').iCheck('disable');
-			$("#time").val(s);
+	$("a.choice").click(function(){
+		$("#choice").val($(this).attr("choice"));
 		$("#form_q").submit();
-    });
+	});
+	$(".choice").mouseenter(function(){
+		$(this).css("border","2px solid #80C122").css("opacity","0.5");
+		$(this).children(".yes").show();
+	}).mouseleave(function(){
+		$(this).removeAttr("style");
+		$(this).children(".yes").hide();
+	});
 });
 </script>
 <div class="main-content-container">
 	<div class="main-body">
-		<div class="test-wrap">
-			<div class="test clearfix">
-    			<ul>
-    				<li class="done"><em><span>●</span>1</em></li>
-    				<li class="done"><em><span>●</span>2</em></li>
-    				<li><em><span>●</span>3</em></li>
-    				<li><em><span>●</span>4</em></li>
-    				<li><em><span>●</span>5</em></li>
-    				<li><em><span>●</span>6</em></li>
-    				<li><em><span>●</span>7</em></li>
-    				<li><em><span>●</span>8</em></li>
-    				<li><em><span>●</span>9</em></li>
-    				<li><em><span>●</span>10</em></li>
-    				<li><em><span>●</span>11</em></li>
-    				<li><em><span>●</span>12</em></li>
-    				<li><em><span>●</span>13</em></li>
-    				<li><em><span>●</span>14</em></li>
-    				<li><em><span>●</span>15</em></li>
-    				<li><em><span>●</span>16</em></li>
-						<li><em><span>●</span>17</em></li>
-    				<li><em><span>●</span>18</em></li>
-    				<li><em><span>●</span>19</em></li>
-    				<li><em><span>●</span>20</em></li>
-    				<li><em><span>●</span>21</em></li>
-    				<li><em><span>●</span>22</em></li>
-    				<li><em><span>●</span>23</em></li>
-    			</ul>
-    			<div class="time-cost clearfix">
-    				<ul>
-    					<li class="pic"><img src="img/time.png" /></li>
-    					<li><h4 id="showtime">00:00</h4></li>
-    				</ul>
-    			</div>
-			</div>
-		</div>
 		<div class="question">
-			<form id="form_q" method="post" >
+			<form id="form_q" method="post">
 			<input type="hidden" name="do_submit" value="true"/>
 			#springBind("form.questionid")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
-			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
-			#springBind("form.time")
-			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
+			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
 			<div class="q-head clearfix">
-				<h1 class="number">3.</h1>
-				<h1 class="title"><img src="img/3-1.png" /></h1>
+				<h1 class="number">第3题. 选出跟前面一张一模一样的图片<div class="clock" answer="1">倒计时：<em>10</em></div></h1>
 			</div>
-			<ul class="single">
-				<li>
-					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、坚决促成客户购买A商品</label>
-				</li>
-				<li>
-					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、促成客户购买A商品，适当让利</label>
-				</li>
-				<li>
-					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、帮助客户仔细分析利弊，劝导客户购买B商品</label>
-				</li>
-				<li>
-					<input type="radio" name="iCheck" id="4">
-					<label for="4">D、客观陈述A，B两项产品的优缺点以及适用程度，让客户自行选择</label>
-				</li>
-			</ul>
+			<div class="choice-wrap clearfix">
+				<a class="choice" choice="1">
+					<div class="img-wrap">
+						<em>
+							<img src="img/test/3-A.jpg" />
+						</em>
+					</div>
+					<p>A</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice" choice="2">
+					<div class="img-wrap">
+						<em>
+							<img src="img/test/3-B.jpg" />
+						</em>
+					</div>
+					<p>B</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice" choice="3">
+					<div class="img-wrap">
+						<em>
+							<img src="img/test/3-C.jpg" />
+						</em>
+					</div>
+					<p>C</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+			</div>
 			</form>
 		</div>
 	</div>

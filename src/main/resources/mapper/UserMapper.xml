@@ -3,67 +3,25 @@
 <mapper namespace="user">
 	<resultMap type="UserEntity" id="UserResultMap">
 	  <!---->
-		<id property="id" column="id" />
+	  <id property="userId" column="user_id"/>
    	  <!---->
-   	<id property="name" column="name" />
-		<id property="cardno" column="cardno" />
+	  <id property="userName" column="user_name"/>
    	  <!---->
-		<id property="birth" column="birth" />
+	  <id property="loginName" column="login_name"/>
    	  <!---->
-		<id property="gender" column="gender" />
+	  <id property="password" column="password"/>
    	  <!---->
-		<id property="domicile" column="domicile" />
+	  <id property="studentId" column="student_id"/>
    	  <!---->
-		<id property="school" column="school" />
+	  <id property="userSex" column="user_sex"/>
    	  <!---->
-		<id property="major" column="major" />
+	  <id property="userBirthday" column="user_birthday"/>
    	  <!---->
-		<id property="industry" column="industry" />
+	  <id property="schoolName" column="school_name"/>
    	  <!---->
-		<id property="position" column="position" />
+	  <id property="classId" column="class_id"/>
    	  <!---->
-		<id property="salary" column="salary" />
-   	  <!---->
-		<id property="welfare" column="welfare" />
-   	  <!---->
-		<id property="vacation" column="vacation" />
-   	  <!---->
-		<id property="freedom" column="freedom" />
-   	  <!---->
-		<id property="burden" column="burden" />
-   	  <!---->
-		<id property="development" column="development" />
-   	  <!---->
-		<id property="training" column="training" />
-   	  <!---->
-		<id property="wtrip" column="wtrip" />
-   	  <!---->
-		<id property="atmosphere" column="atmosphere" />
-   	  <!---->
-		<id property="brand" column="brand" />
-   	  <!---->
-		<id property="distance" column="distance" />
-   	  <!---->
-		<id property="lowSalary" column="lowSalary" />
-   	  <!---->
-		<id property="expectedSalary" column="expectedSalary" />
-   	  <!---->
-		<id property="stateown" column="stateown" />
-   	  <!---->
-		<id property="institution" column="institution" />
-   	  <!---->
-		<id property="administration" column="administration" />
-   	  <!---->
-		<id property="foreig" column="foreig" />
-   	  <!---->
-		<id property="privat" column="privat" />
-   	  <!---->
-		<id property="startup" column="startup" />
-   	  <!---->
-		<id property="ngo" column="ngo" />
-   	  <!---->
-		<id property="commonweal" column="commonweal" />
-		<id property="state" column="state" />
+	  <id property="userCity" column="user_city"/>
 	</resultMap>
 
 	<select id="queryUserEntityById" parameterType="int" resultMap="UserResultMap">
@@ -72,9 +30,9 @@
 	]]>
 	</select>
 
-	<select id="queryUserEntityByCN" parameterType="String" resultMap="UserResultMap">
+	<select id="queryUserEntityByMail" parameterType="String" resultMap="UserResultMap">
 	<![CDATA[
-		SELECT * from t_user t WHERE t.cardno = #{cn}
+		SELECT * from t_user t WHERE t.login_name = #{cn}
 	]]>
 	</select>
 

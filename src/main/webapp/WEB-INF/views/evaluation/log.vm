@@ -3,7 +3,11 @@
 	<div class="main-body">
 		<div class="profile-wrap">
 			<div class="auth-form" id="login">
-				<form accept-charset="UTF-8" action="/session" method="post">
+				#springBind("form.mail")
+				<em for="$!{status.expression}" generated="true" class="error">$!{status.errorMessage}</em>
+				#springBind("form.password")
+				<em for="$!{status.expression}" generated="true" class="error">$!{status.errorMessage}</em>
+				<form accept-charset="UTF-8" action="/log" method="post">
 					<div class="auth-form-header">
 						<input type="hidden" name="do_submit" value="true"/>
 						<h1>登陆</h1>
@@ -12,11 +16,13 @@
                         <label for="login_field">
 							登录名
                         </label>
-						<input autocapitalize="off" autocorrect="off" autofocus="autofocus" class="input-block" id="login_field" name="login" tabindex="1" type="text">
+						#springBind("form.mail")
+						<input autocapitalize="off" autocorrect="off" autofocus="autofocus" class="input-block" id="login_field" name="$!{status.expression}" tabindex="1" type="text">
                         <label for="password">
 							密码
                         </label>
-						<input class="input-block" id="password" name="password" tabindex="2" type="password">
+						#springBind("form.password")
+						<input class="input-block" id="password" name="$!{status.expression}" tabindex="2" type="password">
 						<input class="button" name="commit" tabindex="3" type="submit" value="登 陆">
                   	</div>
             	</form>

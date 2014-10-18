@@ -55,6 +55,7 @@
     
     <mvc:interceptors>
    		<mvc:interceptor>
+   			<mvc:mapping path="/introducer1" />
    			<mvc:mapping path="/q1" />
    			<mvc:mapping path="/q2" />
    			<mvc:mapping path="/q3" />
@@ -157,7 +158,7 @@
 		<property name="basenames">
 			<!-- 配置文件名 -->
 			<list>
-				<value>user</value>
+				<value>pupil</value>
 			</list>
 		</property>
 	</bean>

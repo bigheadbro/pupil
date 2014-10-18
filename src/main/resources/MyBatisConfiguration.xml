@@ -3,10 +3,11 @@
 <configuration>
 
 	<typeAliases>
-	  <typeAlias alias="UserEntity" type="com.pupil.entity.UserEntity" />
+	  	<typeAlias alias="UserEntity" type="com.pupil.entity.UserEntity" />
 		<typeAlias alias="QuestionEntity" type="com.pupil.entity.QuestionEntity" />
 		<typeAlias alias="DimensionEntity" type="com.pupil.entity.DimensionEntity" />
 		<typeAlias alias="ScoreEntity" type="com.pupil.entity.ScoreEntity" />
+		<typeAlias alias="UserinfoEntity" type="com.pupil.entity.UserinfoEntity" />
 	</typeAliases>
 
 	<mappers>

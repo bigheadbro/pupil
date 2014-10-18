@@ -28,8 +28,8 @@ public class GenerateMyBatisMapperUtil {
 		try {
 			connection = java.sql.DriverManager
 					.getConnection(
-							"jdbc:mysql://127.0.0.1:3306/pupil?useUnicode=true&amp;characterEncoding=utf-8",
-							"root", "");
+							"jdbc:mysql://114.80.208.103:60306/pupil?useUnicode=true&amp;characterEncoding=utf-8",
+							"root", "123123");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
