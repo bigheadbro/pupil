@@ -1,0 +1,51 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+    $('input').on('ifChecked', function(event){
+		$("#choice").val($(this).attr("id"));
+     	$('input').iCheck('disable');
+    });
+	$('input').on('ifChecked', function(event){
+     	$('input').iCheck('disable');
+		$("#form_q").submit();
+    });
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="question">
+			<form id="form_q" method="post">
+			<input type="hidden" name="do_submit" value="true"/>
+			#springBind("form.questionid")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+			#springBind("form.choice")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			<div class="q-head clearfix">
+				<h1 class="number">
+					第14题. 小王和小明约好9点在小明家玩耍，小明家住在一个小区的9楼。小区现有2部电梯，一部低层电梯，停靠在1~6楼；一部高层电梯，停靠在1楼和7~12楼。当小王到达小明家楼下时，已经是8点57分了。高层电梯的指示灯为3楼向上，低层电梯的指示灯为2楼向下，小王不想迟到，此时他应该怎么做？
+					<div class="clock" answer="1">倒计时：<em>120</em></div>
+				</h1>
+			</div>
+			<ul class="single">
+				<li>
+					<input type="radio" name="iCheck" id="1">
+					<label for="1">A、等待高层电梯下来，乘坐高层电梯直接到9楼</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="2">
+					<label for="2">B、坐低层电梯到6楼，然后走楼梯到9楼</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="3">
+					<label for="3">C、看看有没有货梯可以坐，如果没有就直接走楼梯到9楼</label>
+				</li>
+			</ul>
+			</form>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,60 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+    $('input').on('ifChecked', function(event){
+		$("#choice").val($(this).attr("id"));
+     	$('input').iCheck('disable');
+    });
+	$('input').on('ifChecked', function(event){
+     	$('input').iCheck('disable');
+		$("#form_q").submit();
+    });
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="question">
+			<form id="form_q" method="post">
+			<input type="hidden" name="do_submit" value="true"/>
+			#springBind("form.questionid")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+			#springBind("form.choice")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			<div class="q-head clearfix">
+				<h1 class="number">
+					第36题. 请认真观看视频，然后回答提问。
+					<p>
+						<object id="" style="visibility:visible;" width="640" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                        	<param value="http://www.tudou.com/v/CF7B3sUdHQg/v.swf" name="movie"><param value="high" name="quality">
+                        	<param value="never" name="allowScriptAccess"><param value="true" name="allowFullScreen">
+                        	<param value="playMovie=true&amp;auto=1&amp;adss=0" name="flashvars">
+                        	<param value="transparent" name="wmode">
+                        	<embed id="" height="440" allowscriptaccess="never" style="visibility:visible;" pluginspage="http://get.adobe.com/cn/flashplayer/" flashvars="playMovie=true&amp;auto=1&amp;autostart=true" width="640" allowfullscreen="true" quality="high" src="http://www.tudou.com/v/CF7B3sUdHQg/v.swf" type="application/x-shockwave-flash" wmode="transparent">
+                        </object>
+					</p>
+					<div class="clock" answer="1">倒计时：<em>160</em></div>
+				</h1>
+			</div>
+			<ul class="single">
+				<li>
+					<input type="radio" name="iCheck" id="1">
+					<label for="1">A、我觉得刘小好不尊重课堂纪律，被老师批评是应该的</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="2">
+					<label for="2">B、我觉得刘小好这样肯定会影响大家合唱的成绩</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="3">
+					<label for="3">C、我觉得刘小好这样也挺好玩的，但他让姚亚男受到了委屈，他应该和姚亚楠道歉 </label>
+				</li>
+			</ul>
+			</form>
+		</div>
+	</div>
+</div>

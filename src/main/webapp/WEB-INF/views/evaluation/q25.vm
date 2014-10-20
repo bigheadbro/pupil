@@ -1,0 +1,74 @@
+<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="js/mp3-player-button.js"></script>
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+	$("a.choice2").click(function(){
+		$("#choice").val($(this).attr("choice"));
+		$("#form_q").submit();
+	});
+	$(".choice2").mouseenter(function(){
+		$(this).css("border","2px solid #80C122").css("opacity","0.5");
+		$(this).children(".yes").show();
+	}).mouseleave(function(){
+		$(this).removeAttr("style");
+		$(this).children(".yes").hide();
+	});
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="question">
+			<form id="form_q" method="post">
+			<input type="hidden" name="do_submit" value="true"/>
+			#springBind("form.questionid")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+			#springBind("form.choice")
+			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
+			<div class="q-head clearfix">
+				<h1 class="number">第25题. 要是可以出国旅游，你会选择下面哪组与你一起同行？
+					<div class="clock" answer="1">倒计时：<em>20</em></div>
+				</h1>
+			</div>
+			<div class="choice-wrap clearfix">
+				<a class="choice2" choice="1">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-A.jpg" />
+						</em>
+					</div>
+					<p>A</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice2" choice="2">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-B.jpg" />
+						</em>
+					</div>
+					<p>B</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice2" choice="3">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-C.jpg" />
+						</em>
+					</div>
+					<p>C</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice2" choice="4">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-D.jpg" />
+						</em>
+					</div>
+					<p>D</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
