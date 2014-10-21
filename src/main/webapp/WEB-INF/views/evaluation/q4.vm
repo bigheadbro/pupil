@@ -32,12 +32,12 @@ $(document).ready(function(){
 			</div>
 			<div class="choice-wrap clearfix">
 				<a class="choice2" choice="1">
-					<img src="img/test/gu.jpg" />
+					<img style="width:200px;" src="img/test/gu.jpg" />
 					<p>A 相同</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
 				<a class="choice2" choice="2">
-					<img src="img/test/gu.jpg" />
+					<img style="width:200px;" src="img/test/gu.jpg" />
 					<p>B 不相同</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
@@ -45,5 +45,5 @@ $(document).ready(function(){
 			</form>
 		</div>
 	</div>
-	<a style="display:none" href="resource/4.mp3" class="sm2_button"></a>
+	<a style="display:none" href="resource/4t.mp3" class="sm2_button"></a>
 </div>

@@ -1,0 +1,11 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<div class="intro-content-container">
+	<div class="main-body">
+		<p class="head">接下来请你回答一些题目，请根据描述选择最符合你自己的选项，这些题目没有好坏之分，也没有正确答案，你只需要按照你的实际情况进行选择，请按照你的真实感受回答。</p>
+		<div class="bot">
+			<h1>准备好了吗？</h1>
+			<a href="q56">开始测试</a>
+		</div>
+	</div>
+</div>
+

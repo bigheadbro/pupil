@@ -3,11 +3,11 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-	$("a.choice2").click(function(){
+	$("a.choice").click(function(){
 		$("#choice").val($(this).attr("choice"));
 		$("#form_q").submit();
 	});
-	$(".choice2").mouseenter(function(){
+	$(".choice").mouseenter(function(){
 		$(this).css("border","2px solid #80C122").css("opacity","0.5");
 		$(this).children(".yes").show();
 	}).mouseleave(function(){
@@ -26,24 +26,40 @@ $(document).ready(function(){
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
 			<div class="q-head clearfix">
-				<h1 class="number">第6题. 仔细听两段节奏，判断它们是否相同？
-					<div class="clock" answer="1">倒计时：<em>23</em></div>
+				<h1 class="number">第42题. 你想知道爸爸的身高，请问你会用下面哪个工具来测量？
+					<div class="clock" answer="1">倒计时：<em>20</em></div>
 				</h1>
 			</div>
 			<div class="choice-wrap clearfix">
-				<a class="choice2" choice="1">
-					<img style="width:150px;" src="img/test/yinfu.jpg" />
-					<p>A 相同</p>
+				<a class="choice" choice="1">
+					<div class="img-wrap">
+						<em>
+							<img src="img/test/hx6-A.jpg" />
+						</em>
+					</div>
+					<p>A</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
-				<a class="choice2" choice="2">
-					<img style="width:150px;" src="img/test/yinfu.jpg" />
-					<p>B 不相同</p>
+				<a class="choice" choice="2">
+					<div class="img-wrap">
+						<em>
+							<img src="img/test/hx6-B.jpg" />
+						</em>
+					</div>
+					<p>B</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice" choice="3">
+					<div class="img-wrap">
+						<em>
+							<img src="img/test/hx6-C.jpg" />
+						</em>
+					</div>
+					<p>C</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
 			</div>
 			</form>
 		</div>
 	</div>
-	<a style="display:none" href="resource/6.mp3" class="sm2_button"></a>
 </div>

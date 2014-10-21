@@ -1,0 +1,59 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+    $('input').on('ifChecked', function(event){
+		$("#choice").val($(this).attr("id"));
+     	$('input').iCheck('disable');
+    });
+	$('input').on('ifChecked', function(event){
+     	$('input').iCheck('disable');
+		$("#form_q").submit();
+    });
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="question">
+			<form id="form_q" method="post">
+			<input type="hidden" name="do_submit" value="true"/>
+			#springBind("form.questionid")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+			#springBind("form.choice")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			<div class="q-head clearfix">
+				<h1 class="number">
+					第54题. 月食，是一种当月球运行进入地球的阴影（本影部份）时，原本可被太阳光照亮的部份，有部份或全部不能被直射阳光照亮，使得位于地球的观测者无法看到普通的月相的天文现象。月食发生时，太阳、地球、月球恰好或几乎在同一条直线上。上图是月食时间表以及部分地区月出时间。<br/>
+					请问在上海下面哪一个时间看到的月亮最红？
+					<p>
+						<img src="img/test/hx12T.jpg" />
+					</p>
+					<div class="clock" answer="1">倒计时：<em>180</em></div>
+				</h1>
+			</div>
+			<ul class="single">
+				<li>
+					<input type="radio" name="iCheck" id="1">
+					<label for="1">A、18:54:36</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="2">
+					<label for="2">B、18:17:10</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="3">
+					<label for="3">C、19:24:00 </label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="4">
+					<label for="4">D、20:32:12 </label>
+				</li>
+			</ul>
+			</form>
+		</div>
+	</div>
+</div>

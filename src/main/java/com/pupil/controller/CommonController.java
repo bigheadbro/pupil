@@ -66,17 +66,21 @@ public class CommonController extends BaseController{
 		{
 			if(accnt.getState() == 0)
 			{
-				return new ModelAndView(new RedirectView("/introducer1")); 
+				return new ModelAndView(new RedirectView("introducer1")); 
 			}
 			else
 			{
 				if(accnt.getState() <= 3)
 				{
-					return new ModelAndView(new RedirectView("/q" + String.valueOf(accnt.getState() + 1) + "t")); 
+					return new ModelAndView(new RedirectView("q" + String.valueOf(accnt.getState() + 1) + "t")); 
 				}
 				else
 				{
-					return new ModelAndView(new RedirectView("/q" + String.valueOf(accnt.getState() + 1))); 
+					if(accnt.getState() == 85)
+					{
+						return new ModelAndView(new RedirectView("/end"));
+					}
+					return new ModelAndView(new RedirectView("q" + String.valueOf(accnt.getState() + 1))); 
 				}
 			}
 		}
@@ -103,22 +107,26 @@ public class CommonController extends BaseController{
 					account.setState(info.getState());
 					if(account.getState() == 0)
 					{
-						return new ModelAndView(new RedirectView("/introducer1")); 
+						return new ModelAndView(new RedirectView("introducer1")); 
 					}
 					else
 					{
 						if(account.getState() <= 2)
 						{
-							return new ModelAndView(new RedirectView("/q" + String.valueOf(account.getState() + 1) + "t")); 
+							return new ModelAndView(new RedirectView("q" + String.valueOf(account.getState() + 1) + "t")); 
 						}
 						else
 						{
-							return new ModelAndView(new RedirectView("/q" + String.valueOf(account.getState() + 1))); 
+							if(account.getState() == 85)
+							{
+								return new ModelAndView(new RedirectView("end"));
+							}
+							return new ModelAndView(new RedirectView("q" + String.valueOf(account.getState() + 1))); 
 						}
 					}
 				}
 				// 登陆成功， 跳转到登陆页面
-				return new ModelAndView(new RedirectView("/introducer1"));
+				return new ModelAndView(new RedirectView("introducer1"));
 			}
 		}
 		return mv;
@@ -156,6 +164,14 @@ public class CommonController extends BaseController{
 		return mv;
 	}
 	
+	@RequestMapping(value="/introducer5")
+	public ModelAndView introducer5(final HttpServletRequest request,final HttpServletResponse response)
+	{ 
+		ModelAndView mv = new ModelAndView("/evaluation/introducer5");
+
+		return mv;
+	}
+	
 	@RequestMapping(value="/introducer")
 	public ModelAndView introducer(final HttpServletRequest request,final HttpServletResponse response)
 	{ 
@@ -181,7 +197,7 @@ public class CommonController extends BaseController{
 		{
 			if(commonService.insertQuestion(form) > 0)
 				
-				return new ModelAndView(new RedirectView("/q2t"));
+				return new ModelAndView(new RedirectView("q2t"));
 			else
 				return mv;
 		}
@@ -207,7 +223,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q3t"));
+				return new ModelAndView(new RedirectView("q3t"));
 			else
 				return mv;
 		}
@@ -233,7 +249,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/introducer2"));
+				return new ModelAndView(new RedirectView("introducer2"));
 			else
 				return mv;
 		}
@@ -246,7 +262,7 @@ public class CommonController extends BaseController{
 	@RequestMapping(value="/q4t")
 	public ModelAndView q4t(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
-		return new ModelAndView(new RedirectView("/q4"));
+		return new ModelAndView(new RedirectView("q4"));
 	}
 	
 	@RequestMapping(value="/q4")
@@ -258,7 +274,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q5"));
+				return new ModelAndView(new RedirectView("q5"));
 			else
 				return mv;
 		}
@@ -271,7 +287,7 @@ public class CommonController extends BaseController{
 	@RequestMapping(value="/q5t")
 	public ModelAndView q5t(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
-		return new ModelAndView(new RedirectView("/q5"));
+		return new ModelAndView(new RedirectView("q5"));
 	}
 	
 	@RequestMapping(value="/q5")
@@ -283,7 +299,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q6"));
+				return new ModelAndView(new RedirectView("q6"));
 			else
 				return mv;
 		}
@@ -296,7 +312,7 @@ public class CommonController extends BaseController{
 	@RequestMapping(value="/q6t")
 	public ModelAndView q6t(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
-		return new ModelAndView(new RedirectView("/q6"));
+		return new ModelAndView(new RedirectView("q6"));
 	}
 	
 	@RequestMapping(value="/q6")
@@ -308,7 +324,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/introducer3"));
+				return new ModelAndView(new RedirectView("introducer3"));
 			else
 				return mv;
 		}
@@ -327,7 +343,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q8"));
+				return new ModelAndView(new RedirectView("q8"));
 			else
 				return mv;
 		}
@@ -351,7 +367,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q9"));
+				return new ModelAndView(new RedirectView("q9"));
 			else
 				return mv;
 		}
@@ -374,7 +390,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/introducer4"));
+				return new ModelAndView(new RedirectView("introducer4"));
 			else
 				return mv;
 		}
@@ -397,7 +413,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q11"));
+				return new ModelAndView(new RedirectView("q11"));
 			else
 				return mv;
 		}
@@ -420,7 +436,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q12"));
+				return new ModelAndView(new RedirectView("q12"));
 			else
 				return mv;
 		}
@@ -443,7 +459,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q13"));
+				return new ModelAndView(new RedirectView("q13"));
 			else
 				return mv;
 		}
@@ -462,7 +478,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q14"));
+				return new ModelAndView(new RedirectView("q14"));
 			else
 				return mv;
 		}
@@ -482,7 +498,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q15"));
+				return new ModelAndView(new RedirectView("q15"));
 			else
 				return mv;
 		}
@@ -501,7 +517,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q16"));
+				return new ModelAndView(new RedirectView("q16"));
 			else
 				return mv;
 		}
@@ -520,7 +536,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q17"));
+				return new ModelAndView(new RedirectView("q17"));
 			else
 				return mv;
 		}
@@ -538,7 +554,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q18"));
+				return new ModelAndView(new RedirectView("q18"));
 			else
 				return mv;
 		}
@@ -557,7 +573,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q19"));
+				return new ModelAndView(new RedirectView("q19"));
 			else
 				return mv;
 		}
@@ -576,7 +592,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q20"));
+				return new ModelAndView(new RedirectView("q20"));
 			else
 				return mv;
 		}
@@ -595,7 +611,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q21"));
+				return new ModelAndView(new RedirectView("q21"));
 			else
 				return mv;
 		}
@@ -614,7 +630,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q22"));
+				return new ModelAndView(new RedirectView("q22"));
 			else
 				return mv;
 		}
@@ -633,7 +649,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q23"));
+				return new ModelAndView(new RedirectView("q23"));
 			else
 				return mv;
 		}
@@ -652,7 +668,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q24"));
+				return new ModelAndView(new RedirectView("q24"));
 			else
 				return mv;
 		}
@@ -671,7 +687,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q25"));
+				return new ModelAndView(new RedirectView("q25"));
 			else
 				return mv;
 		}
@@ -690,7 +706,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q26"));
+				return new ModelAndView(new RedirectView("q26"));
 			else
 				return mv;
 		}
@@ -709,7 +725,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q27"));
+				return new ModelAndView(new RedirectView("q27"));
 			else
 				return mv;
 		}
@@ -728,7 +744,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q28"));
+				return new ModelAndView(new RedirectView("q28"));
 			else
 				return mv;
 		}
@@ -748,7 +764,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q29"));
+				return new ModelAndView(new RedirectView("q29"));
 			else
 				return mv;
 		}
@@ -767,7 +783,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q30"));
+				return new ModelAndView(new RedirectView("q30"));
 			else
 				return mv;
 		}
@@ -786,7 +802,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q31"));
+				return new ModelAndView(new RedirectView("q31"));
 			else
 				return mv;
 		}
@@ -805,7 +821,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q32"));
+				return new ModelAndView(new RedirectView("q32"));
 			else
 				return mv;
 		}
@@ -824,7 +840,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q33"));
+				return new ModelAndView(new RedirectView("q33"));
 			else
 				return mv;
 		}
@@ -843,7 +859,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q34"));
+				return new ModelAndView(new RedirectView("q34"));
 			else
 				return mv;
 		}
@@ -862,7 +878,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q35"));
+				return new ModelAndView(new RedirectView("q35"));
 			else
 				return mv;
 		}
@@ -881,7 +897,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q36"));
+				return new ModelAndView(new RedirectView("q36"));
 			else
 				return mv;
 		}
@@ -900,7 +916,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q37"));
+				return new ModelAndView(new RedirectView("q37"));
 			else
 				return mv;
 		}
@@ -910,6 +926,7 @@ public class CommonController extends BaseController{
 		}
 	}
 	
+	//情景活学
 	@RequestMapping(value="/q37")
 	public ModelAndView q37(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
@@ -919,7 +936,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("/q38"));
+				return new ModelAndView(new RedirectView("q38"));
 			else
 				return mv;
 		}
@@ -928,13 +945,925 @@ public class CommonController extends BaseController{
 			return mv;
 		}
 	}
+	
+	@RequestMapping(value="/q38")
+	public ModelAndView q38(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q38");
+		form.setQuestionid(38);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q39"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q39")
+	public ModelAndView q39(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q39");
+		form.setQuestionid(39);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q40"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q40")
+	public ModelAndView q40(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q40");
+		form.setQuestionid(40);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q41"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q41")
+	public ModelAndView q41(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q41");
+		form.setQuestionid(41);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q42"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q42")
+	public ModelAndView q42(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q42");
+		form.setQuestionid(42);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q43"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q43")
+	public ModelAndView q43(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q43");
+		form.setQuestionid(43);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q44"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q44")
+	public ModelAndView q44(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q44");
+		form.setQuestionid(44);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q45"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q45")
+	public ModelAndView q45(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q45");
+		form.setQuestionid(45);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q46"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q46")
+	public ModelAndView q46(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q46");
+		form.setQuestionid(46);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q47"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q47")
+	public ModelAndView q47(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q47");
+		form.setQuestionid(47);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q48"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q48")
+	public ModelAndView q48(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q48");
+		form.setQuestionid(48);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q49"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q49")
+	public ModelAndView q49(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q49");
+		form.setQuestionid(49);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q50"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q50")
+	public ModelAndView q50(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q50");
+		form.setQuestionid(50);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q51"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q51")
+	public ModelAndView q51(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q51");
+		form.setQuestionid(51);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q52"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q52")
+	public ModelAndView q52(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q52");
+		form.setQuestionid(52);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q53"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q53")
+	public ModelAndView q53(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q53");
+		form.setQuestionid(53);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q54"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q54")
+	public ModelAndView q54(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q54");
+		form.setQuestionid(54);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q55"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q55")
+	public ModelAndView q55(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q55");
+		form.setQuestionid(55);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("introducer5"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q56")
+	public ModelAndView q56(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q56");
+		form.setQuestionid(56);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q57"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q57")
+	public ModelAndView q57(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q57");
+		form.setQuestionid(57);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q58"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q58")
+	public ModelAndView q58(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q58");
+		form.setQuestionid(58);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q59"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q59")
+	public ModelAndView q59(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q59");
+		form.setQuestionid(59);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q60"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q60")
+	public ModelAndView q60(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q60");
+		form.setQuestionid(60);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q61"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q61")
+	public ModelAndView q61(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q61");
+		form.setQuestionid(61);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q62"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q62")
+	public ModelAndView q62(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q62");
+		form.setQuestionid(62);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q63"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q63")
+	public ModelAndView q63(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q63");
+		form.setQuestionid(63);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q64"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q64")
+	public ModelAndView q64(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q64");
+		form.setQuestionid(64);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q65"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q65")
+	public ModelAndView q65(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q65");
+		form.setQuestionid(65);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q66"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q66")
+	public ModelAndView q66(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q66");
+		form.setQuestionid(66);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q67"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q67")
+	public ModelAndView q67(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q67");
+		form.setQuestionid(67);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q68"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q68")
+	public ModelAndView q68(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q68");
+		form.setQuestionid(68);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q69"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q69")
+	public ModelAndView q69(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q69");
+		form.setQuestionid(69);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q70"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q70")
+	public ModelAndView q70(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q70");
+		form.setQuestionid(70);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q71"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q71")
+	public ModelAndView q71(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q71");
+		form.setQuestionid(71);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q72"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q72")
+	public ModelAndView q72(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q72");
+		form.setQuestionid(72);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q73"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q73")
+	public ModelAndView q73(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q73");
+		form.setQuestionid(73);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q74"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q74")
+	public ModelAndView q74(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q74");
+		form.setQuestionid(74);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q75"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q75")
+	public ModelAndView q75(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q75");
+		form.setQuestionid(75);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q76"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q76")
+	public ModelAndView q76(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q76");
+		form.setQuestionid(76);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q77"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q77")
+	public ModelAndView q77(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q77");
+		form.setQuestionid(77);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q78"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q78")
+	public ModelAndView q78(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q78");
+		form.setQuestionid(78);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q79"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q79")
+	public ModelAndView q79(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q79");
+		form.setQuestionid(79);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q80"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q80")
+	public ModelAndView q80(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q80");
+		form.setQuestionid(80);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q81"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q81")
+	public ModelAndView q81(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q81");
+		form.setQuestionid(81);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q82"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q82")
+	public ModelAndView q82(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q82");
+		form.setQuestionid(82);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q83"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q83")
+	public ModelAndView q83(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q83");
+		form.setQuestionid(83);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q84"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q84")
+	public ModelAndView q84(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q84");
+		form.setQuestionid(84);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("q85"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
+	@RequestMapping(value="/q85")
+	public ModelAndView q85(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q85");
+		form.setQuestionid(85);
+		form.setUserid(account.getUserId());
+		if(isDoSubmit(request))
+		{
+			if(commonService.insertQuestion(form) > 0)
+				return new ModelAndView(new RedirectView("end"));
+			else
+				return mv;
+		}
+		else
+		{
+			return mv;
+		}
+	}
+	
 	@RequestMapping(value="/end")
 	public ModelAndView end(final HttpServletRequest request,final HttpServletResponse response,@ModelAttribute("account")Account account)
 	{
 		
 		ModelAndView mv = new ModelAndView("/evaluation/end");
-		ScoreEntity score = commonService.getScore(account.getUserId());
-		mv.addObject("score",score);
+
 		return mv;
 	}
 }

@@ -1,0 +1,52 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+    $('input').on('ifChecked', function(event){
+		$("#choice").val($(this).attr("id"));
+     	$('input').iCheck('disable');
+    });
+	$('input').on('ifChecked', function(event){
+     	$('input').iCheck('disable');
+		$("#form_q").submit();
+    });
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="question">
+			<form id="form_q" method="post">
+			<input type="hidden" name="do_submit" value="true"/>
+			#springBind("form.questionid")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+			#springBind("form.choice")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			<div class="q-head clearfix">
+				<h1 class="number">
+					第39题. 打雷下雨时下面哪个地方比较安全？
+					<div class="clock" answer="1">倒计时：<em>20</em></div>
+				</h1>
+			</div>
+			<ul class="single">
+				<li>
+					<input type="radio" name="iCheck" id="1">
+					<label for="1">A、大树底下 </label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="2">
+					<label for="2">B、操场中间 </label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="3">
+					<label for="3">C、教室走廊上</label>
+				</li>
+
+			</ul>
+			</form>
+		</div>
+	</div>
+</div>

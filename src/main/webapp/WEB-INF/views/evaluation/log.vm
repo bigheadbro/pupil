@@ -7,7 +7,7 @@
 				<em for="$!{status.expression}" generated="true" class="error">$!{status.errorMessage}</em>
 				#springBind("form.password")
 				<em for="$!{status.expression}" generated="true" class="error">$!{status.errorMessage}</em>
-				<form accept-charset="UTF-8" action="/log" method="post">
+				<form accept-charset="UTF-8" action="log" method="post">
 					<div class="auth-form-header">
 						<input type="hidden" name="do_submit" value="true"/>
 						<h1>登陆</h1>

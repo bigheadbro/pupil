@@ -10,7 +10,7 @@
 			<li class="step"><img src="img/red-point.png" /><p>Step3.<br/>完成</p></li>
 		</ul>
 		<div id="profile">
-			<a href="/log">点击进入</a>
+			<a href="log">点击进入</a>
 		</div>
 		<div class="bottom"></div>
 	</div>

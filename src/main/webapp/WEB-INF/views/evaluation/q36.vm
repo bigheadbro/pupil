@@ -29,12 +29,12 @@ $(document).ready(function(){
 				<h1 class="number">
 					第36题. 请认真观看视频，然后回答提问。
 					<p>
-						<object id="" style="visibility:visible;" width="640" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
-                        	<param value="http://www.tudou.com/v/CF7B3sUdHQg/v.swf" name="movie"><param value="high" name="quality">
+						<object id="" style="visibility:visible;" width="640" height="440" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+                        	<param value="http://js.tudouui.com/bin/lingtong/PortalPlayer.swf?icode=CF7B3sUdHQg&amp;iid=211620095" name="movie"><param value="high" name="quality">
                         	<param value="never" name="allowScriptAccess"><param value="true" name="allowFullScreen">
                         	<param value="playMovie=true&amp;auto=1&amp;adss=0" name="flashvars">
                         	<param value="transparent" name="wmode">
-                        	<embed id="" height="440" allowscriptaccess="never" style="visibility:visible;" pluginspage="http://get.adobe.com/cn/flashplayer/" flashvars="playMovie=true&amp;auto=1&amp;autostart=true" width="640" allowfullscreen="true" quality="high" src="http://www.tudou.com/v/CF7B3sUdHQg/v.swf" type="application/x-shockwave-flash" wmode="transparent">
+                        	<embed id="" height="440" allowscriptaccess="never" style="visibility:visible;" pluginspage="http://get.adobe.com/cn/flashplayer/" flashvars="playMovie=true&amp;auto=1&amp;autostart=true" width="640" allowfullscreen="true" quality="high" src="http://js.tudouui.com/bin/lingtong/PortalPlayer.swf?icode=CF7B3sUdHQg&amp;iid=211620095" type="application/x-shockwave-flash" wmode="transparent">
                         </object>
 					</p>
 					<div class="clock" answer="1">倒计时：<em>160</em></div>

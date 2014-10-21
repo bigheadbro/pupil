@@ -32,12 +32,12 @@ $(document).ready(function(){
 			</div>
 			<div class="choice-wrap clearfix">
 				<a class="choice2" choice="1">
-					<img src="img/test/yinfu.jpg" />
+					<img style="width:150px;" src="img/test/yinfu.jpg" />
 					<p>A 相同</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
 				<a class="choice2" choice="2">
-					<img src="img/test/yinfu.jpg" />
+					<img style="width:150px;" src="img/test/yinfu.jpg" />
 					<p>B 不相同</p>
 					<img class="yes" src="img/yes.png" />
 				</a>

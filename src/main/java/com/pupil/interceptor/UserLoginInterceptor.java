@@ -33,7 +33,7 @@ public class UserLoginInterceptor extends HandlerInterceptorAdapter {
 		}
 		else
 		{
-			throw new ModelAndViewDefiningException(new ModelAndView(new RedirectView("/index")));
+			throw new ModelAndViewDefiningException(new ModelAndView(new RedirectView("index")));
 		}
 	}
 }

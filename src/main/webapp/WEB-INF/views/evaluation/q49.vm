@@ -1,0 +1,52 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<script>
+$(document).ready(function(){
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+    $('input').on('ifChecked', function(event){
+		$("#choice").val($(this).attr("id"));
+     	$('input').iCheck('disable');
+    });
+	$('input').on('ifChecked', function(event){
+     	$('input').iCheck('disable');
+		$("#form_q").submit();
+    });
+});
+</script>
+<div class="main-content-container">
+	<div class="main-body">
+		<div class="question">
+			<form id="form_q" method="post">
+			<input type="hidden" name="do_submit" value="true"/>
+			#springBind("form.questionid")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
+			#springBind("form.choice")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			<div class="q-head clearfix">
+				<h1 class="number">
+					第49题. 南极洲是位于地球正南面的一片大陆。（如果你要找南极洲的位置，你会在地球仪的底部看到）它占地球表面的十分之一，上面覆盖着一层可能厚达1,500米以上的南极洲地图冰。南极在南极洲的正中央。
+					是全世界最寒冷，也是最干燥、最高和风最强的大陆。很少人整年住在那里，科学家会在那里短期逗留，住在特别的研究站里。南极洲的夏天是十月至三月。这段期间，太阳日夜不停的照射。四月至九月是冬季，情形刚好相反，南极洲会持续6个月陷入一片漆黑。<br/>
+					你觉得大多数人会选择在什么时间段去南极洲？
+					<p>
+						<img src="img/test/hx11T.jpg" />
+					</p>
+					<div class="clock" answer="1">倒计时：<em>60</em></div>
+				</h1>
+			</div>
+			<ul class="single">
+				<li>
+					<input type="radio" name="iCheck" id="1">
+					<label for="1">A、十月-三月</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="2">
+					<label for="2">B、四月-九月 </label>
+				</li>
+			</ul>
+			</form>
+		</div>
+	</div>
+</div>
