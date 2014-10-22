@@ -93,7 +93,7 @@ public class CommonController extends BaseController{
 				Account account = new Account();
 				UserEntity user = (UserEntity)re.get("user");
 				account.setLogin(true); // 登录成功标识
-				account.setUserName(user.getLoginName());
+				account.setUserName(user.getUserName());
 				account.setSchool(user.getSchoolName());
 				account.setUserId(user.getUserId());
 				request.getSession().setAttribute("account", account);
