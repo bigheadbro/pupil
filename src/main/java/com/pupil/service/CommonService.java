@@ -69,6 +69,10 @@ public class CommonService {
 		QuestionEntity ques = new QuestionEntity();
 		ques.setQid(form.getQuestionid());
 		ques.setUserId(form.getUserid());
+		if(questionDAO.queryQuestion(ques) != null)
+		{
+			return 1;
+		}
 		ques.setChoice(form.getChoice());
 		return questionDAO.insertQuestionEntity(ques);
 	}

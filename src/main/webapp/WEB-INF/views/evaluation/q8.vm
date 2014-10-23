@@ -5,14 +5,20 @@
 $(document).ready(function(){
 	$("a.choice").click(function(){
 		$("#choice").val($(this).attr("choice"));
-		$("#form_q").submit();
+		$(this).parent().children(".choice").each(function(){
+			$(this).removeAttr("style");
+			$(this).children(".yes").hide();
+		});
+		$(this).css("border","2px solid #80C122").css("opacity","0.5");
+		$(this).children(".yes").show();
 	});
 	$(".choice").mouseenter(function(){
 		$(this).css("border","2px solid #80C122").css("opacity","0.5");
-		$(this).children(".yes").show();
 	}).mouseleave(function(){
-		$(this).removeAttr("style");
-		$(this).children(".yes").hide();
+		$(this).css("border","2px solid white");
+	});
+	$(".next").click(function(){
+		$("#form_q").submit();
 	});
 });
 </script>
@@ -60,6 +66,9 @@ $(document).ready(function(){
 				</a>
 			</div>
 			</form>
+			<div class="operation clearfix">
+    			<a class="next">下一题</a>
+    		</div>
 		</div>
 	</div>
 	<a style="display:none" href="resource/8.mp3" class="sm2_button"></a>

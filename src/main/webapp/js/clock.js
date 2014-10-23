@@ -9,6 +9,9 @@ function second() {
 function countdown() {
 	var ss = parseInt($(".clock em").text());
     ss -= 1;
+    if(ss < 0){
+    	ss = 0;
+    }
     $(".clock em").text(ss);
     if(ss==0){
     	if(parseInt($(".clock").attr("answer")) == 1){

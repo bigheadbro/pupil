@@ -10,5 +10,5 @@
 	<script type="text/javascript" src="js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/clock.js"></script>
 	<script type="text/javascript" src="js/jquery.jmp3.js"></script>
-	<script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
 </head>

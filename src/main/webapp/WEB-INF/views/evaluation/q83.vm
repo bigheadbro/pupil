@@ -8,12 +8,12 @@ $(document).ready(function(){
     });
     $('input').on('ifChecked', function(event){
 		$("#choice").val($(this).attr("id"));
-     	$('input').iCheck('disable');
+     	
     });
-	$('input').on('ifChecked', function(event){
-     	$('input').iCheck('disable');
+	
+	$(".next").click(function(){
 		$("#form_q").submit();
-    });
+	});
 });
 </script>
 <div class="main-content-container">
@@ -46,6 +46,9 @@ $(document).ready(function(){
 				</li>
 			</ul>
 			</form>
+			<div class="operation clearfix">
+    			<a class="next">下一题</a>
+    		</div>
 		</div>
 	</div>
 </div>

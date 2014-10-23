@@ -12,6 +12,12 @@
 		<id property="choice" column="choice" />
 	</resultMap>
 
+	<select id="queryQuestion" parameterType="QuestionEntity" resultMap="QuestionResultMap">
+	<![CDATA[
+		SELECT * from t_question t WHERE t.user_id = #{userId} and qid = #{qid}
+	]]>
+	</select>
+	
 	<insert id="insertQuestionEntity" parameterType="QuestionEntity">
 		
 		<selectKey resultType="int" order="AFTER" keyProperty="id">

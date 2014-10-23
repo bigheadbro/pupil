@@ -10,6 +10,9 @@ public interface QuestionDAO {
 	 * @param companyUser
 	 * @return
 	 */
+	
+	public QuestionEntity queryQuestion(QuestionEntity ques);
+	
 	public int insertQuestionEntity(QuestionEntity question);
 	
 	//插入维度题

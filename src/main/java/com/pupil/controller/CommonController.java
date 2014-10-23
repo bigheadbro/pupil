@@ -57,6 +57,14 @@ public class CommonController extends BaseController{
 		return mv;
 	}
 	
+	@RequestMapping(value="/test")
+	public ModelAndView test(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("form")QuestionForm form)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/q10");
+
+		return mv;
+	}
+	
 	@RequestMapping(value="/log")
 	public ModelAndView log(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("form")LoginForm form, BindingResult result)
 	{

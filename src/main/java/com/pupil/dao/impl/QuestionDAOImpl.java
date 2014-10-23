@@ -18,6 +18,12 @@ public class QuestionDAOImpl extends SqlSessionDaoSupport implements QuestionDAO
 	}
 
 	@Override
+	public QuestionEntity queryQuestion(QuestionEntity ques)
+	{
+		return this.getSqlSession().selectOne("queryQuestion", ques);
+	}
+	
+	@Override
 	public int insertQuestionList(List<QuestionEntity> list)
 	{
 		int i = this.getSqlSession().insert("insertQuestionList", list);
