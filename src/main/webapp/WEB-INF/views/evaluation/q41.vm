@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第41题. 小明想了解种子在亮处发芽容易还是在暗处发芽容易。他在浸湿的纸上撒了几粒种子，接下来需要做什么? 
+					第5题. 小明想了解种子在亮处发芽容易还是在暗处发芽容易。他在浸湿的纸上撒了几粒种子，接下来需要做什么? 
 					<div class="clock" answer="1">倒计时：<em>40</em></div>
 				</h1>
 			</div>

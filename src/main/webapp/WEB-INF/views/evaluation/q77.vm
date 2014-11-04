@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第77题. 总的来说，我有不少值得自豪的地方
+					第22题. 总的来说，我有不少值得自豪的地方
 					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>

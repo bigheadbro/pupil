@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第75题. 别的孩子讨厌和我相处
+					第20题. 别的孩子讨厌和我相处
 					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>

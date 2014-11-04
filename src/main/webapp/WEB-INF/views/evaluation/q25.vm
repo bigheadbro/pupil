@@ -1,22 +1,16 @@
-<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
-<script type="text/javascript" src="js/mp3-player-button.js"></script>
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-	$("a.choice2").click(function(){
-		$("#choice").val($(this).attr("choice"));
-		$(this).parent().children(".choice2").each(function(){
-			$(this).removeAttr("style");
-			$(this).children(".yes").hide();
-		});
-		$(this).css("border","2px solid #80C122").css("opacity","0.5");
-		$(this).children(".yes").show();
-	});
-	$(".choice2").mouseenter(function(){
-		$(this).css("border","2px solid #80C122").css("opacity","0.5");
-	}).mouseleave(function(){
-		$(this).css("border","2px solid white");
-	});
+    $('input').iCheck({
+		checkboxClass: 'icheckbox_square-green',
+    	radioClass: 'iradio_square-green',
+    	increaseArea: '20%' // optional
+    });
+    $('input').on('ifChecked', function(event){
+		$("#choice").val($(this).attr("id"));
+     	
+    });
+	
 	$(".next").click(function(){
 		$("#form_q").submit();
 	});
@@ -30,50 +24,27 @@ $(document).ready(function(){
 			#springBind("form.questionid")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
-			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
-				<h1 class="number">第25题. 要是可以出国旅游，你会选择下面哪组与你一起同行？
-					<div class="clock" answer="1">倒计时：<em>20</em></div>
+				<h1 class="number">
+					第10题. 现在请你为迪士尼乐园中的工作人员设计工作服，你会？
+					<div class="clock" answer="1">倒计时：<em>30</em></div>
 				</h1>
 			</div>
-			<div class="choice-wrap clearfix">
-				<a class="choice2" choice="1">
-					<div class="img-wrap-b">
-						<em>
-							<img src="img/test/hd12-A.jpg" />
-						</em>
-					</div>
-					<p>A</p>
-					<img class="yes" src="img/yes.png" />
-				</a>
-				<a class="choice2" choice="2">
-					<div class="img-wrap-b">
-						<em>
-							<img src="img/test/hd12-B.jpg" />
-						</em>
-					</div>
-					<p>B</p>
-					<img class="yes" src="img/yes.png" />
-				</a>
-				<a class="choice2" choice="3">
-					<div class="img-wrap-b">
-						<em>
-							<img src="img/test/hd12-C.jpg" />
-						</em>
-					</div>
-					<p>C</p>
-					<img class="yes" src="img/yes.png" />
-				</a>
-				<a class="choice2" choice="4">
-					<div class="img-wrap-b">
-						<em>
-							<img src="img/test/hd12-D.jpg" />
-						</em>
-					</div>
-					<p>D</p>
-					<img class="yes" src="img/yes.png" />
-				</a>
-			</div>
+			<ul class="single">
+				<li>
+					<input type="radio" name="iCheck" id="1">
+					<label for="1">A、全部设计成中国的唐装</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="2">
+					<label for="2">B、每个国家的标志性衣服都有 </label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="3">
+					<label for="3">C、主要以中国唐装为主，再辅以国外服装</label>
+				</li>
+			</ul>
 			</form>
 			<div class="operation clearfix">
     			<a class="next">下一题</a>

@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第30题. 下面这些东西哪种的价格最接近50元？
+					第4题. 下面这些东西哪种的价格最接近50元？
 					<p><img style="width:700px" src="img/test/lq2T.png" /></p>
 					<div class="clock" answer="1">倒计时：<em>60</em></div>
 				</h1>

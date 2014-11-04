@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第46题. 下图表示小明在爬山过程中的速度，请问小明在哪个时间段里爬的最快？
+					第10题. 下图表示小明在爬山过程中的速度，请问小明在哪个时间段里爬的最快？
 					<p>
 						<img src="img/test/hx10T.jpg" />
 					</p>

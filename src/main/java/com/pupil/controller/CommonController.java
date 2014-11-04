@@ -74,13 +74,17 @@ public class CommonController extends BaseController{
 		{
 			if(accnt.getState() == 0)
 			{
-				return new ModelAndView(new RedirectView("introducer1")); 
+				return new ModelAndView(new RedirectView("introducer")); 
 			}
 			else
 			{
 				if(accnt.getState() <= 3)
 				{
 					return new ModelAndView(new RedirectView("q" + String.valueOf(accnt.getState() + 1) + "t")); 
+				}
+				if(accnt.getState() == 18)
+				{
+					return new ModelAndView(new RedirectView("q21")); 
 				}
 				else
 				{
@@ -115,13 +119,17 @@ public class CommonController extends BaseController{
 					account.setState(info.getState());
 					if(account.getState() == 0)
 					{
-						return new ModelAndView(new RedirectView("introducer1")); 
+						return new ModelAndView(new RedirectView("introducer")); 
 					}
 					else
 					{
 						if(account.getState() <= 2)
 						{
 							return new ModelAndView(new RedirectView("q" + String.valueOf(account.getState() + 1) + "t")); 
+						}
+						if(account.getState() == 18)
+						{
+							return new ModelAndView(new RedirectView("q21")); 
 						}
 						else
 						{
@@ -134,7 +142,7 @@ public class CommonController extends BaseController{
 					}
 				}
 				// 登陆成功， 跳转到登陆页面
-				return new ModelAndView(new RedirectView("introducer1"));
+				return new ModelAndView(new RedirectView("introducer"));
 			}
 		}
 		return mv;
@@ -188,6 +196,37 @@ public class CommonController extends BaseController{
 		return mv;
 	}
 	
+	@RequestMapping(value="/ending1")
+	public ModelAndView ending1(final HttpServletRequest request,final HttpServletResponse response)
+	{ 
+		ModelAndView mv = new ModelAndView("/evaluation/ending1");
+
+		return mv;
+	}
+
+	@RequestMapping(value="/ending2")
+	public ModelAndView ending2(final HttpServletRequest request,final HttpServletResponse response)
+	{ 
+		ModelAndView mv = new ModelAndView("/evaluation/ending2");
+
+		return mv;
+	}
+	
+	@RequestMapping(value="/ending3")
+	public ModelAndView ending3(final HttpServletRequest request,final HttpServletResponse response)
+	{ 
+		ModelAndView mv = new ModelAndView("/evaluation/ending3");
+
+		return mv;
+	}
+	
+	@RequestMapping(value="/ending4")
+	public ModelAndView ending4(final HttpServletRequest request,final HttpServletResponse response)
+	{ 
+		ModelAndView mv = new ModelAndView("/evaluation/ending4");
+
+		return mv;
+	}
 	@RequestMapping(value="/q1t")
 	public ModelAndView q1t(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
@@ -486,7 +525,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("q14"));
+				return new ModelAndView(new RedirectView("ending1"));
 			else
 				return mv;
 		}
@@ -581,7 +620,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("q19"));
+				return new ModelAndView(new RedirectView("q21"));
 			else
 				return mv;
 		}
@@ -591,7 +630,7 @@ public class CommonController extends BaseController{
 		}
 	}
 	
-	@RequestMapping(value="/q19")
+	/*@RequestMapping(value="/q19")
 	public ModelAndView q19(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
 		ModelAndView mv = new ModelAndView("/evaluation/q19");
@@ -627,7 +666,7 @@ public class CommonController extends BaseController{
 		{
 			return mv;
 		}
-	}
+	}*/
 	
 	@RequestMapping(value="/q21")
 	public ModelAndView q21(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
@@ -733,7 +772,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("q27"));
+				return new ModelAndView(new RedirectView("ending2"));
 			else
 				return mv;
 		}
@@ -743,6 +782,7 @@ public class CommonController extends BaseController{
 		}
 	}
 	
+	//乐群
 	@RequestMapping(value="/q27")
 	public ModelAndView q27(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
@@ -762,7 +802,7 @@ public class CommonController extends BaseController{
 		}
 	}
 	
-	//乐群
+	
 	@RequestMapping(value="/q28")
 	public ModelAndView q28(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
@@ -924,7 +964,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("q37"));
+				return new ModelAndView(new RedirectView("ending3"));
 			else
 				return mv;
 		}
@@ -1286,7 +1326,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("introducer5"));
+				return new ModelAndView(new RedirectView("ending4"));
 			else
 				return mv;
 		}

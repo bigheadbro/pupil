@@ -1,16 +1,22 @@
+<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="js/mp3-player-button.js"></script>
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-    $('input').iCheck({
-		checkboxClass: 'icheckbox_square-green',
-    	radioClass: 'iradio_square-green',
-    	increaseArea: '20%' // optional
-    });
-    $('input').on('ifChecked', function(event){
-		$("#choice").val($(this).attr("id"));
-     	
-    });
-	
+	$("a.choice2").click(function(){
+		$("#choice").val($(this).attr("choice"));
+		$(this).parent().children(".choice2").each(function(){
+			$(this).removeAttr("style");
+			$(this).children(".yes").hide();
+		});
+		$(this).css("border","2px solid #80C122").css("opacity","0.5");
+		$(this).children(".yes").show();
+	});
+	$(".choice2").mouseenter(function(){
+		$(this).css("border","2px solid #80C122").css("opacity","0.5");
+	}).mouseleave(function(){
+		$(this).css("border","2px solid white");
+	});
 	$(".next").click(function(){
 		$("#form_q").submit();
 	});
@@ -24,27 +30,50 @@ $(document).ready(function(){
 			#springBind("form.questionid")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
-			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
 			<div class="q-head clearfix">
-				<h1 class="number">
-					第24题. 学校来了一群日本学生，中午老师让你招待他们就餐并一起吃饭，当饭餐上齐后，日本学生说“我要开动了”这时你会怎么办？
+				<h1 class="number">第9题. 要是可以出国旅游，你会选择下面哪组与你一起同行？
 					<div class="clock" answer="1">倒计时：<em>20</em></div>
 				</h1>
 			</div>
-			<ul class="single">
-				<li>
-					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、同样也说“我要开动了”</label>
-				</li>
-				<li>
-					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、微笑点头，然后用餐</label>
-				</li>
-				<li>
-					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、对他们的行为表示不理解。</label>
-				</li>
-			</ul>
+			<div class="choice-wrap clearfix">
+				<a class="choice2" choice="1">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-A.jpg" />
+						</em>
+					</div>
+					<p>A</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice2" choice="2">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-B.jpg" />
+						</em>
+					</div>
+					<p>B</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice2" choice="3">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-C.jpg" />
+						</em>
+					</div>
+					<p>C</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+				<a class="choice2" choice="4">
+					<div class="img-wrap-b">
+						<em>
+							<img src="img/test/hd12-D.jpg" />
+						</em>
+					</div>
+					<p>D</p>
+					<img class="yes" src="img/yes.png" />
+				</a>
+			</div>
 			</form>
 			<div class="operation clearfix">
     			<a class="next">下一题</a>

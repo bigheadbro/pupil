@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第32题. 学校要举办艺术节，你们的班级准备表演一个舞台剧。现在有一些角色邀请你演出，你会选择哪个角色呢？
+					第6题. 学校要举办艺术节，你们的班级准备表演一个舞台剧。现在有一些角色邀请你演出，你会选择哪个角色呢？
 					<div class="clock" answer="1">倒计时：<em>30</em></div>
 				</h1>
 			</div>

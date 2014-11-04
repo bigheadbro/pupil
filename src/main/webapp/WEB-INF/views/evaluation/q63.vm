@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第63题. 我会尝试新的游戏和活动。
+					第8题. 我会尝试新的游戏和活动。
 					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>

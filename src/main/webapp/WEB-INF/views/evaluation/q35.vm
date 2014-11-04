@@ -3,16 +3,16 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-	$("a.choice2").click(function(){
+	$("a.choice3").click(function(){
 		$("#choice").val($(this).attr("choice"));
-		$(this).parent().children(".choice2").each(function(){
+		$(this).parent().children(".choice3").each(function(){
 			$(this).removeAttr("style");
 			$(this).children(".yes").hide();
 		});
 		$(this).css("border","2px solid #80C122").css("opacity","0.5");
 		$(this).children(".yes").show();
 	});
-	$(".choice2").mouseenter(function(){
+	$(".choice3").mouseenter(function(){
 		$(this).css("border","2px solid #80C122").css("opacity","0.5");
 	}).mouseleave(function(){
 		$(this).css("border","2px solid white");
@@ -33,14 +33,14 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第35题. 请问图片中的女孩最有可能是哪一种表情？
-					<p><img src="img/test/lq8T.png" /></p>
+					第9题. 请问图片中的女孩最有可能是哪一种表情？
+					<p><img style="width:240px;" src="img/test/lq8T.png" /></p>
 					<div class="clock" answer="1">倒计时：<em>30</em></div>
 				</h1>
 			</div>
 			<div class="choice-wrap clearfix">
-				<a class="choice2" choice="1">
-					<div class="img-wrap-b">
+				<a class="choice3" choice="1">
+					<div class="img-wrap-s">
 						<em>
 							<img src="img/test/lq8-A.jpg" />
 						</em>
@@ -48,8 +48,8 @@ $(document).ready(function(){
 					<p>A</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
-				<a class="choice2" choice="2">
-					<div class="img-wrap-b">
+				<a class="choice3" choice="2">
+					<div class="img-wrap-s">
 						<em>
 							<img src="img/test/lq8-B.jpg" />
 						</em>
@@ -57,8 +57,8 @@ $(document).ready(function(){
 					<p>B</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
-				<a class="choice2" choice="3">
-					<div class="img-wrap-b">
+				<a class="choice3" choice="3">
+					<div class="img-wrap-s">
 						<em>
 							<img src="img/test/lq8-C.jpg" />
 						</em>
@@ -66,8 +66,8 @@ $(document).ready(function(){
 					<p>C</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
-				<a class="choice2" choice="4">
-					<div class="img-wrap-b">
+				<a class="choice3" choice="4">
+					<div class="img-wrap-s">
 						<em>
 							<img src="img/test/lq8-D.jpg" />
 						</em>

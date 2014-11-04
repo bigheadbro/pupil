@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第62题. 我喜欢与众不同的事物。
+					第7题. 我喜欢与众不同的事物。
 					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>

@@ -28,9 +28,9 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第22题. 选出与图片相符的内容
+					第7题. 选出与图片相符的内容
 					<p>
-						<img src="img/test/hd9T.jpg" />
+						<img src="img/test/hd10T.jpg" />
 					</p>
 					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
@@ -38,19 +38,19 @@ $(document).ready(function(){
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、西班牙</label>
+					<label for="1">A、苏格兰独立公投</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、瑞士</label>
+					<label for="2">B、克里米亚加入俄罗斯</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、法国</label>
+					<label for="3">C、伊朗核问题</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="4">
-					<label for="4">D、意大利</label>
+					<label for="4">D、巴以冲突</label>
 				</li>
 			</ul>
 			</form>

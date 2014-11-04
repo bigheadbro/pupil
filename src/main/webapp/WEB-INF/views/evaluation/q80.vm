@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第80题. 同学有困难或遇到不会做的事，我会说“我来帮你”、“我试试”
+					第25题. 同学有困难或遇到不会做的事，我会说“我来帮你”、“我试试”
 					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>

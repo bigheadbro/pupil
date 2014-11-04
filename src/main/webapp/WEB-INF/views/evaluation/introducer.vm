@@ -1,20 +1,10 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <div class="intro-content-container">
 	<div class="main-body">
-		<p class="head">亲爱的同学，欢迎参加大学生职业素养测试。由思来氏教育测评中心与上海市教育报刊总社联合开发的这一款测试，旨在帮助大学生了解自己的职场准备情况，了解自己的特点，在自己与用人单位的双向选择中达成匹配。<br/><br/>
-			在接下来的测试中，你将会获得不同以往的测试体验。你的每一次点击，反应的速度都会被记录，并体现在最后的结果中哦！所以，请你在测试开始前，先做好充分的准备。包括：</p>
-		<ul class="notice">
-			<li><span class="no1">能够保持至少三十分钟坐在电脑前，不会被其他事务打扰</span></li>
-			<li><span class="no2">你的精力是充沛的，没有处于情绪化或十分疲劳的状态</span></li>
-			<li><span class="no3">电脑已经连接了声音播放设备，比如耳机或外放音箱</span></li>
-		</ul>
+		<p class="head">小朋友，非常欢迎你来参加活力测试。本次测试和你平常的考试有一些不同，因为很多题目都没有绝对正确的答案，也不会计入你的期末成绩，所以请你轻松愉快地答题，不需要太紧张哦。加油啦！</p>
 		<div class="bot">
-			<p class="sign">上海教育报刊总社<br/>思来氏教育测评中心</p>
-			<h1>接下来，我们就开始吧！</h1>
-			<a href="q1">开始测试</a>
-			<p class="warn">请大家注意，每一个账号都只有一次测验的机会!</p>
+			<a href="introducer1">进入测试</a>
 		</div>
 	</div>
-	<img src="img/intro.png" />
 </div>
 

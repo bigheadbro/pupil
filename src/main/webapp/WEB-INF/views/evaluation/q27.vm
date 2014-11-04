@@ -27,22 +27,27 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第27题. 你旅游到了一个地方，当地村民非常热情，但是他们有个习俗“抹泥巴”——将泥巴抹在别人脸上来表示友好，这时候你会？
-					<div class="clock" answer="1">倒计时：<em>20</em></div>
+					第1题. 这周末你准备去看电影，你买了一张票，这时候你应该坐在哪里？
+					<p><img src="img/test/lq1T.jpg" /></p>
+					<div class="clock" answer="1">倒计时：<em>120</em></div>
 				</h1>
 			</div>
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、入乡随俗，加入到抹泥巴盛会</label>
+					<label for="1">A、一厅04排03号</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、不想弄脏自己，拒绝参加 </label>
+					<label for="2">B、二厅03排04号 </label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、认为这是落后的习俗，并不能表达友好</label>
+					<label for="3">C、二厅04排03号</label>
+				</li>
+				<li>
+					<input type="radio" name="iCheck" id="4">
+					<label for="4">D、一厅04排05号</label>
 				</li>
 			</ul>
 			</form>

@@ -37,38 +37,29 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第15题. 假设小王同学在长寿路，他想去大世界，今天人民广场站因客流过多而暂时关闭了换乘，而从人民广场走到大世界站需要8分钟现有4条线路，你能为小王选择条合理线路吗？
+					第2题. 现在有四张卡片，每张卡片如果正面写城市的名称,反面就写交通工具的名称;反之,正面写交通工具则反面写城市名称。四张卡片如下图。如果你想证明上海的反面写着火车，请问下面哪种翻卡片的方法可以最快地证明这个想法？
 					<p>
-						<em>
-							<a class="fancybox-v" href="img/test/hd2T1.jpg"><img src="img/test/hd2T1.jpg" class="small"/></a>
-							<a class="fancybox-v" href="img/test/hd2T2.jpg"><img src="img/test/hd2T2.jpg" class="small"/></a>
-						</em>
-						<span>
-						A线路：7号线→2号线→8号线，换乘时间10分钟，总共需要23分钟<br/>
-                        B线路：7号线→8号线，换乘1分钟，总共需要30分钟<br/>
-                        C线路：7号线→9号线→8号线，换乘2分钟，总共需要25分钟<br/>
-                        D线路：公交，每班间隔15分钟，总共需要18分钟<br/>
-						</span>
+						<img style="width:500px;" src="img/test/hd2T.png" />
 					</p>
-					<div class="clock" answer="1">倒计时：<em>120</em></div>
+					<div class="clock" answer="1">倒计时：<em>180</em></div>
 				</h1>
 			</div>
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、7号线→2号线→8号线</label>
+					<label for="1">A、翻“上海”</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、7号线→8号线</label>
+					<label for="2">B、翻“北京”和“火车”</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、7号线→9号线→8号线</label>
+					<label for="3">C、翻“上海”和“汽车”</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="4">
-					<label for="4">D、公交</label>
+					<label for="4">D、翻“上海”，“火车”和“汽车”</label>
 				</li>
 			</ul>
 			</form>

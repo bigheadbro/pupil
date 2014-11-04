@@ -27,11 +27,11 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第50题. 莎拉·维乐是在南极洲工作的一位科学家。透过他寄给侄女丹妮的信，你会知道更多她在南极洲的经历。这封信是谁寄给谁的？
+					第11-4题. 莎拉·维乐是在南极洲工作的一位科学家。透过他寄给侄女丹妮的信，你会知道更多她在南极洲的经历。这封信是谁寄给谁的？
 					<p>
 						<img style="width:700px" src="img/test/hx13T.jpg" />
 					</p>
-					<div class="clock" answer="1">倒计时：<em>60</em></div>
+					<div class="clock" answer="1">倒计时：<em>180</em></div>
 				</h1>
 			</div>
 			<ul class="single">

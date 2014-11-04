@@ -32,7 +32,7 @@ $(document).ready(function(){
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
 			<div class="q-head clearfix">
-				<h1 class="number">第31题. 你和妈妈现在在闸北公园，你们家在永和新村，那么你们现在应该选择哪一辆公交车回家呢？
+				<h1 class="number">第5题. 你和妈妈现在在闸北公园，你们家在永和新村，那么你们现在应该选择哪一辆公交车回家呢？
 					<div class="clock" answer="1">倒计时：<em>120</em></div>
 				</h1>
 			</div>
@@ -40,7 +40,7 @@ $(document).ready(function(){
 				<a class="choice2" choice="1">
 					<div class="img-wrap-b">
 						<em>
-							<img src="img/test/lq4-A.jpg" />
+							<img src="img/test/lq4-B.jpg" />
 						</em>
 					</div>
 					<p>A</p>
@@ -49,28 +49,10 @@ $(document).ready(function(){
 				<a class="choice2" choice="2">
 					<div class="img-wrap-b">
 						<em>
-							<img src="img/test/lq4-B.jpg" />
-						</em>
-					</div>
-					<p>B</p>
-					<img class="yes" src="img/yes.png" />
-				</a>
-				<a class="choice2" choice="3">
-					<div class="img-wrap-b">
-						<em>
 							<img src="img/test/lq4-C.jpg" />
 						</em>
 					</div>
-					<p>C</p>
-					<img class="yes" src="img/yes.png" />
-				</a>
-				<a class="choice2" choice="4">
-					<div class="img-wrap-b">
-						<em>
-							<img src="img/test/lq4-D.jpg" />
-						</em>
-					</div>
-					<p>D</p>
+					<p>B</p>
 					<img class="yes" src="img/yes.png" />
 				</a>
 			</div>

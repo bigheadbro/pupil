@@ -27,22 +27,23 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第28题. 今天班里来了一位新同学，他上台介绍的时候十分紧张，甚至连家住在哪里都说错了，这时候你觉得：
-					<div class="clock" answer="1">倒计时：<em>90</em></div>
+					第2题. 你现在在人民广场，想去世纪公园，请问应该搭乘几号线？
+					<p><img style="width:550px" src="img/test/lqNewT.png" /></p>
+					<div class="clock" answer="1">倒计时：<em>120</em></div>
 				</h1>
 			</div>
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、他是一个内向的同学，面对这么多的同学紧张是可以理解的</label>
+					<label for="1">A、1号线</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、自我介绍就该大大方方，没必要扭扭捏捏的 </label>
+					<label for="2">B、2号线 </label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、他应该是没有准备好，如果是我的话我会准备得更充分</label>
+					<label for="3">C、8号线</label>
 				</li>
 			</ul>
 			</form>

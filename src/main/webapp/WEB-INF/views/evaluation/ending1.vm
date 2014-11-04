@@ -1,0 +1,10 @@
+#set($layout = "/layout/user_detail_layout.vm")
+<div class="intro-content-container">
+	<div class="main-body">
+		<p class="head"><img src="img/1.png" /></p>
+		<div class="bot">
+			<a href="q14">继续测试</a>
+		</div>
+	</div>
+</div>
+

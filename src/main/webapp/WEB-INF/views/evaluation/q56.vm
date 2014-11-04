@@ -27,7 +27,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第56题. 在吵闹的环境下，我还是能专注于在做的事，直至完成。
+					第1题. 在吵闹的环境下，我还是能专注于在做的事，直至完成。
 					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>

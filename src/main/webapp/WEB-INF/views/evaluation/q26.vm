@@ -27,22 +27,22 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第26题. 上海迪士尼乐园(Shanghai Disney Resort)，又称上海迪士尼魔法王国主题乐园，是中国大陆第一个，中国第二个，亚洲第三个，世界第六个迪士尼主题公园。上海迪士尼度假区主题乐园与配套设施建设正按计划推进,将于2015年底开门迎客。现在请你为迪士尼乐园中的工作人员设计工作服，你会？
-					<div class="clock" answer="1">倒计时：<em>30</em></div>
+					第11题. 你旅游到了一个地方，当地村民非常热情，但是他们喜欢“抹泥巴”—将泥巴抹（mǒ）在别人脸上来表示友好，这时候你会？
+					<div class="clock" answer="1">倒计时：<em>20</em></div>
 				</h1>
 			</div>
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、全部设计成中国的唐装</label>
+					<label for="1">A、入乡随俗，加入到抹泥巴盛会</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、每个国家的标志性衣服都有 </label>
+					<label for="2">B、不想弄脏自己，拒绝参加 </label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、主要以中国唐装为主，再辅以国外服装</label>
+					<label for="3">C、认为这是落后的习俗，并不能表达友好</label>
 				</li>
 			</ul>
 			</form>

@@ -36,7 +36,7 @@ $(document).ready(function(){
 				<a class="choice" choice="1">
 					<div class="img-wrap">
 						<em>
-							<img src="img/test/13-A.jpg" />
+							<img style="width:300px;" src="img/test/13-A.jpg" />
 						</em>
 					</div>
 					<p>A</p>
