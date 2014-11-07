@@ -3,7 +3,7 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <div class="intro-content-container">
 	<div class="main-body">
-		<p class="head" style="">小朋友，非常欢迎你来参加活力测试。这一次的测试很多题目都没有绝对正确的答案，也不会计入你的期末成绩，所以请你轻松愉快地答题，不要太紧张哦。<br/>
+		<p class="head" style="text-align:left;">小朋友，非常欢迎你来参加活力测试。这一次的测试很多题目都没有绝对正确的答案，也不会计入你的期末成绩，所以请你轻松愉快地答题，不要太紧张哦。<br/>
 			接下来每一道题目都会有一定的时间限制，如果你在规定的时间内还没答题，题目就会自动跳转到下一题，如果你提前做完了，就按“下一题”继续测试。<br/>
 			请注意做完一题后不能返回去修改答案哦。那么我们开始吧！</p>
 		<div class="bot">
