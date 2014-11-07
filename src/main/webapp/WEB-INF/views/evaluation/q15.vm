@@ -21,6 +21,7 @@ $(document).ready(function(){
           }
 	});
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -35,9 +36,11 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第2题. 现在有四张卡片，每张卡片如果正面写城市的名称,反面就写交通工具的名称;反之,正面写交通工具则反面写城市名称。四张卡片如下图。如果你想证明上海的反面写着火车，请问下面哪种翻卡片的方法可以最快地证明这个想法？
+					第2题. 请问下面四个选项中哪一个数字与下图中的三个数字不能算出24点？
 					<p>
 						<img style="width:500px;" src="img/test/hd2T.png" />
 					</p>
@@ -47,19 +50,19 @@ $(document).ready(function(){
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、翻“上海”</label>
+					<label for="1">A、5</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、翻“北京”和“火车”</label>
+					<label for="2">B、6</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、翻“上海”和“汽车”</label>
+					<label for="3">C、7</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="4">
-					<label for="4">D、翻“上海”，“火车”和“汽车”</label>
+					<label for="4">D、8</label>
 				</li>
 			</ul>
 			</form>

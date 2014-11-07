@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 	
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -25,6 +26,8 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第20题. 别的孩子讨厌和我相处

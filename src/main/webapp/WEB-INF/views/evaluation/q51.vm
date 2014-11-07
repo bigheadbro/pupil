@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 	
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -25,9 +26,11 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第11-5题. 莎拉·维乐是在南极洲工作的一位科学家。透过他寄给侄女丹妮的信，你会知道更多她在南极洲的经历。下面哪一些食物是南极洲的食物？
+					第11-5题. <span>下面哪一些食物是南极洲的食物？</span><br/>莎拉·维乐是在南极洲工作的一位科学家。透过他寄给侄女丹妮的信，你会知道更多她在南极洲的经历。
 					<p>
 						<img style="width:700px" src="img/test/hx13T.jpg" />
 					</p>

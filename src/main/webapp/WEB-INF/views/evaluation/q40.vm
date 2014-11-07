@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 	
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -25,6 +26,8 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第4题. 你家离科技馆大概有2.3千米的路程，平时你和妈妈坐公交过去大约需要15分钟，今天你们想走路过去，大概需要多久？

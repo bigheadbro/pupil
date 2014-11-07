@@ -1,10 +1,15 @@
+<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="js/mp3-player-button.js"></script>
 #set($layout = "/layout/user_detail_layout.vm")
 <div class="intro-content-container">
 	<div class="main-body">
-		<p class="head">小朋友，非常欢迎你来参加活力测试。本次测试和你平常的考试有一些不同，因为很多题目都没有绝对正确的答案，也不会计入你的期末成绩，所以请你轻松愉快地答题，不需要太紧张哦。加油啦！</p>
+		<p class="head" style="">小朋友，非常欢迎你来参加活力测试。这一次的测试很多题目都没有绝对正确的答案，也不会计入你的期末成绩，所以请你轻松愉快地答题，不要太紧张哦。<br/>
+			接下来每一道题目都会有一定的时间限制，如果你在规定的时间内还没答题，题目就会自动跳转到下一题，如果你提前做完了，就按“下一题”继续测试。<br/>
+			请注意做完一题后不能返回去修改答案哦。那么我们开始吧！</p>
 		<div class="bot">
 			<a href="introducer1">进入测试</a>
 		</div>
 	</div>
 </div>
+<a style="display:none" href="resource/introducer.mp3" class="sm2_button"></a>
 

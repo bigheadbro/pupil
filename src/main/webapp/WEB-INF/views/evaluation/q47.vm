@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 	
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -25,11 +26,13 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第11-1题. 南极洲是位于地球正南面的一片大陆。（如果你要找南极洲的位置，你会在地球仪的底部看到）它占地球表面的十分之一，上面覆盖着一层可能厚达1,500米以上的南极洲地图冰。南极在南极洲的正中央。
+					第11-1题. <span>在地球仪上，哪里可以看到南极洲？</span><br/>南极洲是位于地球正南面的一片大陆。（如果你要找南极洲的位置，你会在地球仪的底部看到）它占地球表面的十分之一，上面覆盖着一层可能厚达1,500米以上的南极洲地图冰。南极在南极洲的正中央。
 					是全世界最寒冷，也是最干燥、最高和风最强的大陆。很少人整年住在那里，科学家会在那里短期逗留，住在特别的研究站里。南极洲的夏天是十月至三月。这段期间，太阳日夜不停的照射。四月至九月是冬季，情形刚好相反，南极洲会持续6个月陷入一片漆黑。<br/>
-					在地球仪上，哪里可以看到南极洲？
+					
 					<p>
 						<img src="img/test/hx11T.jpg" />
 					</p>

@@ -82,9 +82,13 @@ public class CommonController extends BaseController{
 				{
 					return new ModelAndView(new RedirectView("q" + String.valueOf(accnt.getState() + 1) + "t")); 
 				}
-				if(accnt.getState() == 18)
+				else if(accnt.getState() == 18)
 				{
 					return new ModelAndView(new RedirectView("q21")); 
+				}
+				else if(accnt.getState() == 35)
+				{
+					return new ModelAndView(new RedirectView("q37")); 
 				}
 				else
 				{
@@ -127,9 +131,13 @@ public class CommonController extends BaseController{
 						{
 							return new ModelAndView(new RedirectView("q" + String.valueOf(account.getState() + 1) + "t")); 
 						}
-						if(account.getState() == 18)
+						else if(account.getState() == 18)
 						{
 							return new ModelAndView(new RedirectView("q21")); 
+						}
+						else if(account.getState() == 35)
+						{
+							return new ModelAndView(new RedirectView("q37")); 
 						}
 						else
 						{
@@ -945,7 +953,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("q36"));
+				return new ModelAndView(new RedirectView("ending3"));
 			else
 				return mv;
 		}
@@ -955,7 +963,7 @@ public class CommonController extends BaseController{
 		}
 	}
 	
-	@RequestMapping(value="/q36")
+	/*@RequestMapping(value="/q36")
 	public ModelAndView q36(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
 		ModelAndView mv = new ModelAndView("/evaluation/q36");
@@ -972,7 +980,7 @@ public class CommonController extends BaseController{
 		{
 			return mv;
 		}
-	}
+	}*/
 	
 	//情景活学
 	@RequestMapping(value="/q37")

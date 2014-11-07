@@ -1,9 +1,8 @@
-var se, m = 0, h = 0, s = 0;
+var se, cost, m = 0, h = 0, s = 1;
 function second() {
     if (s > 0 && (s % 60) == 0) { m += 1; s = 0; }
     if (m > 0 && (m % 60) == 0) { h += 1; m = 0; }
     t = (m <= 9 ? "0" + m : m) + ":" + (s <= 9 ? "0" + s : s); 
-    $(".clock").text("倒计时"+t);
     s += 1;
 }
 function countdown() {
@@ -15,6 +14,7 @@ function countdown() {
     $(".clock em").text(ss);
     if(ss==0){
     	if(parseInt($(".clock").attr("answer")) == 1){
+    		$("#time").val(s);
     		$("#form_q").submit();
     	}else{
     		location.href= $(".clock").attr("url");
@@ -27,5 +27,6 @@ function calcCurrentTime(){
 $(document).ready(
 	function startclock() { 
 		se = setInterval("countdown()", 1000); 
+		cost = setInterval("second()", 1000); 
 	}
 );

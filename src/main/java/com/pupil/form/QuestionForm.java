@@ -14,6 +14,8 @@ public class QuestionForm implements Serializable {
 	private int choice;
 	
 	private int userid;
+	
+	private int time;
 
 	/**
 	 * @return the qustionid
@@ -49,5 +51,13 @@ public class QuestionForm implements Serializable {
 
 	public void setUserid(int userid) {
 		this.userid = userid;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
 	}
 }

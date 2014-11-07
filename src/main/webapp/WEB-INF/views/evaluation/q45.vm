@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 	
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -25,6 +26,8 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第9题. 一名学生想知道，以下两个杯子是否能盛相同体积的水。已知，两个杯子的重量（质量）各不相同。该学生在第1个杯子中完全盛满水，并想测量出杯2能否盛相同体积的水。<br/>

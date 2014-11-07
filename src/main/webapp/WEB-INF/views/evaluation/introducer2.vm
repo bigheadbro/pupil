@@ -1,3 +1,5 @@
+<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="js/mp3-player-button.js"></script>
 #set($layout = "/layout/user_detail_layout.vm")
 <div class="intro-content-container">
 	<div class="main-body">
@@ -8,4 +10,4 @@
 		</div>
 	</div>
 </div>
-
+<a style="display:none" href="resource/introducer2.mp3" class="sm2_button"></a>

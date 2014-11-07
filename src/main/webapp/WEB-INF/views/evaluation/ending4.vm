@@ -1,0 +1,12 @@
+<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
+<script type="text/javascript" src="js/mp3-player-button.js"></script>
+#set($layout = "/layout/user_detail_layout.vm")
+<div class="intro-content-container">
+	<div class="main-body">
+		<p class="head"><img src="img/4.png" /></p>
+		<div class="bot">
+			<a href="introducer5">继续测试</a>
+		</div>
+	</div>
+</div>
+<a style="display:none" href="resource/engding4.mp3" class="sm2_button"></a>

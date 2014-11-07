@@ -13,11 +13,12 @@ $(document).ready(function(){
 		$(this).children(".yes").show();
 	});
 	$(".choice").mouseenter(function(){
-		$(this).css("border","2px solid #80C122").css("opacity","0.5");
+		$(this).css("border","2px solid #80C122");
 	}).mouseleave(function(){
 		$(this).css("border","2px solid white");
 	});
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -31,10 +32,12 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value=0 id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第12-1题. 月食，是一种当月球运行进入地球的阴影（本影部份）时，原本可被太阳光照亮的部份，有部份或全部不能被直射阳光照亮，使得位于地球的观测者无法看到普通的月相的天文现象。月食发生时，太阳、地球、月球恰好或几乎在同一条直线上。下图是月食时间表以及部分地区月出时间。请回答以下问题。<br/>
-					下面哪一张图表示月食发生了？
+					第12-1题. <span>下面哪一张图表示月食发生了？</span><br/>月食，是一种当月球运行进入地球的阴影（本影部份）时，原本可被太阳光照亮的部份，有部份或全部不能被直射阳光照亮，使得位于地球的观测者无法看到普通的月相的天文现象。月食发生时，太阳、地球、月球恰好或几乎在同一条直线上。下图是月食时间表以及部分地区月出时间。请回答以下问题。<br/>
+					
 					<p><img style="width:500px" src="img/test/hx12T.jpg" /></p>
 					<div class="clock" answer="1">倒计时：<em>240</em></div>
 				</h1>

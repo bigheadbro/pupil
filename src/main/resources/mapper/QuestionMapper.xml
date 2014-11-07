@@ -10,6 +10,7 @@
 		<id property="qid" column="qid" />
    	  <!---->
 		<id property="choice" column="choice" />
+		<id property="time" column="time" />
 	</resultMap>
 
 	<select id="queryQuestion" parameterType="QuestionEntity" resultMap="QuestionResultMap">
@@ -29,6 +30,7 @@
 		,user_id
 		,qid
 		,choice
+		,time
 		)
 		values
 		(
@@ -36,6 +38,7 @@
 		,#{userId}
 		,#{qid}
 		,#{choice}
+		,#{time}
 		)
 	</insert>
 </mapper>

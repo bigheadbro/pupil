@@ -73,6 +73,7 @@ public class CommonService {
 		{
 			return 1;
 		}
+		ques.setTime(form.getTime());
 		ques.setChoice(form.getChoice());
 		return questionDAO.insertQuestionEntity(ques);
 	}

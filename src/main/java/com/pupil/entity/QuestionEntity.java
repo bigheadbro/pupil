@@ -17,6 +17,7 @@ public class QuestionEntity implements Serializable {
 	//
 	private int choice;
 	
+	private int time;
 	/**
 	 * @return the id
 	 */
@@ -68,5 +69,13 @@ public class QuestionEntity implements Serializable {
 
 	public void setChoice(int choice) {
 		this.choice = choice;
+	}
+
+	public int getTime() {
+		return time;
+	}
+
+	public void setTime(int time) {
+		this.time = time;
 	}
 }

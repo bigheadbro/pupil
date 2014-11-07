@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 	
 	$(".next").click(function(){
+		$("#time").val(s);
 		$("#form_q").submit();
 	});
 });
@@ -25,9 +26,14 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="qid" />
 			#springBind("form.choice")
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="choice"/>
+			#springBind("form.time")
+			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第11题. 你旅游到了一个地方，当地村民非常热情，但是他们喜欢“抹泥巴”—将泥巴抹（mǒ）在别人脸上来表示友好，这时候你会？
+					第11题. 你旅游到了一个地方，当地村民非常热情，但是他们喜欢“抹锅灰”—将锅灰抹在别人脸上来表示友好，这时候你会？
+					<p>
+						<img src="img/test/hd11T.jpg" />
+					</p>
 					<div class="clock" answer="1">倒计时：<em>20</em></div>
 				</h1>
 			</div>
