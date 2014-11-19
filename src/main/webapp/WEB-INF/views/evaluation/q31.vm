@@ -5,7 +5,7 @@
 $(document).ready(function(){
 	$("a.choice4").click(function(){
 		$("#choice").val($(this).attr("choice"));
-		$(this).parent().children(".choice2").each(function(){
+		$(this).parent().children(".choice4").each(function(){
 			$(this).removeAttr("style");
 			$(this).children(".yes").hide();
 		});

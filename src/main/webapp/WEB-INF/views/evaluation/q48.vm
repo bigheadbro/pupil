@@ -34,7 +34,7 @@ $(document).ready(function(){
 					是全世界最寒冷，也是最干燥、最高和风最强的大陆。很少人整年住在那里，科学家会在那里短期逗留，住在特别的研究站里。南极洲的夏天是十月至三月。这段期间，太阳日夜不停的照射。四月至九月是冬季，情形刚好相反，南极洲会持续6个月陷入一片漆黑。<br/>
 					
 					<p>
-						<img src="img/test/hx11T.jpg" />
+						<img style="width:220px" src="img/test/hx11T.jpg" />
 					</p>
 					<div class="clock" answer="1">倒计时：<em>120</em></div>
 				</h1>
