@@ -39,7 +39,7 @@ $(document).ready(function(){
 					<div class="clock" answer="1">倒计时：<em>20</em></div>
 				</h1>
 			</div>
-			<div class="choice-wrap clearfix">
+			<div class="choice-wrap clearfix" style="width: 600px;">
 				<a class="choice2" choice="1">
 					<div class="img-wrap-b">
 						<em>

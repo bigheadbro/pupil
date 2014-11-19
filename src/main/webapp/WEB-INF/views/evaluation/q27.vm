@@ -33,7 +33,7 @@ $(document).ready(function(){
 					第1题. 这周末你准备去看电影，你买了一张票，这时候你应该坐在哪里？
 					<p>
 						<img src="img/test/lq1T.jpg" />
-						<img src="img/test/lq1T2.png" />
+						<img style="width:400px;" src="img/test/lq1T2.png" />
 					</p>
 					<div class="clock" answer="1">倒计时：<em>120</em></div>
 				</h1>
@@ -41,19 +41,19 @@ $(document).ready(function(){
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、一厅04排03号</label>
+					<label for="1">A、A</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、二厅03排04号 </label>
+					<label for="2">B、B</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、二厅04排03号</label>
+					<label for="3">C、C</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="4">
-					<label for="4">D、一厅04排05号</label>
+					<label for="4">D、D</label>
 				</li>
 			</ul>
 			</form>
