@@ -11,6 +11,7 @@
    	  <!---->
 		<id property="choice" column="choice" />
 		<id property="time" column="time" />
+		<id property="gmtcreate" column="gmtcreate" />
 	</resultMap>
 
 	<select id="queryQuestion" parameterType="QuestionEntity" resultMap="QuestionResultMap">
@@ -31,6 +32,7 @@
 		,qid
 		,choice
 		,time
+		,gmtcreate
 		)
 		values
 		(
@@ -39,6 +41,7 @@
 		,#{qid}
 		,#{choice}
 		,#{time}
+		,now()
 		)
 	</insert>
 </mapper>

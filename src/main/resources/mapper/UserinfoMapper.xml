@@ -8,6 +8,7 @@
 	  <id property="userId" column="user_id"/>
    	  <!---->
 	  <id property="state" column="state"/>
+	  <id property="gmtcreate" column="gmtcreate"/>
 	</resultMap>
 
 	<select id="queryUserinfoEntityByUserid" parameterType="int" resultMap="UserinfoResultMap">
@@ -25,12 +26,14 @@
 		id
 		,user_id
 		,state
+		,gmtcreate
 		)
 		values
 		(
 		#{id}
 		,#{userId}
 		,#{state}
+		,now()
 		)
 	</insert>
 	

@@ -18,6 +18,9 @@ public class QuestionEntity implements Serializable {
 	private int choice;
 	
 	private int time;
+	
+	private String gmtcreate;
+	
 	/**
 	 * @return the id
 	 */
@@ -77,5 +80,15 @@ public class QuestionEntity implements Serializable {
 
 	public void setTime(int time) {
 		this.time = time;
+	}
+
+	public String getGmtcreate()
+	{
+		return gmtcreate;
+	}
+
+	public void setGmtcreate(String gmtcreate)
+	{
+		this.gmtcreate = gmtcreate;
 	}
 }

@@ -14,6 +14,8 @@ public class UserinfoEntity implements Serializable {
 	//
 	private int state;
 
+	private String gmtcreate;
+	
 	public int getId() {
 		return id;
 	}
@@ -36,5 +38,15 @@ public class UserinfoEntity implements Serializable {
 
 	public void setState(int state) {
 		this.state = state;
+	}
+
+	public String getGmtcreate()
+	{
+		return gmtcreate;
+	}
+
+	public void setGmtcreate(String gmtcreate)
+	{
+		this.gmtcreate = gmtcreate;
 	}
 }
