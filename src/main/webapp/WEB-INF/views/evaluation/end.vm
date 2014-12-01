@@ -8,6 +8,7 @@
 				<h3>感谢您的参与</h3>
 			</div>
 		</div>
+		<h1 class="clock" url="logoff"><em >5</em>秒后退出</h1>
 		<div class="bottom"></div>
 	</div>
 	
