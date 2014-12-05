@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -65,6 +66,14 @@ public class CommonController extends BaseController{
 		return mv;
 	}
 	
+	@RequestMapping(value = "/logoff")
+	public ModelAndView logoff(final HttpServletRequest request,final HttpServletResponse response, Model model) {
+		request.getSession().invalidate();
+		model.asMap().remove("account");
+		return new ModelAndView(new RedirectView("index"));
+		
+	}
+	
 	@RequestMapping(value="/log")
 	public ModelAndView log(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("form")LoginForm form, BindingResult result)
 	{
@@ -94,7 +103,7 @@ public class CommonController extends BaseController{
 				{
 					if(accnt.getState() == 85)
 					{
-						return new ModelAndView(new RedirectView("/end"));
+						return new ModelAndView(new RedirectView("end"));
 					}
 					return new ModelAndView(new RedirectView("q" + String.valueOf(accnt.getState() + 1))); 
 				}
