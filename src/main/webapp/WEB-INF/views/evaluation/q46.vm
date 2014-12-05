@@ -30,7 +30,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第10题. 下图表示小明在爬山过程中的速度，请问小明在哪个时间段里爬的最快？
+					第10题. 下图表示小明在爬山过程中随着时间的推移爬过的路程，请问小明在哪个时间段里爬的最快？
 					<p>
 						<img style="width:500px;" src="img/test/hx10T.jpg" />
 					</p>

@@ -45,7 +45,7 @@ $(document).ready(function(){
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、更想作为观众看其他人表演</label>
+					<label for="3">C、当观众看其他人表演</label>
 				</li>
 			</ul>
 			</form>

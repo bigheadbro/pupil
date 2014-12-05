@@ -1,6 +1,14 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
+	$("#form_q").validate({
+		rules:{
+			choice:{
+				required:true,
+				min:1
+			}
+		}
+	});
 	$("a.choice").click(function(){
 		$("#choice").val($(this).attr("choice"));
 		$(this).parent().children(".choice").each(function(){

@@ -45,7 +45,7 @@ $(document).ready(function(){
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、1小时</label>
+					<label for="3">C、2小时</label>
 				</li>
 			</ul>
 			</form>

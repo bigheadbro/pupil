@@ -40,15 +40,15 @@ $(document).ready(function(){
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、入乡随俗，加入到抹泥巴盛会</label>
+					<label for="1">A、觉得很有趣，一起参加当地村民的活动</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
-					<label for="2">B、不想弄脏自己，拒绝参加 </label>
+					<label for="2">B、有点脏，就在边上观看</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、认为这是落后的习俗，并不能表达友好</label>
+					<label for="3">C、太恶心了，拒绝加入</label>
 				</li>
 			</ul>
 			</form>

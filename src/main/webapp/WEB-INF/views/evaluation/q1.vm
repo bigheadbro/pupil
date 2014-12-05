@@ -19,6 +19,7 @@ $(document).ready(function(){
 		$("#time").val(s);
 		$("#form_q").submit();
 	});
+	
 });
 </script>
 <div class="main-content-container">

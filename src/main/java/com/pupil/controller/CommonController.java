@@ -99,6 +99,10 @@ public class CommonController extends BaseController{
 				{
 					return new ModelAndView(new RedirectView("q37")); 
 				}
+				else if(accnt.getState() == 52)
+				{
+					return new ModelAndView(new RedirectView("q56")); 
+				}
 				else
 				{
 					if(accnt.getState() == 85)
@@ -147,6 +151,10 @@ public class CommonController extends BaseController{
 						else if(account.getState() == 35)
 						{
 							return new ModelAndView(new RedirectView("q37")); 
+						}
+						else if(account.getState() == 52)
+						{
+							return new ModelAndView(new RedirectView("q56")); 
 						}
 						else
 						{
@@ -1286,7 +1294,7 @@ public class CommonController extends BaseController{
 		if(isDoSubmit(request))
 		{
 			if(commonService.insertQuestion(form) > 0)
-				return new ModelAndView(new RedirectView("q53"));
+				return new ModelAndView(new RedirectView("ending4"));
 			else
 				return mv;
 		}
@@ -1296,7 +1304,7 @@ public class CommonController extends BaseController{
 		}
 	}
 	
-	@RequestMapping(value="/q53")
+	/*@RequestMapping(value="/q53")
 	public ModelAndView q53(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)
 	{
 		ModelAndView mv = new ModelAndView("/evaluation/q53");
@@ -1351,7 +1359,7 @@ public class CommonController extends BaseController{
 		{
 			return mv;
 		}
-	}
+	}*/
 	
 	@RequestMapping(value="/q56")
 	public ModelAndView q56(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("account")Account account, @ModelAttribute("form")QuestionForm form)

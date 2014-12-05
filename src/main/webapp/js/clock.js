@@ -15,6 +15,7 @@ function countdown() {
     if(ss==0){
     	if(parseInt($(".clock").attr("answer")) == 1){
     		$("#time").val(s);
+    		$("#choice").val(5);
     		$("#form_q").submit();
     	}else{
     		location.href= $(".clock").attr("url");
@@ -30,3 +31,19 @@ $(document).ready(
 		cost = setInterval("second()", 1000); 
 	}
 );
+$(document).ready(function(){
+	$("#form_q").validate({
+		ignore: [],
+		rules:{
+			choice:{
+				min:1
+			},
+			messages:{
+				choice:{
+					min:"还未选择答案"
+				}
+			},
+			errorElement:"em"
+		}
+	});
+});

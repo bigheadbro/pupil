@@ -30,7 +30,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第11-4题. <span>这封信是谁寄给谁的？</span><br/>莎拉·维乐是在南极洲工作的一位科学家。透过他寄给侄女丹妮的信，你会知道更多她在南极洲的经历。
+					第11-4题. 莎拉·维乐是在南极洲工作的一位科学家。透过他寄给侄女丹妮的信，你会知道更多她在南极洲的经历。
 					<p>
 						<img style="width:700px" src="img/test/hx13T.jpg" />
 					</p>
@@ -38,6 +38,7 @@ $(document).ready(function(){
 				</h1>
 			</div>
 			<ul class="single">
+				<span>这封信是谁寄给谁的？</span>
 				<li>
 					<input type="radio" name="iCheck" id="1">
 					<label for="1">A、科学家莎拉寄给她的侄女丹妮</label>

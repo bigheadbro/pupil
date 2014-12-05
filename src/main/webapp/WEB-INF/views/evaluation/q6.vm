@@ -4,7 +4,7 @@
 <script>
 $(document).ready(function(){
 	$("a.choice2").click(function(){
-		$("#choice2").val($(this).attr("choice"));
+		$("#choice").val($(this).attr("choice"));
 		$(this).parent().children(".choice2").each(function(){
 			$(this).removeAttr("style");
 			$(this).children(".yes").hide();

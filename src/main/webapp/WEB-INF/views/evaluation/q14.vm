@@ -30,7 +30,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第1题. 小王和小明约在周末玩耍，他们都不想走超过15分钟的路，他们应该在哪里见面？
+					第1题. 小王和小明约在周末玩耍，地图上的数字代表走过这段路需要的时间，他们都不想走超过15分钟的路，他们应该在哪里见面？
 					<p>
 						<img style="width:500px;" src="img/test/hd1T.png" />
 					</p>
