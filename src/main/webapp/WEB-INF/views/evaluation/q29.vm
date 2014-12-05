@@ -46,7 +46,7 @@ $(document).ready(function(){
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、肯德基全家桶 </label>
+					<label for="3">C、汉堡套餐 </label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="4">

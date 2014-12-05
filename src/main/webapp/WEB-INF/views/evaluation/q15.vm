@@ -50,7 +50,7 @@ $(document).ready(function(){
 			<ul class="single">
 				<li>
 					<input type="radio" name="iCheck" id="1">
-					<label for="1">A、5</label>
+					<label for="1">A、3</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="2">
@@ -58,11 +58,11 @@ $(document).ready(function(){
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="3">
-					<label for="3">C、7</label>
+					<label for="3">C、2</label>
 				</li>
 				<li>
 					<input type="radio" name="iCheck" id="4">
-					<label for="4">D、8</label>
+					<label for="4">D、5</label>
 				</li>
 			</ul>
 			</form>
