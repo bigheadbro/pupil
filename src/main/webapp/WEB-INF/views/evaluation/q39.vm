@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第3题. 打雷下雨时下面哪个地方比较安全？
-					<div class="clock" answer="1">倒计时：<em>20</em></div>
+					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>
 			<ul class="single">

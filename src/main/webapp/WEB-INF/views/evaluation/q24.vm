@@ -36,7 +36,7 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">第9题. 要是可以出国旅游，你会选择下面哪些人与你一起同行？
-					<div class="clock" answer="1">倒计时：<em>20</em></div>
+					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>
 			<div class="choice-wrap clearfix" style="width: 600px;">

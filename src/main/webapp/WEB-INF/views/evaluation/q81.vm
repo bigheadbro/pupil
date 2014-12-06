@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第26题. 在文娱活动中，我宁愿坐着看而不愿亲自参加。
-					<div class="clock" answer="1">倒计时：<em>15</em></div>
+					<div class="clock" answer="1">倒计时：<em>12</em></div>
 				</h1>
 			</div>
 			<ul class="single">

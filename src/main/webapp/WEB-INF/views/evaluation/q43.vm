@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第7题. 在科学课上，你对老师的结论产生疑问时，你会
-					<div class="clock" answer="1">倒计时：<em>20</em></div>
+					<div class="clock" answer="1">倒计时：<em>25</em></div>
 				</h1>
 			</div>
 			<ul class="single">

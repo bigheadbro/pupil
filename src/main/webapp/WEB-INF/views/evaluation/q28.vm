@@ -41,7 +41,7 @@ $(document).ready(function(){
 				<h1 class="number">
 					第2题. 你现在在人民广场，想去世纪公园，请问应该搭乘几号线最方便？
 					<p><a class="fancybox-v" href="img/test/lqNewT.png"><img style="width:300px" src="img/test/lqNewT.png" /></a>(点击可放大图片)</p>
-					<div class="clock" answer="1">倒计时：<em>120</em></div>
+					<div class="clock" answer="1">倒计时：<em>90</em></div>
 				</h1>
 			</div>
 			<ul class="single">

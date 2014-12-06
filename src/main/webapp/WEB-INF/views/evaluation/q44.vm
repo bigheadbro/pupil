@@ -40,7 +40,7 @@ $(document).ready(function(){
                     </span>
 					</p>
 																    如果通过以上三种方法得到的结论存在分歧，你最相信的是哪一种?
-					<div class="clock" answer="1">倒计时：<em>90</em></div>
+					<div class="clock" answer="1">倒计时：<em>80</em></div>
 				</h1>
 			</div>
 			<ul class="single">

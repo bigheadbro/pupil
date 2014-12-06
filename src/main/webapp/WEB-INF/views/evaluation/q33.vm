@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第7题. 由于是班里的大型活动，每一个同学都参与到了演出的准备过程之中，而除了舞台剧表演以外还有一些事情需要提前进行准备，你更想做以下哪一件事情：
-					<div class="clock" answer="1">倒计时：<em>30</em></div>
+					<div class="clock" answer="1">倒计时：<em>40</em></div>
 				</h1>
 			</div>
 			<ul class="single">

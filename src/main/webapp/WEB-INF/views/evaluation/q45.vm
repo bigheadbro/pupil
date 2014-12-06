@@ -35,7 +35,7 @@ $(document).ready(function(){
 					<p>
 						<img src="img/test/hx9T.jpg" />
 					</p>
-					<div class="clock" answer="1">倒计时：<em>120</em></div>
+					<div class="clock" answer="1">倒计时：<em>100</em></div>
 				</h1>
 			</div>
 			<ul class="single">

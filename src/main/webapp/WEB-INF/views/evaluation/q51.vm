@@ -30,11 +30,11 @@ $(document).ready(function(){
 			<input type="hidden" name="${status.expression}" value="$!{status.value}" id="time"/>
 			<div class="q-head clearfix">
 				<h1 class="number">
-					第11-5题. 莎拉·维乐是在南极洲工作的一位科学家。透过他寄给侄女丹妮的信，你会知道更多她在南极洲的经历。
+					第11-5题. 莎拉·维乐是在南极洲工作的一位科学家。透过她寄给侄女丹妮的信，你会知道更多她在南极洲的经历。
 					<p>
 						<img style="width:700px" src="img/test/hx13T.jpg" />
 					</p>
-					<div class="clock" answer="1">倒计时：<em>120</em></div>
+					<div class="clock" answer="1">倒计时：<em>90</em></div>
 				</h1>
 			</div>
 			<ul class="single">

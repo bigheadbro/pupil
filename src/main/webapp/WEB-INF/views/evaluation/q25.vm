@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第10题. 现在请你为迪士尼乐园中的工作人员设计工作服，你会？
-					<div class="clock" answer="1">倒计时：<em>30</em></div>
+					<div class="clock" answer="1">倒计时：<em>27</em></div>
 				</h1>
 			</div>
 			<ul class="single">

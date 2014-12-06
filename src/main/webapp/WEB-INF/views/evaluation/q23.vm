@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第8题. 学校来了一群日本学生，中午老师让你招待他们就餐并一起吃饭，当饭餐上齐后，日本学生说“我要开动了”这时你会怎么办？
-					<div class="clock" answer="1">倒计时：<em>20</em></div>
+					<div class="clock" answer="1">倒计时：<em>25</em></div>
 				</h1>
 			</div>
 			<ul class="single">

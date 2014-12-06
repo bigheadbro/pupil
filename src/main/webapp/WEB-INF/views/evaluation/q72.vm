@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第17题. 没有人把我的话当一回事 
-					<div class="clock" answer="1">倒计时：<em>15</em></div>
+					<div class="clock" answer="1">倒计时：<em>12</em></div>
 				</h1>
 			</div>
 			<ul class="single">

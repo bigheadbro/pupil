@@ -31,7 +31,7 @@ $(document).ready(function(){
 			<div class="q-head clearfix">
 				<h1 class="number">
 					第2题. 外面天气多少度时，人体感觉最舒服
-					<div class="clock" answer="1">倒计时：<em>20</em></div>
+					<div class="clock" answer="1">倒计时：<em>15</em></div>
 				</h1>
 			</div>
 			<ul class="single">
