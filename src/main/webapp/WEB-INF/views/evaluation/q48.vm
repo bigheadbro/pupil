@@ -1,12 +1,8 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-    $('input').iCheck({
-		checkboxClass: 'icheckbox_square-green',
-    	radioClass: 'iradio_square-green',
-    	increaseArea: '20%' // optional
-    });
-    $('input').on('ifChecked', function(event){
+    
+    $('.iCheck').click(function(event){
 		$("#choice").val($(this).attr("id"));
      	
     });
@@ -42,19 +38,19 @@ $(document).ready(function(){
 			<ul class="single">
 				<span>南极洲是地球上最寒冷的地方。它保持哪些记录？</span>
 				<li>
-					<input type="radio" name="iCheck" id="1">
+					<input type="radio" class="iCheck" name="iCheck" id="1">
 					<label for="1">A、最干燥、最多云</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="2">
+					<input type="radio" class="iCheck" name="iCheck" id="2">
 					<label for="2">B、最潮湿、最强风</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="3">
+					<input type="radio" class="iCheck" name="iCheck" id="3">
 					<label for="3">C、最多云、最高</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="4">
+					<input type="radio" class="iCheck" name="iCheck" id="4">
 					<label for="4">D、最强风、最高</label>
 				</li>
 			</ul>

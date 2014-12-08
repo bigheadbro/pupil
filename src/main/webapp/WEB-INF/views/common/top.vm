@@ -1,6 +1,6 @@
 <div class="main-top-container">
     <div class="main-top clearfix">
-		<h4>思来氏小学生活力指数测评</h4>
+		<h4>思来氏小学活力指数测评</h4>
 		#if($!session.getAttribute("account")) 
 			<h5>${account.userName}，${account.school}</h5>
 		#end

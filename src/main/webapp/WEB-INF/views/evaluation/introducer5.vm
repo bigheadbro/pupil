@@ -1,5 +1,3 @@
-<script type="text/javascript" src="js/soundmanager2-jsmin.js"></script>
-<script type="text/javascript" src="js/mp3-player-button.js"></script>
 #set($layout = "/layout/user_detail_layout.vm")
 <div class="intro-content-container">
 	<div class="main-body">
@@ -10,5 +8,5 @@
 		</div>
 	</div>
 </div>
-<h1 class="clock hidden" url="q56"><em >27</em></h1>
-<a style="display:none" href="resource/introducer5.mp3" class="sm2_button"></a>
+<h1 class="clock hidden" url="q56"><em >31</em></h1>
+<embed height="0" width="0" src="resource/introducer5.mp3" />

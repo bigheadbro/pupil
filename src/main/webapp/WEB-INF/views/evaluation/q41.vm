@@ -1,12 +1,8 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-    $('input').iCheck({
-		checkboxClass: 'icheckbox_square-green',
-    	radioClass: 'iradio_square-green',
-    	increaseArea: '20%' // optional
-    });
-    $('input').on('ifChecked', function(event){
+    
+    $('.iCheck').click(function(event){
 		$("#choice").val($(this).attr("id"));
      	
     });
@@ -36,19 +32,19 @@ $(document).ready(function(){
 			</div>
 			<ul class="single">
 				<li>
-					<input type="radio" name="iCheck" id="1">
+					<input type="radio" class="iCheck" name="iCheck" id="1">
 					<label for="1">A、先把种子和纸一起放在暗处，然后再放在亮处</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="2">
+					<input type="radio" class="iCheck" name="iCheck" id="2">
 					<label for="2">B、先把种子和纸一起放在亮处，然后再放在暗处</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="3">
+					<input type="radio" class="iCheck" name="iCheck" id="3">
 					<label for="3">C、去查找书籍，看书上是怎么做的，照着书上一步一步做</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="4">
+					<input type="radio" class="iCheck" name="iCheck" id="4">
 					<label for="4">D、把种子分成两部分，一部分放到亮处，一部分放到暗处</label>
 				</li>
 			</ul>

@@ -1,12 +1,8 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-    $('input').iCheck({
-		checkboxClass: 'icheckbox_square-green',
-    	radioClass: 'iradio_square-green',
-    	increaseArea: '20%' // optional
-    });
-    $('input').on('ifChecked', function(event){
+    
+    $('.iCheck').click(function(event){
 		$("#choice").val($(this).attr("id"));
      	
     });
@@ -36,15 +32,15 @@ $(document).ready(function(){
 			</div>
 			<ul class="single">
 				<li>
-					<input type="radio" name="iCheck" id="1">
+					<input type="radio" class="iCheck" name="iCheck" id="1">
 					<label for="1">A、全都怪主演</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="2">
+					<input type="radio" class="iCheck" name="iCheck" id="2">
 					<label for="2">B、不光是主演的问题，大家应该准备更充分</label>
 				</li>
 				<li>
-					<input type="radio" name="iCheck" id="3">
+					<input type="radio" class="iCheck" name="iCheck" id="3">
 					<label for="3">C、发生这样的意外，也不能怪谁</label>
 				</li>
 			</ul>

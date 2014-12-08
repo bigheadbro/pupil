@@ -1,7 +1,7 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <div class="index-content-container">
 	<div class="main-body">
-		<h1 class="welcome">欢迎参加小学生活力指数测评</h1>
+		<h1 class="welcome">欢迎参加小学活力指数测评</h1>
 		<ul class="steps clearfix">
 			<li class="step"><img src="img/red-point.png" /><p>Step1.<br/>登陆</p></li>
 			<li class="process"><img src="img/grey-point.png" /></li>

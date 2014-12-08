@@ -1,16 +1,12 @@
 #set($layout = "/layout/user_detail_layout.vm")
 <script>
 $(document).ready(function(){
-    $('input').iCheck({
-		checkboxClass: 'icheckbox_square-green',
-    	radioClass: 'iradio_square-green',
-    	increaseArea: '20%' // optional
-    });
-    $('input').on('ifChecked', function(event){
+    
+    $('.iCheck').click(function(event){
 		$("#choice").val($(this).attr("id"));
      	
     });
-	$('input').on('ifChecked', function(event){
+	$('.iCheck').click(function(event){
      	
 			$("#time").val(s);
 		$("#form_q").submit();

@@ -58,6 +58,20 @@ public class CommonController extends BaseController{
 		return mv;
 	}
 	
+	@RequestMapping(value="/13")
+	public ModelAndView other13(final HttpServletRequest request,final HttpServletResponse response)
+	{
+		ModelAndView mv = new ModelAndView("/evaluation/index");
+
+		return mv;
+	}
+	
+	@RequestMapping(value="/22")
+	public ModelAndView other22(final HttpServletRequest request,final HttpServletResponse response)
+	{
+		return new ModelAndView(new RedirectView("http://www.sojump.com/jq/4171044.aspx"));
+	}
+	
 	@RequestMapping(value="/test")
 	public ModelAndView test(final HttpServletRequest request,final HttpServletResponse response, @ModelAttribute("form")QuestionForm form)
 	{

@@ -57,7 +57,7 @@ $(document).ready(function(){
 				<a class="choice" choice="3">
 					<div class="img-wrap">
 						<em>
-							<img src="img/test/10-C.jpg" />
+							<img src="img/test/11-A.jpg" />
 						</em>
 					</div>
 					<p>C</p>

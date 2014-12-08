@@ -10,11 +10,7 @@ $(document).ready(function(){
 	  dateFormat: "yy-mm-dd",
 	  defaultDate: "-22y"
     });
-	$('input').iCheck({
-		checkboxClass: 'icheckbox_square-green',
-    	radioClass: 'iradio_square-green',
-    	increaseArea: '20%' // optional
-    });
+	
 		$("#form_profile").validate({
 				ignore: [],
 				rules:{
@@ -729,7 +725,7 @@ function showposition() {
 	$(".position-win").show();
 }
 $(document).ready(function(){
-	$('input').on('ifChecked', function(event){
+	$('.iCheck').click(function(event){
 		$("#"+$(this).attr("name")).val(parseInt($(this).attr("order")));
     });
 	$(".dim7 a").click(function(){
